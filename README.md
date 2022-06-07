@@ -5,9 +5,8 @@ remodularization proposals for Earth System Models (ESM). This README.md only pr
 overview on the setup.
 
 Directory structure:
-- tools
-  - bin executable of the tools
-  - lib libraries used by the tools
+- oceandsl-tools.tgz collection of OceanDSL tools used in the recovery and analysis
+- TODO python tools.
 - mitgcm experiment scripts and configurations for mitgcm experiments
 - uvic experiment scripts and configurations for uvic experiments
 
