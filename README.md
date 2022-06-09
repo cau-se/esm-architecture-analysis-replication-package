@@ -46,8 +46,8 @@ on the architecture.
 - Generate metrics based on the architecture with mvis
 - Interactively inspect the architecture with Kieker Architecture Visualization
 
-### Compute Remodularization
+### Compute Restructuring
 
-TODO
+TODO (hs)
 
 
