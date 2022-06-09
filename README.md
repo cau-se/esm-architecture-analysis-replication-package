@@ -1,4 +1,4 @@
-# Earth System Model - Architecture Recovery, Analysis and Remodularization Replication-Package
+# Earth System Model - Architecture Recovery, Analysis and Restructuring Replication-Package
 
 This package contains information to perform architecture recovery and analysis, and supports
 remodularization proposals for Earth System Models (ESM). This README.md only provides an
