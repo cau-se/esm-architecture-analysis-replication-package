@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="ASCII"?>
+<assembly:AssemblyModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:assembly="platform:/resource/Kieker/model/analysismodel.ecore/assembly">
+  <assemblyComponents key="&lt;unknown>">
+    <value signature="&lt;unknown>">
+      <operations key="&lt;unknown>">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.0/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.0/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="model.f90">
+    <value signature="model.f90">
+      <operations key="main">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.1/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="main_">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.1/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="initmodel.3">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.1/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="timestepmodel.2">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.1/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="model_advance.0">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.1/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="finishmodel.1">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.1/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.1/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="logging.f90">
+    <value signature="logging.f90">
+      <operations key="__logging_mod_initlogging">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.2/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__logging_mod_log_info">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.2/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__logging_mod_formattedwrite">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.2/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__logging_mod_now">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.2/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__logging_mod_log_debug">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.2/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__logging_mod_finishlogging">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.2/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.2/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="io_module.f90">
+    <value signature="io_module.f90">
+      <operations key="__io_module_mod_initio">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_parse_nc_file_params">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_get_nf90_cmode">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_nf90cmode_string_to_int">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_get_nf90_endianness">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_get_nf90_shuffle">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_get_nf90_deflate_level">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_get_nf90_fletcher32">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_get_nf90_chunksizes">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_get_nf90_contiguous">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_initfh">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.10/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_issetfh">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.11/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_touch">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.12/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_closeds">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.13/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_createdseuler">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.14/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_getfname">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.15/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_create_nc_file">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.16/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_check">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.17/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_create_nc_coord_var">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.18/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_create_nc_data_var">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.19/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_updatenrec">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.20/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_putvareuler">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.21/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_opends">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.22/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_gettdimid">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.23/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_gettvarid">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.24/@value"/>
+        </value>
+      </operations>
+      <operations key="__io_module_mod_finishio">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value/@providedOperations.25/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.3/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="str.f90">
+    <value signature="str.f90">
+      <operations key="__str_mod_to_upper">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.4/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.4/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="calendar_module.f90">
+    <value signature="calendar_module.f90">
+      <operations key="__calendar_module_mod_opencal">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.5/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__calendar_module_mod_setcal">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.5/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__calendar_module_mod_issetcal">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.5/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__calendar_module_mod_closecal">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.5/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.5/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="f_udunits_2.f90">
+    <value signature="f_udunits_2.f90">
+      <operations key="__f_udunits_2_mod_init_f_udunits_2">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.6/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__f_udunits_2_mod_f_ut_set_error_message_handler">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.6/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__f_udunits_2_mod_f_ut_read_xml">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.6/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__f_udunits_2_mod_ut_check_status">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.6/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__f_udunits_2_mod_f_ut_get_status">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.6/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__f_udunits_2_mod_f_ut_parse">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.6/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="__f_udunits_2_mod_f_ut_free_system">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.6/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.6/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="domain_module.f90">
+    <value signature="domain_module.f90">
+      <operations key="__domain_module_mod_initdomain">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.7/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.7/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="init_vars.f90">
+    <value signature="init_vars.f90">
+      <operations key="__init_vars_mod_init2dvarsi">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.8/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__init_vars_mod_init2dvard">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.8/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__init_vars_mod_init3dvard">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.8/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.8/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="grid_module.f90">
+    <value signature="grid_module.f90">
+      <operations key="__grid_module_mod_setgrideuler">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_setlon">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_setlat">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_setsin">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_setcos">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_settan">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_setland">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_setocean">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_settopo">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_setf">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <operations key="__grid_module_mod_comparegridseuler">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value/@providedOperations.10/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.9/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="vars_module.f90">
+    <value signature="vars_module.f90">
+      <operations key="__vars_module_mod_initvars">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.10/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__vars_module_mod_add2dtoregister">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.10/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__vars_module_mod_getvarptrfromregister">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.10/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__vars_module_mod_addvarptrtoregister">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.10/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__vars_module_mod_add3dtoregister">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.10/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__vars_module_mod_get2dfromregister">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.10/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.10/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="generic_list.f90">
+    <value signature="generic_list.f90">
+      <operations key="__generic_list_mod_list_init">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.11/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__generic_list_mod_list_get">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.11/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__generic_list_mod_list_next">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.11/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__generic_list_mod_list_insert">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.11/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__generic_list_mod_list_free">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.11/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.11/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="calc_lib.f90">
+    <value signature="calc_lib.f90">
+      <operations key="__calc_lib_mod_initcalclib">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.12/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__calc_lib_mod_set2pointinterpolater">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.12/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__calc_lib_mod_getoutgrid">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.12/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__calc_lib_mod_set4pointinterpolater">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.12/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__calc_lib_mod_advancecalclib">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.12/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__calc_lib_mod_finishcalclib">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.12/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.12/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="time_integration_module.f90">
+    <value signature="time_integration_module.f90">
+      <operations key="__time_integration_module_mod_time_integration_init">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.13/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__time_integration_module_mod_integrate_ab_vec">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.13/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.13/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_module.f90">
+    <value signature="swm_module.f90">
+      <operations key="__swm_module_mod_swm_initswm">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.14/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_module_mod_swm_initialconditions">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.14/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_module_mod_swm_advance">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.14/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_module_mod_swm_timestep">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.14/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_module_mod_swm_finishswm">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.14/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.14/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_vars.f90">
+    <value signature="swm_vars.f90">
+      <operations key="__swm_vars_mod_swm_vars_init">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.15/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_vars_mod_swm_vars_finish">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.15/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.15/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_timestep_module.f90">
+    <value signature="swm_timestep_module.f90">
+      <operations key="__swm_timestep_module_mod_swm_timestep_init">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_computed">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_computerelvort">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_computepotvort">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_computeedens">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_computemassfluxes">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_swm_timestep_advance">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_swm_timestep_step">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_alreadystepped">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_swm_timestep_nonlinear">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_timestep_module_mod_swm_timestep_finish">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value/@providedOperations.10/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.16/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_lateralmixing_module.f90">
+    <value signature="swm_lateralmixing_module.f90">
+      <operations key="__swm_lateralmixing_module_mod_swm_lateralmixing_init">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.17/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_lateralmixing_module_mod_swm_lateralmixing_init_p_coefficients">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.17/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_lateralmixing_module_mod_swm_lateralmixing_step">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.17/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_lateralmixing_module_mod_swm_lateralmixing_compute_p">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.17/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_lateralmixing_module_mod_swm_lateralmixing_compute_uv">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.17/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_lateralmixing_module_mod_swm_lateralmixing_finish">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.17/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_lateralmixing_module_mod_swm_lateralmixing_finish_p_coefficients">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.17/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.17/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_damping_module.f90">
+    <value signature="swm_damping_module.f90">
+      <operations key="__swm_damping_module_mod_swm_damping_init">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.18/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_damping_module_mod_getdampingcoefficient">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.18/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_damping_module_mod_setdefault_swm_damping_nl">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.18/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_damping_module_mod_getspongelayer">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.18/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_damping_module_mod_swm_damping_finish">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.18/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.18/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_forcing_module.f90">
+    <value signature="swm_forcing_module.f90">
+      <operations key="__swm_forcing_module_mod_swm_forcing_init">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.19/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_forcing_module_mod_swm_forcing_getforcing">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.19/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_forcing_module_mod_swm_forcing_update">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.19/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__swm_forcing_module_mod_swm_forcing_finish">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.19/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.19/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="diag_module.f90">
+    <value signature="diag_module.f90">
+      <operations key="__diag_module_mod_initdiag">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.20/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__diag_module_mod_diag">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.20/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__diag_module_mod_finishdiag">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.20/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.20/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="diagtask.f90">
+    <value signature="diagtask.f90">
+      <operations key="__diagtask_mod_initdiagtasklist">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_readdiagnl">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_initdiagtask">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_getvardatafromregister">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_createtaskds">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_processtasklist">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_processtask">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_writetasktofile">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_finishdiagtasklist">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagtask_mod_finishdiagtask">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.21/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="diagvar.f90">
+    <value signature="diagvar.f90">
+      <operations key="__diagvar_mod_resetdiagvarlist">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.22/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="__diagvar_mod_finishdiagvarlist">
+        <value>
+          <operationType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.22/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <componentType href="/home/armin/Dokumente/kieker-transformed/models/type-model.xmi#//@componentTypes.22/@value"/>
+    </value>
+  </assemblyComponents>
+</assembly:AssemblyModel>
