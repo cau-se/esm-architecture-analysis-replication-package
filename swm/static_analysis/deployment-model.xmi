@@ -2,8 +2,8 @@
 <deployment:DeploymentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:deployment="platform:/resource/Kieker/model/analysismodel.ecore/deployment">
   <deploymentContexts key="node1">
     <value name="node1">
-      <components key="e:\amack\documents\uni\somefortran\ready\calc_lib.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\calc_lib.f90">
+      <components key="calc_lib.f90">
+        <value signature="calc_lib.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.0/@value"/>
           <operations key="initcalclib">
             <value>
@@ -92,8 +92,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\logging.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\logging.f90">
+      <components key="logging.f90">
+        <value signature="logging.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.1/@value"/>
           <operations key="log_alloc_fatal">
             <value>
@@ -262,8 +262,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\calendar_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\calendar_module.f90">
+      <components key="calendar_module.f90">
+        <value signature="calendar_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.3/@value"/>
           <operations key="opencal">
             <value>
@@ -307,8 +307,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\f_udunits_2.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\f_udunits_2.f90">
+      <components key="f_udunits_2.f90">
+        <value signature="f_udunits_2.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.4/@value"/>
           <operations key="init_f_udunits_2">
             <value>
@@ -367,8 +367,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\diagtask.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\diagtask.f90">
+      <components key="diagtask.f90">
+        <value signature="diagtask.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.5/@value"/>
           <operations key="initdiagtask">
             <value>
@@ -437,8 +437,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\diagvar.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\diagvar.f90">
+      <components key="diagvar.f90">
+        <value signature="diagvar.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.6/@value"/>
           <operations key="getdiagvarfromlist">
             <value>
@@ -492,8 +492,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\io_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\io_module.f90">
+      <components key="io_module.f90">
+        <value signature="io_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.7/@value"/>
           <operations key="closeds">
             <value>
@@ -627,8 +627,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\generic_list.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\generic_list.f90">
+      <components key="generic_list.f90">
+        <value signature="generic_list.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.8/@value"/>
           <operations key="list_init">
             <value>
@@ -647,8 +647,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\diag_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\diag_module.f90">
+      <components key="diag_module.f90">
+        <value signature="diag_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.9/@value"/>
           <operations key="initdiag">
             <value>
@@ -667,8 +667,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\domain_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\domain_module.f90">
+      <components key="domain_module.f90">
+        <value signature="domain_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.10/@value"/>
           <operations key="initdomain">
             <value>
@@ -677,8 +677,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\grid_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\grid_module.f90">
+      <components key="grid_module.f90">
+        <value signature="grid_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.11/@value"/>
           <operations key="setf">
             <value>
@@ -727,8 +727,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\dynfromfile_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\dynfromfile_module.f90">
+      <components key="dynfromfile_module.f90">
+        <value signature="dynfromfile_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.12/@value"/>
           <operations key="dff_initdynfromfile">
             <value>
@@ -752,8 +752,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\memchunk_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\memchunk_module.f90">
+      <components key="memchunk_module.f90">
+        <value signature="memchunk_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.13/@value"/>
           <operations key="initmemchunk">
             <value>
@@ -787,8 +787,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\elsolv_sor.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\elsolv_sor.f90">
+      <components key="elsolv_sor.f90">
+        <value signature="elsolv_sor.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.14/@value"/>
           <operations key="init_elsolv_sor">
             <value>
@@ -817,8 +817,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\model.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\model.f90">
+      <components key="model.f90">
+        <value signature="model.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.15/@value"/>
           <operations key="model">
             <value>
@@ -847,8 +847,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\vars_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\vars_module.f90">
+      <components key="vars_module.f90">
+        <value signature="vars_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.16/@value"/>
           <operations key="initvars">
             <value>
@@ -882,8 +882,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\time_integration_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\time_integration_module.f90">
+      <components key="time_integration_module.f90">
+        <value signature="time_integration_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.17/@value"/>
           <operations key="time_integration_init">
             <value>
@@ -892,8 +892,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\swm_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\swm_module.f90">
+      <components key="swm_module.f90">
+        <value signature="swm_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.18/@value"/>
           <operations key="swm_initswm">
             <value>
@@ -922,8 +922,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\swm_damping_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\swm_damping_module.f90">
+      <components key="swm_damping_module.f90">
+        <value signature="swm_damping_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.19/@value"/>
           <operations key="swm_damping_init">
             <value>
@@ -952,8 +952,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\swm_forcing_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\swm_forcing_module.f90">
+      <components key="swm_forcing_module.f90">
+        <value signature="swm_forcing_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.20/@value"/>
           <operations key="swm_forcing_init">
             <value>
@@ -1017,8 +1017,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\swm_lateralmixing_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\swm_lateralmixing_module.f90">
+      <components key="swm_lateralmixing_module.f90">
+        <value signature="swm_lateralmixing_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.21/@value"/>
           <operations key="swm_lateralmixing_init">
             <value>
@@ -1062,8 +1062,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\swm_timestep_module_old.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\swm_timestep_module_old.f90">
+      <components key="swm_timestep_module_old.f90">
+        <value signature="swm_timestep_module_old.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.22/@value"/>
           <operations key="swm_timestep_init">
             <value>
@@ -1107,8 +1107,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\swm_vars.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\swm_vars.f90">
+      <components key="swm_vars.f90">
+        <value signature="swm_vars.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.23/@value"/>
           <operations key="swm_vars_finish">
             <value>
@@ -1122,8 +1122,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\swm_nonlinear_timestep_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\swm_nonlinear_timestep_module.f90">
+      <components key="swm_nonlinear_timestep_module.f90">
+        <value signature="swm_nonlinear_timestep_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.24/@value"/>
           <operations key="swm_timestep_init">
             <value>
@@ -1152,8 +1152,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\swm_timestep_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\swm_timestep_module.f90">
+      <components key="swm_timestep_module.f90">
+        <value signature="swm_timestep_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.25/@value"/>
           <operations key="computed">
             <value>
@@ -1207,8 +1207,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\tracer_module.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\tracer_module.f90">
+      <components key="tracer_module.f90">
+        <value signature="tracer_module.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.26/@value"/>
           <operations key="trc_inittracer">
             <value>
@@ -1257,8 +1257,8 @@
           </operations>
         </value>
       </components>
-      <components key="e:\amack\documents\uni\somefortran\ready\tracer_vars.f90">
-        <value signature="e:\amack\documents\uni\somefortran\ready\tracer_vars.f90">
+      <components key="tracer_vars.f90">
+        <value signature="tracer_vars.f90">
           <assemblyComponent href="assembly-model.xmi#//@assemblyComponents.27/@value"/>
           <operations key="trc_vars_init">
             <value>

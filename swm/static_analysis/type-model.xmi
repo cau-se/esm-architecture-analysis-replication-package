@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <type:TypeModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:type="platform:/resource/Kieker/model/analysismodel.ecore/type">
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\calc_lib.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\calc_lib.f90" name="e:\amack\documents\uni\somefortran\ready\calc_lib.f90" package="swm">
+  <componentTypes key="calc_lib.f90">
+    <value signature="calc_lib.f90" name="calc_lib.f90" package="swm">
       <providedOperations key="initcalclib">
         <value signature="initcalclib" name="initcalclib" returnType="unknown"/>
       </providedOperations>
@@ -55,8 +55,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\logging.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\logging.f90" name="e:\amack\documents\uni\somefortran\ready\logging.f90" package="swm">
+  <componentTypes key="logging.f90">
+    <value signature="logging.f90" name="logging.f90" package="swm">
       <providedOperations key="log_alloc_fatal">
         <value signature="log_alloc_fatal" name="log_alloc_fatal" returnType="unknown"/>
       </providedOperations>
@@ -159,8 +159,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\calendar_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\calendar_module.f90" name="e:\amack\documents\uni\somefortran\ready\calendar_module.f90" package="swm">
+  <componentTypes key="calendar_module.f90">
+    <value signature="calendar_module.f90" name="calendar_module.f90" package="swm">
       <providedOperations key="opencal">
         <value signature="opencal" name="opencal" returnType="unknown"/>
       </providedOperations>
@@ -187,8 +187,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\f_udunits_2.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\f_udunits_2.f90" name="e:\amack\documents\uni\somefortran\ready\f_udunits_2.f90" package="swm">
+  <componentTypes key="f_udunits_2.f90">
+    <value signature="f_udunits_2.f90" name="f_udunits_2.f90" package="swm">
       <providedOperations key="init_f_udunits_2">
         <value signature="init_f_udunits_2" name="init_f_udunits_2" returnType="unknown"/>
       </providedOperations>
@@ -224,8 +224,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\diagtask.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\diagtask.f90" name="e:\amack\documents\uni\somefortran\ready\diagtask.f90" package="swm">
+  <componentTypes key="diagtask.f90">
+    <value signature="diagtask.f90" name="diagtask.f90" package="swm">
       <providedOperations key="initdiagtask">
         <value signature="initdiagtask" name="initdiagtask" returnType="unknown"/>
       </providedOperations>
@@ -267,8 +267,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\diagvar.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\diagvar.f90" name="e:\amack\documents\uni\somefortran\ready\diagvar.f90" package="swm">
+  <componentTypes key="diagvar.f90">
+    <value signature="diagvar.f90" name="diagvar.f90" package="swm">
       <providedOperations key="getdiagvarfromlist">
         <value signature="getdiagvarfromlist" name="getdiagvarfromlist" returnType="unknown"/>
       </providedOperations>
@@ -301,8 +301,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\io_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\io_module.f90" name="e:\amack\documents\uni\somefortran\ready\io_module.f90" package="swm">
+  <componentTypes key="io_module.f90">
+    <value signature="io_module.f90" name="io_module.f90" package="swm">
       <providedOperations key="closeds">
         <value signature="closeds" name="closeds" returnType="unknown"/>
       </providedOperations>
@@ -383,8 +383,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\generic_list.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\generic_list.f90" name="e:\amack\documents\uni\somefortran\ready\generic_list.f90" package="swm">
+  <componentTypes key="generic_list.f90">
+    <value signature="generic_list.f90" name="generic_list.f90" package="swm">
       <providedOperations key="list_init">
         <value signature="list_init" name="list_init" returnType="unknown"/>
       </providedOperations>
@@ -396,8 +396,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\diag_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\diag_module.f90" name="e:\amack\documents\uni\somefortran\ready\diag_module.f90" package="swm">
+  <componentTypes key="diag_module.f90">
+    <value signature="diag_module.f90" name="diag_module.f90" package="swm">
       <providedOperations key="initdiag">
         <value signature="initdiag" name="initdiag" returnType="unknown"/>
       </providedOperations>
@@ -409,15 +409,15 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\domain_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\domain_module.f90" name="e:\amack\documents\uni\somefortran\ready\domain_module.f90" package="swm">
+  <componentTypes key="domain_module.f90">
+    <value signature="domain_module.f90" name="domain_module.f90" package="swm">
       <providedOperations key="initdomain">
         <value signature="initdomain" name="initdomain" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\grid_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\grid_module.f90" name="e:\amack\documents\uni\somefortran\ready\grid_module.f90" package="swm">
+  <componentTypes key="grid_module.f90">
+    <value signature="grid_module.f90" name="grid_module.f90" package="swm">
       <providedOperations key="setf">
         <value signature="setf" name="setf" returnType="unknown"/>
       </providedOperations>
@@ -447,8 +447,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\dynfromfile_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\dynfromfile_module.f90" name="e:\amack\documents\uni\somefortran\ready\dynfromfile_module.f90" package="swm">
+  <componentTypes key="dynfromfile_module.f90">
+    <value signature="dynfromfile_module.f90" name="dynfromfile_module.f90" package="swm">
       <providedOperations key="dff_initdynfromfile">
         <value signature="dff_initdynfromfile" name="dff_initdynfromfile" returnType="unknown"/>
       </providedOperations>
@@ -463,8 +463,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\memchunk_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\memchunk_module.f90" name="e:\amack\documents\uni\somefortran\ready\memchunk_module.f90" package="swm">
+  <componentTypes key="memchunk_module.f90">
+    <value signature="memchunk_module.f90" name="memchunk_module.f90" package="swm">
       <providedOperations key="initmemchunk">
         <value signature="initmemchunk" name="initmemchunk" returnType="unknown"/>
       </providedOperations>
@@ -485,8 +485,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\elsolv_sor.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\elsolv_sor.f90" name="e:\amack\documents\uni\somefortran\ready\elsolv_sor.f90" package="swm">
+  <componentTypes key="elsolv_sor.f90">
+    <value signature="elsolv_sor.f90" name="elsolv_sor.f90" package="swm">
       <providedOperations key="init_elsolv_sor">
         <value signature="init_elsolv_sor" name="init_elsolv_sor" returnType="unknown"/>
       </providedOperations>
@@ -504,8 +504,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\model.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\model.f90" name="e:\amack\documents\uni\somefortran\ready\model.f90" package="swm">
+  <componentTypes key="model.f90">
+    <value signature="model.f90" name="model.f90" package="swm">
       <providedOperations key="model">
         <value signature="model" name="model" returnType="unknown"/>
       </providedOperations>
@@ -523,8 +523,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\vars_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\vars_module.f90" name="e:\amack\documents\uni\somefortran\ready\vars_module.f90" package="swm">
+  <componentTypes key="vars_module.f90">
+    <value signature="vars_module.f90" name="vars_module.f90" package="swm">
       <providedOperations key="initvars">
         <value signature="initvars" name="initvars" returnType="unknown"/>
       </providedOperations>
@@ -545,15 +545,15 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\time_integration_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\time_integration_module.f90" name="e:\amack\documents\uni\somefortran\ready\time_integration_module.f90" package="swm">
+  <componentTypes key="time_integration_module.f90">
+    <value signature="time_integration_module.f90" name="time_integration_module.f90" package="swm">
       <providedOperations key="time_integration_init">
         <value signature="time_integration_init" name="time_integration_init" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\swm_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\swm_module.f90" name="e:\amack\documents\uni\somefortran\ready\swm_module.f90" package="swm">
+  <componentTypes key="swm_module.f90">
+    <value signature="swm_module.f90" name="swm_module.f90" package="swm">
       <providedOperations key="swm_initswm">
         <value signature="swm_initswm" name="swm_initswm" returnType="unknown"/>
       </providedOperations>
@@ -571,8 +571,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\swm_damping_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\swm_damping_module.f90" name="e:\amack\documents\uni\somefortran\ready\swm_damping_module.f90" package="swm">
+  <componentTypes key="swm_damping_module.f90">
+    <value signature="swm_damping_module.f90" name="swm_damping_module.f90" package="swm">
       <providedOperations key="swm_damping_init">
         <value signature="swm_damping_init" name="swm_damping_init" returnType="unknown"/>
       </providedOperations>
@@ -590,8 +590,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\swm_forcing_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\swm_forcing_module.f90" name="e:\amack\documents\uni\somefortran\ready\swm_forcing_module.f90" package="swm">
+  <componentTypes key="swm_forcing_module.f90">
+    <value signature="swm_forcing_module.f90" name="swm_forcing_module.f90" package="swm">
       <providedOperations key="swm_forcing_init">
         <value signature="swm_forcing_init" name="swm_forcing_init" returnType="unknown"/>
       </providedOperations>
@@ -630,8 +630,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\swm_lateralmixing_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\swm_lateralmixing_module.f90" name="e:\amack\documents\uni\somefortran\ready\swm_lateralmixing_module.f90" package="swm">
+  <componentTypes key="swm_lateralmixing_module.f90">
+    <value signature="swm_lateralmixing_module.f90" name="swm_lateralmixing_module.f90" package="swm">
       <providedOperations key="swm_lateralmixing_init">
         <value signature="swm_lateralmixing_init" name="swm_lateralmixing_init" returnType="unknown"/>
       </providedOperations>
@@ -658,8 +658,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\swm_timestep_module_old.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\swm_timestep_module_old.f90" name="e:\amack\documents\uni\somefortran\ready\swm_timestep_module_old.f90" package="swm">
+  <componentTypes key="swm_timestep_module_old.f90">
+    <value signature="swm_timestep_module_old.f90" name="swm_timestep_module_old.f90" package="swm">
       <providedOperations key="swm_timestep_init">
         <value signature="swm_timestep_init" name="swm_timestep_init" returnType="unknown"/>
       </providedOperations>
@@ -686,8 +686,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\swm_vars.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\swm_vars.f90" name="e:\amack\documents\uni\somefortran\ready\swm_vars.f90" package="swm">
+  <componentTypes key="swm_vars.f90">
+    <value signature="swm_vars.f90" name="swm_vars.f90" package="swm">
       <providedOperations key="swm_vars_finish">
         <value signature="swm_vars_finish" name="swm_vars_finish" returnType="unknown"/>
       </providedOperations>
@@ -696,8 +696,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\swm_nonlinear_timestep_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\swm_nonlinear_timestep_module.f90" name="e:\amack\documents\uni\somefortran\ready\swm_nonlinear_timestep_module.f90" package="swm">
+  <componentTypes key="swm_nonlinear_timestep_module.f90">
+    <value signature="swm_nonlinear_timestep_module.f90" name="swm_nonlinear_timestep_module.f90" package="swm">
       <providedOperations key="swm_timestep_init">
         <value signature="swm_timestep_init" name="swm_timestep_init" returnType="unknown"/>
       </providedOperations>
@@ -715,8 +715,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\swm_timestep_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\swm_timestep_module.f90" name="e:\amack\documents\uni\somefortran\ready\swm_timestep_module.f90" package="swm">
+  <componentTypes key="swm_timestep_module.f90">
+    <value signature="swm_timestep_module.f90" name="swm_timestep_module.f90" package="swm">
       <providedOperations key="computed">
         <value signature="computed" name="computed" returnType="unknown"/>
       </providedOperations>
@@ -749,8 +749,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\tracer_module.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\tracer_module.f90" name="e:\amack\documents\uni\somefortran\ready\tracer_module.f90" package="swm">
+  <componentTypes key="tracer_module.f90">
+    <value signature="tracer_module.f90" name="tracer_module.f90" package="swm">
       <providedOperations key="trc_inittracer">
         <value signature="trc_inittracer" name="trc_inittracer" returnType="unknown"/>
       </providedOperations>
@@ -780,8 +780,8 @@
       </providedOperations>
     </value>
   </componentTypes>
-  <componentTypes key="e:\amack\documents\uni\somefortran\ready\tracer_vars.f90">
-    <value signature="e:\amack\documents\uni\somefortran\ready\tracer_vars.f90" name="e:\amack\documents\uni\somefortran\ready\tracer_vars.f90" package="swm">
+  <componentTypes key="tracer_vars.f90">
+    <value signature="tracer_vars.f90" name="tracer_vars.f90" package="swm">
       <providedOperations key="trc_vars_init">
         <value signature="trc_vars_init" name="trc_vars_init" returnType="unknown"/>
       </providedOperations>

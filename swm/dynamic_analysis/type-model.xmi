@@ -31,105 +31,105 @@
   </componentTypes>
   <componentTypes key="logging.f90">
     <value signature="logging.f90" name="logging.f90" package="demo">
-      <providedOperations key="__logging_mod_initlogging">
-        <value signature="__logging_mod_initlogging" name="__logging_mod_initlogging" returnType="unknown"/>
+      <providedOperations key="initlogging">
+        <value signature="initlogging" name="initlogging" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__logging_mod_log_info">
-        <value signature="__logging_mod_log_info" name="__logging_mod_log_info" returnType="unknown"/>
+      <providedOperations key="log_info">
+        <value signature="log_info" name="log_info" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__logging_mod_formattedwrite">
-        <value signature="__logging_mod_formattedwrite" name="__logging_mod_formattedwrite" returnType="unknown"/>
+      <providedOperations key="formattedwrite">
+        <value signature="formattedwrite" name="formattedwrite" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__logging_mod_now">
-        <value signature="__logging_mod_now" name="__logging_mod_now" returnType="unknown"/>
+      <providedOperations key="now">
+        <value signature="now" name="now" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__logging_mod_log_debug">
-        <value signature="__logging_mod_log_debug" name="__logging_mod_log_debug" returnType="unknown"/>
+      <providedOperations key="log_debug">
+        <value signature="log_debug" name="log_debug" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__logging_mod_finishlogging">
-        <value signature="__logging_mod_finishlogging" name="__logging_mod_finishlogging" returnType="unknown"/>
+      <providedOperations key="finishlogging">
+        <value signature="finishlogging" name="finishlogging" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="io_module.f90">
     <value signature="io_module.f90" name="io_module.f90" package="demo">
-      <providedOperations key="__io_module_mod_initio">
-        <value signature="__io_module_mod_initio" name="__io_module_mod_initio" returnType="unknown"/>
+      <providedOperations key="initio">
+        <value signature="initio" name="initio" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_parse_nc_file_params">
-        <value signature="__io_module_mod_parse_nc_file_params" name="__io_module_mod_parse_nc_file_params" returnType="unknown"/>
+      <providedOperations key="parse_nc_file_params">
+        <value signature="parse_nc_file_params" name="parse_nc_file_params" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_get_nf90_cmode">
-        <value signature="__io_module_mod_get_nf90_cmode" name="__io_module_mod_get_nf90_cmode" returnType="unknown"/>
+      <providedOperations key="get_nf90_cmode">
+        <value signature="get_nf90_cmode" name="get_nf90_cmode" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_nf90cmode_string_to_int">
-        <value signature="__io_module_mod_nf90cmode_string_to_int" name="__io_module_mod_nf90cmode_string_to_int" returnType="unknown"/>
+      <providedOperations key="nf90cmode_string_to_int">
+        <value signature="nf90cmode_string_to_int" name="nf90cmode_string_to_int" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_get_nf90_endianness">
-        <value signature="__io_module_mod_get_nf90_endianness" name="__io_module_mod_get_nf90_endianness" returnType="unknown"/>
+      <providedOperations key="get_nf90_endianness">
+        <value signature="get_nf90_endianness" name="get_nf90_endianness" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_get_nf90_shuffle">
-        <value signature="__io_module_mod_get_nf90_shuffle" name="__io_module_mod_get_nf90_shuffle" returnType="unknown"/>
+      <providedOperations key="get_nf90_shuffle">
+        <value signature="get_nf90_shuffle" name="get_nf90_shuffle" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_get_nf90_deflate_level">
-        <value signature="__io_module_mod_get_nf90_deflate_level" name="__io_module_mod_get_nf90_deflate_level" returnType="unknown"/>
+      <providedOperations key="get_nf90_deflate_level">
+        <value signature="get_nf90_deflate_level" name="get_nf90_deflate_level" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_get_nf90_fletcher32">
-        <value signature="__io_module_mod_get_nf90_fletcher32" name="__io_module_mod_get_nf90_fletcher32" returnType="unknown"/>
+      <providedOperations key="get_nf90_fletcher32">
+        <value signature="get_nf90_fletcher32" name="get_nf90_fletcher32" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_get_nf90_chunksizes">
-        <value signature="__io_module_mod_get_nf90_chunksizes" name="__io_module_mod_get_nf90_chunksizes" returnType="unknown"/>
+      <providedOperations key="get_nf90_chunksizes">
+        <value signature="get_nf90_chunksizes" name="get_nf90_chunksizes" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_get_nf90_contiguous">
-        <value signature="__io_module_mod_get_nf90_contiguous" name="__io_module_mod_get_nf90_contiguous" returnType="unknown"/>
+      <providedOperations key="get_nf90_contiguous">
+        <value signature="get_nf90_contiguous" name="get_nf90_contiguous" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_initfh">
-        <value signature="__io_module_mod_initfh" name="__io_module_mod_initfh" returnType="unknown"/>
+      <providedOperations key="initfh">
+        <value signature="initfh" name="initfh" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_issetfh">
-        <value signature="__io_module_mod_issetfh" name="__io_module_mod_issetfh" returnType="unknown"/>
+      <providedOperations key="issetfh">
+        <value signature="issetfh" name="issetfh" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_touch">
-        <value signature="__io_module_mod_touch" name="__io_module_mod_touch" returnType="unknown"/>
+      <providedOperations key="touch">
+        <value signature="touch" name="touch" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_closeds">
-        <value signature="__io_module_mod_closeds" name="__io_module_mod_closeds" returnType="unknown"/>
+      <providedOperations key="closeds">
+        <value signature="closeds" name="closeds" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_createdseuler">
-        <value signature="__io_module_mod_createdseuler" name="__io_module_mod_createdseuler" returnType="unknown"/>
+      <providedOperations key="createdseuler">
+        <value signature="createdseuler" name="createdseuler" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_getfname">
-        <value signature="__io_module_mod_getfname" name="__io_module_mod_getfname" returnType="unknown"/>
+      <providedOperations key="getfname">
+        <value signature="getfname" name="getfname" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_create_nc_file">
-        <value signature="__io_module_mod_create_nc_file" name="__io_module_mod_create_nc_file" returnType="unknown"/>
+      <providedOperations key="create_nc_file">
+        <value signature="create_nc_file" name="create_nc_file" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_check">
-        <value signature="__io_module_mod_check" name="__io_module_mod_check" returnType="unknown"/>
+      <providedOperations key="check">
+        <value signature="check" name="check" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_create_nc_coord_var">
-        <value signature="__io_module_mod_create_nc_coord_var" name="__io_module_mod_create_nc_coord_var" returnType="unknown"/>
+      <providedOperations key="create_nc_coord_var">
+        <value signature="create_nc_coord_var" name="create_nc_coord_var" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_create_nc_data_var">
-        <value signature="__io_module_mod_create_nc_data_var" name="__io_module_mod_create_nc_data_var" returnType="unknown"/>
+      <providedOperations key="create_nc_data_var">
+        <value signature="create_nc_data_var" name="create_nc_data_var" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_updatenrec">
-        <value signature="__io_module_mod_updatenrec" name="__io_module_mod_updatenrec" returnType="unknown"/>
+      <providedOperations key="updatenrec">
+        <value signature="updatenrec" name="updatenrec" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_putvareuler">
-        <value signature="__io_module_mod_putvareuler" name="__io_module_mod_putvareuler" returnType="unknown"/>
+      <providedOperations key="putvareuler">
+        <value signature="putvareuler" name="putvareuler" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_opends">
-        <value signature="__io_module_mod_opends" name="__io_module_mod_opends" returnType="unknown"/>
+      <providedOperations key="opends">
+        <value signature="opends" name="opends" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_gettdimid">
-        <value signature="__io_module_mod_gettdimid" name="__io_module_mod_gettdimid" returnType="unknown"/>
+      <providedOperations key="gettdimid">
+        <value signature="gettdimid" name="gettdimid" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_gettvarid">
-        <value signature="__io_module_mod_gettvarid" name="__io_module_mod_gettvarid" returnType="unknown"/>
+      <providedOperations key="gettvarid">
+        <value signature="gettvarid" name="gettvarid" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__io_module_mod_finishio">
-        <value signature="__io_module_mod_finishio" name="__io_module_mod_finishio" returnType="unknown"/>
+      <providedOperations key="finishio">
+        <value signature="finishio" name="finishio" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
@@ -142,355 +142,355 @@
   </componentTypes>
   <componentTypes key="calendar_module.f90">
     <value signature="calendar_module.f90" name="calendar_module.f90" package="demo">
-      <providedOperations key="__calendar_module_mod_opencal">
-        <value signature="__calendar_module_mod_opencal" name="__calendar_module_mod_opencal" returnType="unknown"/>
+      <providedOperations key="opencal">
+        <value signature="opencal" name="opencal" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__calendar_module_mod_setcal">
-        <value signature="__calendar_module_mod_setcal" name="__calendar_module_mod_setcal" returnType="unknown"/>
+      <providedOperations key="setcal">
+        <value signature="setcal" name="setcal" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__calendar_module_mod_issetcal">
-        <value signature="__calendar_module_mod_issetcal" name="__calendar_module_mod_issetcal" returnType="unknown"/>
+      <providedOperations key="issetcal">
+        <value signature="issetcal" name="issetcal" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__calendar_module_mod_closecal">
-        <value signature="__calendar_module_mod_closecal" name="__calendar_module_mod_closecal" returnType="unknown"/>
+      <providedOperations key="closecal">
+        <value signature="closecal" name="closecal" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="f_udunits_2.f90">
     <value signature="f_udunits_2.f90" name="f_udunits_2.f90" package="demo">
-      <providedOperations key="__f_udunits_2_mod_init_f_udunits_2">
-        <value signature="__f_udunits_2_mod_init_f_udunits_2" name="__f_udunits_2_mod_init_f_udunits_2" returnType="unknown"/>
+      <providedOperations key="init_f_udunits_2">
+        <value signature="init_f_udunits_2" name="init_f_udunits_2" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__f_udunits_2_mod_f_ut_set_error_message_handler">
-        <value signature="__f_udunits_2_mod_f_ut_set_error_message_handler" name="__f_udunits_2_mod_f_ut_set_error_message_handler" returnType="unknown"/>
+      <providedOperations key="f_ut_set_error_message_handler">
+        <value signature="f_ut_set_error_message_handler" name="f_ut_set_error_message_handler" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__f_udunits_2_mod_f_ut_read_xml">
-        <value signature="__f_udunits_2_mod_f_ut_read_xml" name="__f_udunits_2_mod_f_ut_read_xml" returnType="unknown"/>
+      <providedOperations key="f_ut_read_xml">
+        <value signature="f_ut_read_xml" name="f_ut_read_xml" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__f_udunits_2_mod_ut_check_status">
-        <value signature="__f_udunits_2_mod_ut_check_status" name="__f_udunits_2_mod_ut_check_status" returnType="unknown"/>
+      <providedOperations key="ut_check_status">
+        <value signature="ut_check_status" name="ut_check_status" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__f_udunits_2_mod_f_ut_get_status">
-        <value signature="__f_udunits_2_mod_f_ut_get_status" name="__f_udunits_2_mod_f_ut_get_status" returnType="unknown"/>
+      <providedOperations key="f_ut_get_status">
+        <value signature="f_ut_get_status" name="f_ut_get_status" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__f_udunits_2_mod_f_ut_parse">
-        <value signature="__f_udunits_2_mod_f_ut_parse" name="__f_udunits_2_mod_f_ut_parse" returnType="unknown"/>
+      <providedOperations key="f_ut_parse">
+        <value signature="f_ut_parse" name="f_ut_parse" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__f_udunits_2_mod_f_ut_free_system">
-        <value signature="__f_udunits_2_mod_f_ut_free_system" name="__f_udunits_2_mod_f_ut_free_system" returnType="unknown"/>
+      <providedOperations key="f_ut_free_system">
+        <value signature="f_ut_free_system" name="f_ut_free_system" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="domain_module.f90">
     <value signature="domain_module.f90" name="domain_module.f90" package="demo">
-      <providedOperations key="__domain_module_mod_initdomain">
-        <value signature="__domain_module_mod_initdomain" name="__domain_module_mod_initdomain" returnType="unknown"/>
+      <providedOperations key="initdomain">
+        <value signature="initdomain" name="initdomain" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="init_vars.f90">
     <value signature="init_vars.f90" name="init_vars.f90" package="demo">
-      <providedOperations key="__init_vars_mod_init2dvarsi">
-        <value signature="__init_vars_mod_init2dvarsi" name="__init_vars_mod_init2dvarsi" returnType="unknown"/>
+      <providedOperations key="init2dvarsi">
+        <value signature="init2dvarsi" name="init2dvarsi" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__init_vars_mod_init2dvard">
-        <value signature="__init_vars_mod_init2dvard" name="__init_vars_mod_init2dvard" returnType="unknown"/>
+      <providedOperations key="init2dvard">
+        <value signature="init2dvard" name="init2dvard" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__init_vars_mod_init3dvard">
-        <value signature="__init_vars_mod_init3dvard" name="__init_vars_mod_init3dvard" returnType="unknown"/>
+      <providedOperations key="init3dvard">
+        <value signature="init3dvard" name="init3dvard" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="grid_module.f90">
     <value signature="grid_module.f90" name="grid_module.f90" package="demo">
-      <providedOperations key="__grid_module_mod_setgrideuler">
-        <value signature="__grid_module_mod_setgrideuler" name="__grid_module_mod_setgrideuler" returnType="unknown"/>
+      <providedOperations key="setgrideuler">
+        <value signature="setgrideuler" name="setgrideuler" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_setlon">
-        <value signature="__grid_module_mod_setlon" name="__grid_module_mod_setlon" returnType="unknown"/>
+      <providedOperations key="setlon">
+        <value signature="setlon" name="setlon" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_setlat">
-        <value signature="__grid_module_mod_setlat" name="__grid_module_mod_setlat" returnType="unknown"/>
+      <providedOperations key="setlat">
+        <value signature="setlat" name="setlat" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_setsin">
-        <value signature="__grid_module_mod_setsin" name="__grid_module_mod_setsin" returnType="unknown"/>
+      <providedOperations key="setsin">
+        <value signature="setsin" name="setsin" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_setcos">
-        <value signature="__grid_module_mod_setcos" name="__grid_module_mod_setcos" returnType="unknown"/>
+      <providedOperations key="setcos">
+        <value signature="setcos" name="setcos" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_settan">
-        <value signature="__grid_module_mod_settan" name="__grid_module_mod_settan" returnType="unknown"/>
+      <providedOperations key="settan">
+        <value signature="settan" name="settan" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_setland">
-        <value signature="__grid_module_mod_setland" name="__grid_module_mod_setland" returnType="unknown"/>
+      <providedOperations key="setland">
+        <value signature="setland" name="setland" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_setocean">
-        <value signature="__grid_module_mod_setocean" name="__grid_module_mod_setocean" returnType="unknown"/>
+      <providedOperations key="setocean">
+        <value signature="setocean" name="setocean" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_settopo">
-        <value signature="__grid_module_mod_settopo" name="__grid_module_mod_settopo" returnType="unknown"/>
+      <providedOperations key="settopo">
+        <value signature="settopo" name="settopo" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_setf">
-        <value signature="__grid_module_mod_setf" name="__grid_module_mod_setf" returnType="unknown"/>
+      <providedOperations key="setf">
+        <value signature="setf" name="setf" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__grid_module_mod_comparegridseuler">
-        <value signature="__grid_module_mod_comparegridseuler" name="__grid_module_mod_comparegridseuler" returnType="unknown"/>
+      <providedOperations key="comparegridseuler">
+        <value signature="comparegridseuler" name="comparegridseuler" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="vars_module.f90">
     <value signature="vars_module.f90" name="vars_module.f90" package="demo">
-      <providedOperations key="__vars_module_mod_initvars">
-        <value signature="__vars_module_mod_initvars" name="__vars_module_mod_initvars" returnType="unknown"/>
+      <providedOperations key="initvars">
+        <value signature="initvars" name="initvars" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__vars_module_mod_add2dtoregister">
-        <value signature="__vars_module_mod_add2dtoregister" name="__vars_module_mod_add2dtoregister" returnType="unknown"/>
+      <providedOperations key="add2dtoregister">
+        <value signature="add2dtoregister" name="add2dtoregister" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__vars_module_mod_getvarptrfromregister">
-        <value signature="__vars_module_mod_getvarptrfromregister" name="__vars_module_mod_getvarptrfromregister" returnType="unknown"/>
+      <providedOperations key="getvarptrfromregister">
+        <value signature="getvarptrfromregister" name="getvarptrfromregister" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__vars_module_mod_addvarptrtoregister">
-        <value signature="__vars_module_mod_addvarptrtoregister" name="__vars_module_mod_addvarptrtoregister" returnType="unknown"/>
+      <providedOperations key="addvarptrtoregister">
+        <value signature="addvarptrtoregister" name="addvarptrtoregister" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__vars_module_mod_add3dtoregister">
-        <value signature="__vars_module_mod_add3dtoregister" name="__vars_module_mod_add3dtoregister" returnType="unknown"/>
+      <providedOperations key="add3dtoregister">
+        <value signature="add3dtoregister" name="add3dtoregister" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__vars_module_mod_get2dfromregister">
-        <value signature="__vars_module_mod_get2dfromregister" name="__vars_module_mod_get2dfromregister" returnType="unknown"/>
+      <providedOperations key="get2dfromregister">
+        <value signature="get2dfromregister" name="get2dfromregister" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="generic_list.f90">
     <value signature="generic_list.f90" name="generic_list.f90" package="demo">
-      <providedOperations key="__generic_list_mod_list_init">
-        <value signature="__generic_list_mod_list_init" name="__generic_list_mod_list_init" returnType="unknown"/>
+      <providedOperations key="list_init">
+        <value signature="list_init" name="list_init" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__generic_list_mod_list_get">
-        <value signature="__generic_list_mod_list_get" name="__generic_list_mod_list_get" returnType="unknown"/>
+      <providedOperations key="list_get">
+        <value signature="list_get" name="list_get" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__generic_list_mod_list_next">
-        <value signature="__generic_list_mod_list_next" name="__generic_list_mod_list_next" returnType="unknown"/>
+      <providedOperations key="list_next">
+        <value signature="list_next" name="list_next" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__generic_list_mod_list_insert">
-        <value signature="__generic_list_mod_list_insert" name="__generic_list_mod_list_insert" returnType="unknown"/>
+      <providedOperations key="list_insert">
+        <value signature="list_insert" name="list_insert" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__generic_list_mod_list_free">
-        <value signature="__generic_list_mod_list_free" name="__generic_list_mod_list_free" returnType="unknown"/>
+      <providedOperations key="list_free">
+        <value signature="list_free" name="list_free" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="calc_lib.f90">
     <value signature="calc_lib.f90" name="calc_lib.f90" package="demo">
-      <providedOperations key="__calc_lib_mod_initcalclib">
-        <value signature="__calc_lib_mod_initcalclib" name="__calc_lib_mod_initcalclib" returnType="unknown"/>
+      <providedOperations key="initcalclib">
+        <value signature="initcalclib" name="initcalclib" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__calc_lib_mod_set2pointinterpolater">
-        <value signature="__calc_lib_mod_set2pointinterpolater" name="__calc_lib_mod_set2pointinterpolater" returnType="unknown"/>
+      <providedOperations key="set2pointinterpolater">
+        <value signature="set2pointinterpolater" name="set2pointinterpolater" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__calc_lib_mod_getoutgrid">
-        <value signature="__calc_lib_mod_getoutgrid" name="__calc_lib_mod_getoutgrid" returnType="unknown"/>
+      <providedOperations key="getoutgrid">
+        <value signature="getoutgrid" name="getoutgrid" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__calc_lib_mod_set4pointinterpolater">
-        <value signature="__calc_lib_mod_set4pointinterpolater" name="__calc_lib_mod_set4pointinterpolater" returnType="unknown"/>
+      <providedOperations key="set4pointinterpolater">
+        <value signature="set4pointinterpolater" name="set4pointinterpolater" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__calc_lib_mod_advancecalclib">
-        <value signature="__calc_lib_mod_advancecalclib" name="__calc_lib_mod_advancecalclib" returnType="unknown"/>
+      <providedOperations key="advancecalclib">
+        <value signature="advancecalclib" name="advancecalclib" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__calc_lib_mod_finishcalclib">
-        <value signature="__calc_lib_mod_finishcalclib" name="__calc_lib_mod_finishcalclib" returnType="unknown"/>
+      <providedOperations key="finishcalclib">
+        <value signature="finishcalclib" name="finishcalclib" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="time_integration_module.f90">
     <value signature="time_integration_module.f90" name="time_integration_module.f90" package="demo">
-      <providedOperations key="__time_integration_module_mod_time_integration_init">
-        <value signature="__time_integration_module_mod_time_integration_init" name="__time_integration_module_mod_time_integration_init" returnType="unknown"/>
+      <providedOperations key="time_integration_init">
+        <value signature="time_integration_init" name="time_integration_init" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__time_integration_module_mod_integrate_ab_vec">
-        <value signature="__time_integration_module_mod_integrate_ab_vec" name="__time_integration_module_mod_integrate_ab_vec" returnType="unknown"/>
+      <providedOperations key="integrate_ab_vec">
+        <value signature="integrate_ab_vec" name="integrate_ab_vec" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="swm_module.f90">
     <value signature="swm_module.f90" name="swm_module.f90" package="demo">
-      <providedOperations key="__swm_module_mod_swm_initswm">
-        <value signature="__swm_module_mod_swm_initswm" name="__swm_module_mod_swm_initswm" returnType="unknown"/>
+      <providedOperations key="swm_initswm">
+        <value signature="swm_initswm" name="swm_initswm" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_module_mod_swm_initialconditions">
-        <value signature="__swm_module_mod_swm_initialconditions" name="__swm_module_mod_swm_initialconditions" returnType="unknown"/>
+      <providedOperations key="swm_initialconditions">
+        <value signature="swm_initialconditions" name="swm_initialconditions" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_module_mod_swm_advance">
-        <value signature="__swm_module_mod_swm_advance" name="__swm_module_mod_swm_advance" returnType="unknown"/>
+      <providedOperations key="swm_advance">
+        <value signature="swm_advance" name="swm_advance" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_module_mod_swm_timestep">
-        <value signature="__swm_module_mod_swm_timestep" name="__swm_module_mod_swm_timestep" returnType="unknown"/>
+      <providedOperations key="swm_timestep">
+        <value signature="swm_timestep" name="swm_timestep" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_module_mod_swm_finishswm">
-        <value signature="__swm_module_mod_swm_finishswm" name="__swm_module_mod_swm_finishswm" returnType="unknown"/>
+      <providedOperations key="swm_finishswm">
+        <value signature="swm_finishswm" name="swm_finishswm" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="swm_vars.f90">
     <value signature="swm_vars.f90" name="swm_vars.f90" package="demo">
-      <providedOperations key="__swm_vars_mod_swm_vars_init">
-        <value signature="__swm_vars_mod_swm_vars_init" name="__swm_vars_mod_swm_vars_init" returnType="unknown"/>
+      <providedOperations key="swm_vars_init">
+        <value signature="swm_vars_init" name="swm_vars_init" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_vars_mod_swm_vars_finish">
-        <value signature="__swm_vars_mod_swm_vars_finish" name="__swm_vars_mod_swm_vars_finish" returnType="unknown"/>
+      <providedOperations key="swm_vars_finish">
+        <value signature="swm_vars_finish" name="swm_vars_finish" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="swm_timestep_module.f90">
     <value signature="swm_timestep_module.f90" name="swm_timestep_module.f90" package="demo">
-      <providedOperations key="__swm_timestep_module_mod_swm_timestep_init">
-        <value signature="__swm_timestep_module_mod_swm_timestep_init" name="__swm_timestep_module_mod_swm_timestep_init" returnType="unknown"/>
+      <providedOperations key="swm_timestep_init">
+        <value signature="swm_timestep_init" name="swm_timestep_init" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_computed">
-        <value signature="__swm_timestep_module_mod_computed" name="__swm_timestep_module_mod_computed" returnType="unknown"/>
+      <providedOperations key="computed">
+        <value signature="computed" name="computed" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_computerelvort">
-        <value signature="__swm_timestep_module_mod_computerelvort" name="__swm_timestep_module_mod_computerelvort" returnType="unknown"/>
+      <providedOperations key="computerelvort">
+        <value signature="computerelvort" name="computerelvort" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_computepotvort">
-        <value signature="__swm_timestep_module_mod_computepotvort" name="__swm_timestep_module_mod_computepotvort" returnType="unknown"/>
+      <providedOperations key="computepotvort">
+        <value signature="computepotvort" name="computepotvort" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_computeedens">
-        <value signature="__swm_timestep_module_mod_computeedens" name="__swm_timestep_module_mod_computeedens" returnType="unknown"/>
+      <providedOperations key="computeedens">
+        <value signature="computeedens" name="computeedens" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_computemassfluxes">
-        <value signature="__swm_timestep_module_mod_computemassfluxes" name="__swm_timestep_module_mod_computemassfluxes" returnType="unknown"/>
+      <providedOperations key="computemassfluxes">
+        <value signature="computemassfluxes" name="computemassfluxes" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_swm_timestep_advance">
-        <value signature="__swm_timestep_module_mod_swm_timestep_advance" name="__swm_timestep_module_mod_swm_timestep_advance" returnType="unknown"/>
+      <providedOperations key="swm_timestep_advance">
+        <value signature="swm_timestep_advance" name="swm_timestep_advance" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_swm_timestep_step">
-        <value signature="__swm_timestep_module_mod_swm_timestep_step" name="__swm_timestep_module_mod_swm_timestep_step" returnType="unknown"/>
+      <providedOperations key="swm_timestep_step">
+        <value signature="swm_timestep_step" name="swm_timestep_step" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_alreadystepped">
-        <value signature="__swm_timestep_module_mod_alreadystepped" name="__swm_timestep_module_mod_alreadystepped" returnType="unknown"/>
+      <providedOperations key="alreadystepped">
+        <value signature="alreadystepped" name="alreadystepped" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_swm_timestep_nonlinear">
-        <value signature="__swm_timestep_module_mod_swm_timestep_nonlinear" name="__swm_timestep_module_mod_swm_timestep_nonlinear" returnType="unknown"/>
+      <providedOperations key="swm_timestep_nonlinear">
+        <value signature="swm_timestep_nonlinear" name="swm_timestep_nonlinear" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_timestep_module_mod_swm_timestep_finish">
-        <value signature="__swm_timestep_module_mod_swm_timestep_finish" name="__swm_timestep_module_mod_swm_timestep_finish" returnType="unknown"/>
+      <providedOperations key="swm_timestep_finish">
+        <value signature="swm_timestep_finish" name="swm_timestep_finish" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="swm_lateralmixing_module.f90">
     <value signature="swm_lateralmixing_module.f90" name="swm_lateralmixing_module.f90" package="demo">
-      <providedOperations key="__swm_lateralmixing_module_mod_swm_lateralmixing_init">
-        <value signature="__swm_lateralmixing_module_mod_swm_lateralmixing_init" name="__swm_lateralmixing_module_mod_swm_lateralmixing_init" returnType="unknown"/>
+      <providedOperations key="swm_lateralmixing_init">
+        <value signature="swm_lateralmixing_init" name="swm_lateralmixing_init" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_lateralmixing_module_mod_swm_lateralmixing_init_p_coefficients">
-        <value signature="__swm_lateralmixing_module_mod_swm_lateralmixing_init_p_coefficients" name="__swm_lateralmixing_module_mod_swm_lateralmixing_init_p_coefficients" returnType="unknown"/>
+      <providedOperations key="swm_lateralmixing_init_p_coefficients">
+        <value signature="swm_lateralmixing_init_p_coefficients" name="swm_lateralmixing_init_p_coefficients" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_lateralmixing_module_mod_swm_lateralmixing_step">
-        <value signature="__swm_lateralmixing_module_mod_swm_lateralmixing_step" name="__swm_lateralmixing_module_mod_swm_lateralmixing_step" returnType="unknown"/>
+      <providedOperations key="swm_lateralmixing_step">
+        <value signature="swm_lateralmixing_step" name="swm_lateralmixing_step" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_lateralmixing_module_mod_swm_lateralmixing_compute_p">
-        <value signature="__swm_lateralmixing_module_mod_swm_lateralmixing_compute_p" name="__swm_lateralmixing_module_mod_swm_lateralmixing_compute_p" returnType="unknown"/>
+      <providedOperations key="swm_lateralmixing_compute_p">
+        <value signature="swm_lateralmixing_compute_p" name="swm_lateralmixing_compute_p" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_lateralmixing_module_mod_swm_lateralmixing_compute_uv">
-        <value signature="__swm_lateralmixing_module_mod_swm_lateralmixing_compute_uv" name="__swm_lateralmixing_module_mod_swm_lateralmixing_compute_uv" returnType="unknown"/>
+      <providedOperations key="swm_lateralmixing_compute_uv">
+        <value signature="swm_lateralmixing_compute_uv" name="swm_lateralmixing_compute_uv" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_lateralmixing_module_mod_swm_lateralmixing_finish">
-        <value signature="__swm_lateralmixing_module_mod_swm_lateralmixing_finish" name="__swm_lateralmixing_module_mod_swm_lateralmixing_finish" returnType="unknown"/>
+      <providedOperations key="swm_lateralmixing_finish">
+        <value signature="swm_lateralmixing_finish" name="swm_lateralmixing_finish" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_lateralmixing_module_mod_swm_lateralmixing_finish_p_coefficients">
-        <value signature="__swm_lateralmixing_module_mod_swm_lateralmixing_finish_p_coefficients" name="__swm_lateralmixing_module_mod_swm_lateralmixing_finish_p_coefficients" returnType="unknown"/>
+      <providedOperations key="swm_lateralmixing_finish_p_coefficients">
+        <value signature="swm_lateralmixing_finish_p_coefficients" name="swm_lateralmixing_finish_p_coefficients" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="swm_damping_module.f90">
     <value signature="swm_damping_module.f90" name="swm_damping_module.f90" package="demo">
-      <providedOperations key="__swm_damping_module_mod_swm_damping_init">
-        <value signature="__swm_damping_module_mod_swm_damping_init" name="__swm_damping_module_mod_swm_damping_init" returnType="unknown"/>
+      <providedOperations key="swm_damping_init">
+        <value signature="swm_damping_init" name="swm_damping_init" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_damping_module_mod_getdampingcoefficient">
-        <value signature="__swm_damping_module_mod_getdampingcoefficient" name="__swm_damping_module_mod_getdampingcoefficient" returnType="unknown"/>
+      <providedOperations key="getdampingcoefficient">
+        <value signature="getdampingcoefficient" name="getdampingcoefficient" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_damping_module_mod_setdefault_swm_damping_nl">
-        <value signature="__swm_damping_module_mod_setdefault_swm_damping_nl" name="__swm_damping_module_mod_setdefault_swm_damping_nl" returnType="unknown"/>
+      <providedOperations key="setdefault_swm_damping_nl">
+        <value signature="setdefault_swm_damping_nl" name="setdefault_swm_damping_nl" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_damping_module_mod_getspongelayer">
-        <value signature="__swm_damping_module_mod_getspongelayer" name="__swm_damping_module_mod_getspongelayer" returnType="unknown"/>
+      <providedOperations key="getspongelayer">
+        <value signature="getspongelayer" name="getspongelayer" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_damping_module_mod_swm_damping_finish">
-        <value signature="__swm_damping_module_mod_swm_damping_finish" name="__swm_damping_module_mod_swm_damping_finish" returnType="unknown"/>
+      <providedOperations key="swm_damping_finish">
+        <value signature="swm_damping_finish" name="swm_damping_finish" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="swm_forcing_module.f90">
     <value signature="swm_forcing_module.f90" name="swm_forcing_module.f90" package="demo">
-      <providedOperations key="__swm_forcing_module_mod_swm_forcing_init">
-        <value signature="__swm_forcing_module_mod_swm_forcing_init" name="__swm_forcing_module_mod_swm_forcing_init" returnType="unknown"/>
+      <providedOperations key="swm_forcing_init">
+        <value signature="swm_forcing_init" name="swm_forcing_init" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_forcing_module_mod_swm_forcing_getforcing">
-        <value signature="__swm_forcing_module_mod_swm_forcing_getforcing" name="__swm_forcing_module_mod_swm_forcing_getforcing" returnType="unknown"/>
+      <providedOperations key="swm_forcing_getforcing">
+        <value signature="swm_forcing_getforcing" name="swm_forcing_getforcing" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_forcing_module_mod_swm_forcing_update">
-        <value signature="__swm_forcing_module_mod_swm_forcing_update" name="__swm_forcing_module_mod_swm_forcing_update" returnType="unknown"/>
+      <providedOperations key="swm_forcing_update">
+        <value signature="swm_forcing_update" name="swm_forcing_update" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__swm_forcing_module_mod_swm_forcing_finish">
-        <value signature="__swm_forcing_module_mod_swm_forcing_finish" name="__swm_forcing_module_mod_swm_forcing_finish" returnType="unknown"/>
+      <providedOperations key="swm_forcing_finish">
+        <value signature="swm_forcing_finish" name="swm_forcing_finish" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="diag_module.f90">
     <value signature="diag_module.f90" name="diag_module.f90" package="demo">
-      <providedOperations key="__diag_module_mod_initdiag">
-        <value signature="__diag_module_mod_initdiag" name="__diag_module_mod_initdiag" returnType="unknown"/>
+      <providedOperations key="initdiag">
+        <value signature="initdiag" name="initdiag" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diag_module_mod_diag">
-        <value signature="__diag_module_mod_diag" name="__diag_module_mod_diag" returnType="unknown"/>
+      <providedOperations key="diag">
+        <value signature="diag" name="diag" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diag_module_mod_finishdiag">
-        <value signature="__diag_module_mod_finishdiag" name="__diag_module_mod_finishdiag" returnType="unknown"/>
+      <providedOperations key="finishdiag">
+        <value signature="finishdiag" name="finishdiag" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="diagtask.f90">
     <value signature="diagtask.f90" name="diagtask.f90" package="demo">
-      <providedOperations key="__diagtask_mod_initdiagtasklist">
-        <value signature="__diagtask_mod_initdiagtasklist" name="__diagtask_mod_initdiagtasklist" returnType="unknown"/>
+      <providedOperations key="initdiagtasklist">
+        <value signature="initdiagtasklist" name="initdiagtasklist" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_readdiagnl">
-        <value signature="__diagtask_mod_readdiagnl" name="__diagtask_mod_readdiagnl" returnType="unknown"/>
+      <providedOperations key="readdiagnl">
+        <value signature="readdiagnl" name="readdiagnl" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_initdiagtask">
-        <value signature="__diagtask_mod_initdiagtask" name="__diagtask_mod_initdiagtask" returnType="unknown"/>
+      <providedOperations key="initdiagtask">
+        <value signature="initdiagtask" name="initdiagtask" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_getvardatafromregister">
-        <value signature="__diagtask_mod_getvardatafromregister" name="__diagtask_mod_getvardatafromregister" returnType="unknown"/>
+      <providedOperations key="getvardatafromregister">
+        <value signature="getvardatafromregister" name="getvardatafromregister" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_createtaskds">
-        <value signature="__diagtask_mod_createtaskds" name="__diagtask_mod_createtaskds" returnType="unknown"/>
+      <providedOperations key="createtaskds">
+        <value signature="createtaskds" name="createtaskds" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_processtasklist">
-        <value signature="__diagtask_mod_processtasklist" name="__diagtask_mod_processtasklist" returnType="unknown"/>
+      <providedOperations key="processtasklist">
+        <value signature="processtasklist" name="processtasklist" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_processtask">
-        <value signature="__diagtask_mod_processtask" name="__diagtask_mod_processtask" returnType="unknown"/>
+      <providedOperations key="processtask">
+        <value signature="processtask" name="processtask" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_writetasktofile">
-        <value signature="__diagtask_mod_writetasktofile" name="__diagtask_mod_writetasktofile" returnType="unknown"/>
+      <providedOperations key="writetasktofile">
+        <value signature="writetasktofile" name="writetasktofile" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_finishdiagtasklist">
-        <value signature="__diagtask_mod_finishdiagtasklist" name="__diagtask_mod_finishdiagtasklist" returnType="unknown"/>
+      <providedOperations key="finishdiagtasklist">
+        <value signature="finishdiagtasklist" name="finishdiagtasklist" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagtask_mod_finishdiagtask">
-        <value signature="__diagtask_mod_finishdiagtask" name="__diagtask_mod_finishdiagtask" returnType="unknown"/>
+      <providedOperations key="finishdiagtask">
+        <value signature="finishdiagtask" name="finishdiagtask" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
   <componentTypes key="diagvar.f90">
     <value signature="diagvar.f90" name="diagvar.f90" package="demo">
-      <providedOperations key="__diagvar_mod_resetdiagvarlist">
-        <value signature="__diagvar_mod_resetdiagvarlist" name="__diagvar_mod_resetdiagvarlist" returnType="unknown"/>
+      <providedOperations key="resetdiagvarlist">
+        <value signature="resetdiagvarlist" name="resetdiagvarlist" returnType="unknown"/>
       </providedOperations>
-      <providedOperations key="__diagvar_mod_finishdiagvarlist">
-        <value signature="__diagvar_mod_finishdiagvarlist" name="__diagvar_mod_finishdiagvarlist" returnType="unknown"/>
+      <providedOperations key="finishdiagvarlist">
+        <value signature="finishdiagvarlist" name="finishdiagvarlist" returnType="unknown"/>
       </providedOperations>
     </value>
   </componentTypes>
