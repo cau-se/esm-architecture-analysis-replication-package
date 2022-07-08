@@ -14,11 +14,11 @@ export DATA_PATH="$BASE_DIR/dynamic-data"
 export DYNAMIC_DATA_PATH="${DATA_PATH}"
 export STATIC_DATA_PATH="$BASE_DIR/static-data"
 
-# prepocessor
-PREPROCESS="${BASE_DIR}/../pp-static-log/bin/pp-static-log"
-
-# arcitecture analysis tool
-ANALYSIS="${BASE_DIR}/../create-architecture-model/bin/create-architecture-model"
+DAR="${BASE_DIR}/../oceandsl-tools/bin/dar"
+SAR="${BASE_DIR}/../oceandsl-tools/bin/sar"
+MAA="${BASE_DIR}/../oceandsl-tools/bin/maa"
+MOP="${BASE_DIR}/../oceandsl-tools/bin/mop"
+MVIS="${BASE_DIR}/../oceandsl-tools/bin/mvis"
 
 # collector tool
 COLLECTOR="${BASE_DIR}/../collector-1.15-SNAPSHOT/bin/collector"

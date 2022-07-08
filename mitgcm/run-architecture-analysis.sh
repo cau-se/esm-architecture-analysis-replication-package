@@ -2,6 +2,8 @@
 
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
+. "${BASE_DIR}/../common-functions.rc"
+
 if [ "$1" != "" ] ; then
         export NAME="$1"
 else
@@ -16,25 +18,32 @@ else
         exit 1
 fi
 
-if [ ! -d "${DYNAMIC_DATA_PATH}" ] ; then
-	echo "DYNAMIC_DATA_PATH missing or not a directory."
-	exit 1
-fi
-if [ ! -d "${STATIC_DATA_PATH}" ] ; then
-	echo "STATIC_DATA_PATH missing or not a directory."
-	exit 1
-fi
+# inputs
+checkDirectory "Dynamic data" "${DYNAMIC_DATA_PATH}"
+checkDirectory "Static data" "${STATIC_DATA_PATH}"
 
+# outputs
 DYNAMIC_RESULT="$BASE_DIR/dynamic-result"
 DYNAMIC_FILE_MODEL="$BASE_DIR/dynamic-model/file-$NAME"
 DYNAMIC_MAP_MODEL="$BASE_DIR/dynamic-model/map-$NAME"
+
+STATIC_RESULT="$BASE_DIR/static-result"
+STATIC_FILE_MODEL="$BASE_DIR/static-model/file-$NAME"
+STATIC_MAP_MODEL="$BASE_DIR/static-model/map-$NAME"
 
 COMBINED_RESULT="$BASE_DIR/combined-result"
 COMBINED_FILE_MODEL="$BASE_DIR/combined-model/file-$NAME"
 COMBINED_MAP_MODEL="$BASE_DIR/combined-model/map-$NAME"
 
+INTERFACE_RESULT="$BASE_DIR/combined-result"
+INTERFACE_FILE_MODEL="$BASE_DIR/combined-model/file-$NAME"
+INTERFACE_MAP_MODEL="$BASE_DIR/combined-model/map-$NAME"
+
+# inputs
 KIEKER_LOG=${DYNAMIC_DATA_PATH}/`ls ${DYNAMIC_DATA_PATH}/ | grep kieker | grep $NAME`
+
 STATIC_LOG="${STATIC_DATA_PATH}/MITgcm-$NAME/coupling.csv"
+STATIC_DATAFLOW_LOG="${STATIC_DATA_PATH}/MITgcm-$NAME/dataflow.csv"
 
 STATIC_FUNCTION_MAP="${STATIC_DATA_PATH}/MITgcm-$NAME/functionnames.csv"
 ADDITIONAL_FUNCTION_MAP="${STATIC_DATA_PATH}/additional-functionnames.csv"
@@ -43,78 +52,80 @@ GLOBAL_FUNCTION_MAP="${STATIC_DATA_PATH}/mitgcm-functionnames.csv"
 STATIC_LOG_CORRECTED="${STATIC_DATA_PATH}/MITgcm-$NAME/corrected-coupling.csv"
 STATIC_MODULE_MAP="${STATIC_DATA_PATH}/module-file-function-map.csv"
 
-if [ ! -d "${KIEKER_LOG}" ] ; then
-        echo "Cannot find kieker log ${KIEKER_LOG}"
-        exit 1
-fi
-if [ ! -f "${STATIC_LOG}" ] ; then
-        echo "Cannot find static log ${STATIC_LOG}"
-        exit 1
-fi
-if [ ! -f "${STATIC_FUNCTION_MAP}" ] ; then
-        echo "Cannot find function map ${STATIC_FUNCTION_MAP}"
-        exit 1
-fi
+## check tools and directories
+checkExecutable "dynamic architecture analysis" "${DAR}"
+checkExecutable "dynamic architecture analysis" "${SAR}"
+checkExecutable "computing interfaces" "${MAA}"
+checkExecutable "visualization and statistics" "${MIVS}"
+
+## check directories and data
+checkDirectory "Kieker Log" "${KIEKER_LOG}"
+checkFile "Static Log" "${STATIC_LOG}"
+checkFile "Static dataflow Log" "${STATIC_DATAFLOW_LOG}"
+checkFile "Static function map" "${STATIC_FUNCTION_MAP}"
+
+checkFile "Executable" "${EXECUTABLE}"
+checkFile "addr2line" "${ADDR2LINE}"
 
 # Creating directories
-if [ -d "${DYNAMIC_RESULT}" ] ; then
-	rm -f ${DYNAMIC_RESULT}/$NAME-*
-else
-        mkdir -p "${DYNAMIC_RESULT}"
-fi
-if [ -d "${DYNAMIC_FILE_MODEL}" ] ; then
-	rm -rf "${DYNAMIC_FILE_MODEL}"
-fi
-mkdir -p "${DYNAMIC_FILE_MODEL}"
-if [ -d "${DYNAMIC_MAP_MODEL}" ] ; then
-	rm -rf "${DYNAMIC_MAP_MODEL}"
-fi
-mkdir -p "${DYNAMIC_MAP_MODEL}"
+prepareDirectory "${DYNAMIC_RESULT}"
+prepareDirectory "${DYNAMIC_FILE_MODEL}"
+prepareDirectory "${DYNAMIC_MAP_MODEL}"
 
-if [ -d "${COMBINED_RESULT}" ] ; then
-	rm -f ${COMBINED_RESULT}/$NAME-*
-else
-        mkdir -p "${COMBINED_RESULT}"
-fi
+prepareDirectory "${STATIC_RESULT}"
+prepareDirectory "${STATIC_FILE_MODEL}"
+prepareDirectory "${STATIC_MAP_MODEL}"
 
-if [ -d "${COMBINED_FILE_MODEL}" ] ; then
-	rm -rf "${COMBINED_FILE_MODEL}"
-fi
-mkdir -p "${COMBINED_FILE_MODEL}"
-if [ -d "${COMBINED_MAP_MODEL}" ] ; then
-	rm -rf "${COMBINED_MAP_MODEL}"
-fi
-mkdir -p "${COMBINED_MAP_MODEL}"
+prepareDirectory "${COMBINED_RESULT}"
+prepareDirectory "${COMBINED_FILE_MODEL}"
+prepareDirectory "${COMBINED_MAP_MODEL}"
 
-echo "------------------------------------------------"
-echo "${NAME}"
-echo "------------------------------------------------"
+prepareDirectory "${INTERFACE_RESULT}"
+prepareDirectory "${INTERFACE_FILE_MODEL}"
+prepareDirectory "${INTERFACE_MAP_MODEL}"
 
-echo "Preprocess static log to fill in callee file names"
-$PREPROCESS -i "${STATIC_LOG}" -m "${STATIC_FUNCTION_MAP}" "${ADDITIONAL_FUNCTION_MAP}" "${GLOBAL_FUNCTION_MAP}" -o "${STATIC_LOG_CORRECTED}"
+information "------------------------------------------------"
+information "${NAME}"
+information "------------------------------------------------"
 
-export CREATE_ARCHITECTURE_MODEL_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.groovy"
 
-echo ""
-echo "** File Mode **"
-echo "Analysis kieker log ${KIEKER_LOG}"
-$ANALYSIS -m kieker -i "${KIEKER_LOG}" -o "${DYNAMIC_RESULT}" -a "${ADDR2LINE}" -e "${EXECUTABLE}" -oa "${DYNAMIC_FILE_MODEL}" -l dynamic -E $NAME -c -g dot-component
+information "Process dynamic data to model"
+"${DAR}" -i "${KIEKER_LOG}" -c -o "${DYNAMIC_FILE_MODEL}" -e "${EXECUTABLE}" -a "${ADDR2LINE}" -E "${EXPERIMENT_NAME}" \\
+	-l dynamic -m file-mode -s elf
+"${DAR}" -i "${KIEKER_LOG}" -c -o "${DYNAMIC_MAP_MODEL}" -e "${EXECUTABLE}" -a "${ADDR2LINE}" -E "${EXPERIMENT_NAME}" \\
+	-l dynamic -m map-mode -s elf -M "${STATIC_MODULE_MAP}"
 
-echo ""
-echo "Analysis the corrected static caller-callee log ${STATIC_LOG_CORRECTED}"
-$ANALYSIS -m csv -i "${STATIC_LOG_CORRECTED}" -o "${COMBINED_RESULT}" -ia "${DYNAMIC_FILE_MODEL}" -oa "${COMBINED_FILE_MODEL}" -l static -E $NAME -H $HOST -c -g dot-component
+information "Process static data to model"
+"${SAR}" -i "${STATIC_LOG}" -j "${STATIC_DATAFLOW_LOG}" -c -E "${EXPERIMENT_NAME}" \\
+	-f "${STATIC_FUNCTION_MAP}" "${ADDITIONAL_FUNCTION_MAP}" "${GLOBAL_FUNCTION_MAP}" \\
+	-H "${HOST}" \\
+	-o "${STATIC_FILE_MODEL}" -l static -ns ";" -ds ";" -cs ";"
+"${SAR}" -i "${STATIC_LOG}" -j "${STATIC_DATAFLOW_LOG}" -c -E "${EXPERIMENT_NAME}" \\
+	-f "${STATIC_FUNCTION_MAP}" "${ADDITIONAL_FUNCTION_MAP}" "${GLOBAL_FUNCTION_MAP}" \\
+	-H "${HOST}" -M "${STATIC_MODULE_MAP}" -m "${MISSING_FUNCTIONS_LIST}" \\
+	-o "${STATIC_FILE_MODEL}" -l static -ns ";" -ds ";" -cs ";"
 
-echo ""
-echo "** Map Mode **"
-echo "Analysis kieker log ${KIEKER_LOG}"
-$ANALYSIS -m kieker -i "${KIEKER_LOG}" -o "${DYNAMIC_RESULT}" -a "${ADDR2LINE}" -e "${EXECUTABLE}" -oa "${DYNAMIC_MAP_MODEL}" -l dynamic -E $NAME -c -M "${STATIC_MODULE_MAP}" -g dot-component
+information "Combine models"
+"${MOP}" -i "${DYNAMIC_FILE_MODEL}" "${STATIC_FILE_MODEL}" -o "${COMBINED_FILE_MODEL}" -e merged
+"${MOP}" -i "${DYNAMIC_MAP_MODEL}" "${STATIC_MAP_MODEL}" -o "${COMBINED_MAP_MODEL}" -e merged
 
-echo ""
-echo "Analysis the corrected static caller-callee log ${STATIC_LOG_CORRECTED}"
-$ANALYSIS -m csv -i "${STATIC_LOG_CORRECTED}" -o "${COMBINED_RESULT}" -ia "${DYNAMIC_MAP_MODEL}" -oa "${COMBINED_MAP_MODEL}" -l static -E $NAME -H $HOST -c -M "${STATIC_MODULE_MAP}" -g dot-component
+information "Compute Interfaces"
+"${MAA}" -i "${COMBINED_FILE_MODEL}" -o "${INTERFACE_FILE_MODEL}" -I -c -s
+"${MAA}" -i "${COMBINED_MAP_MODEL}" -o "${INTERFACE_MAP_MODEL}" -I -c -s
 
-echo ""
-echo "Done"
-echo ""
+information "Compute statistics"
+"${MVIS}" -i "${DYNAMIC_FILE_MODEL}" -o "${DYNAMIC_RESULT}" -s all -g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${STATIC_FILE_MODEL}" -o "${STATIC_RESULT}" -s all -g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${COMBINED_FILE_MODEL}" -o "${COMBINED_RESULT}" -s all -g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${INTERFACE_FILE_MODEL}" -o "${INTERFACE_RESULT}" -s all -g dot-op dot-component -m add-nodes
+
+"${MVIS}" -i "${DYNAMIC_MAP_MODEL}" -o "${DYNAMIC_RESULT}" -s all -g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${STATIC_MAP_MODEL}" -o "${STATIC_RESULT}" -s all -g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${COMBINED_MAP_MODEL}" -o "${COMBINED_RESULT}" -s all -g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${INTERFACE_MAP_MODEL}" -o "${INTERFACE_RESULT}" -s all -g dot-op dot-component -m add-nodes
+
+information ""
+information "Done"
+information ""
 
 # end
