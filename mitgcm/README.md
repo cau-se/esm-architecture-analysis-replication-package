@@ -76,6 +76,7 @@ i.e., the observation of the model behavior at runtime.
 
 ```
 cd kieker-lang-pack-c
+cd source
 ```
 
 Follow the installation instructions there. In short perform the following
