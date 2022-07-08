@@ -20,6 +20,7 @@ Buster on AMD64/Intel 64 bit CPUs.
 - Other
   - Git
   - Bash
+- Follow the installation instructions in the global README.md
 
 ## Preparations
 
@@ -39,19 +40,6 @@ Clone the *mitgcm* repository.
 ```
 git clone https://github.com/MITgcm/MITgcm.git
 ```
-
-
-From the Kieker binary distribution archive, extract the file
-`kieker-1.14/tools/collector-1.14.zip` from the archive.
-Then unpack the tool as follows:
-```
-unzip collector.zip
-```
-
-This installs the collector tool alongside the two tools from OceanDSL.
-
-Please note: You can also use the more recent binary distribution
-kieker-1.15-SNAPSHOT.
 
 ## Test MITgcm 
 
