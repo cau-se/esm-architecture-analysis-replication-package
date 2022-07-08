@@ -38,7 +38,7 @@ git clone https://git.se.informatik.uni-kiel.de/oceandsl/ecsa-mitgcm.git
 Clone the *oceandsl-java-tools* or retrieve them from the replication
 package.
 ```
-git clone https://git.se.informatik.uni-kiel.de/oceandsl/oceandsl-java-tools
+git clone https://git.se.informatik.uni-kiel.de/oceandsl/oceandsl-tools.git
 ```
 
 Clone the *mitgcm* repository.
@@ -48,25 +48,25 @@ git clone https://github.com/MITgcm/MITgcm.git
 
 Clone the *kieker-lang-pack-c* repository.
 ```
-git clone https://github.com/kieker-monitoring/kieker-lang-pack-c
+git clone https://github.com/kieker-monitoring/kieker-lang-pack-c.git
 ```
 
 ## Java Tools
 
 Building the Java tools should be straight forward. Enter:
 ```
-cd oceandsl-java-tools
+cd oceandsl-tools
 ./gradlew clean build
+./assemble-tools.sh
 cd ..
 ```
 
 Install both tools as follows:
 ```
-tar -xpf oceandsl-java-tools/tools/create-architecture-model/build/distributions/create-architecture-model.tar
-tar -xpf oceandsl-java-tools/tools/pp-static-log/build/distributions/pp-static-log.tar
+tar -xpf oceandsl-tools/build/oceandsl-tools.tgz
 ```
 
-This creates two directories in your experiments folder containing
+This creates a directory in your experiments folder containing
 the respective tools in a bin folder.
 
 ## Install Kieker
