@@ -24,16 +24,20 @@ Buster on AMD64/Intel 64 bit CPUs.
 
 ## Preparations
 
-Create a workspace for the analyis, e.g., `experiments`, and switch to
-this directory.
-```
-mkdir experients
-cd experiments
-```
+We assume that you have read the setup instructions in the main README.md and
+that you follow the directory layout discussed there. In case you have chosen
+another structure, please adapt directories accordingly.
 
-Clone the *ecsa-mitgcm* git repository containing the setup scripts.
+Please note that the ${REPLICATION_DIR} is the main directory of the whole
+setup and ${SCRIPTS_DIR} is the directory of this README.md file, e.g.,
+`${REPLICATION_DIR}/esm-architecture-analysis-replication-package/models/mitgcm`
+
+Create a workspace directory for the analyis, e.g., `experiments/mitgcm`, and
+switch to this directory.
 ```
-git clone https://git.se.informatik.uni-kiel.de/oceandsl/ecsa-mitgcm.git
+cd ${REPLICATION_DIR}
+mkdir -p experients/mitgcm
+cd experiments/mitgcm
 ```
 
 Clone the *mitgcm* repository.
@@ -78,59 +82,52 @@ To run:
 
 You should check the `output.txt` file for errors.
 
-If all works well, go back to the `experiments` directory, e.g.,
+If all works well, go back to the `experiments/mitgcm` directory, e.g.,
 ```
 cd ../..
 ```
 
 ## Setting up the Experiments
 
-Lets assume you are in the main `experiments` folder.
-Switch to `ecsa-mitgcm`.
-```
-cd ecsa-mitgcm
-```
+Lets assume you are in the `${SCRIPTS}` directory.
 
-Here you need to create a `config` file. There are examples of the 
-file available. Lets assume your user account is called `trillian` and
-the home directory is `/home/trillian` containing the `experiments`
-folder. Then the configuration file should look like this:
+Here you need to create a `config` file. You can use the `config.template` that
+resides alongside this `README.md`-file.
+
+Then the configuration file should look like this:
 
 ```
 # PREFIX for the mitgcm model variants
-PREFIX="/home/trillian/experiments/MITgcm/verification"
+PREFIX="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification"
 
 # Library path including Kieker libraries
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/trillian/experiments/kieker-lang-pack-c/libkieker/.libs"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${REPLICATION_DIR}/kieker/lib/"
 
 # Compile configurtion for kieker
-export CONFIGURATION="${BASE_DIR}/linux_amd64_gfortran_kieker"
-
-# Location for the observed monitoring data for each model variant
-export DATA_PATH="$BASE_DIR/dynamic-data"
+export CONFIGURATION="${REPLICATION_DIR}/experiments/mitgcm/linux_amd64_gfortran_kieker"
 
 # Location for dynamic and static data
-export DYNAMIC_DATA_PATH="${DATA_PATH}"
-export STATIC_DATA_PATH="$BASE_DIR/static-data"
+export DYNAMIC_DATA_PATH="${REPLICATION_DIR}/experiments/mitgcm/dynamic-data"
+export STATIC_DATA_PATH="${REPLICATION_DIR}/experiments/mitgcm/static-data"
 
-# prepocessor
-PREPROCESS="${BASE_DIR}/../pp-static-log/bin/pp-static-log"
+DAR="${REPLICATION_DIR}/oceandsl-tools/bin/dar"
+SAR="${REPLICATION_DIR}/oceandsl-tools/bin/sar"
+MAA="${REPLICATION_DIR}/oceandsl-tools/bin/maa"
+MOP="${REPLICATION_DIR}/oceandsl-tools/bin/mop"
+MVIS="${REPLICATION_DIR}/oceandsl-tools/bin/mvis"
 
-# arcitecture analysis tool
-ANALYSIS="${BASE_DIR}/../create-architecture-model/bin/create-architecture-model"
-
-# collector tool 
-COLLECTOR="${BASE_DIR}/../collector-1.14/bin/collector"
+# collector tool
+COLLECTOR="${REPLICATION_DIR}/collector/bin/collector"
 
 # addr2line
 ADDR2LINE=`which addr2line`
 
 # Path to the executable
-EXECUTABLE="$BASE_DIR/../MITgcm/verification/$NAME/build/mitgcmuv"
+EXECUTABLE="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification/$NAME/build/mitgcmuv"
 
 # Dynamic and static prefix
 DYNAMIC_PREFIX="$PREFIX/$NAME/build/"
-STATIC_PREFIX="/home/trillian/experiments/PlayPython/resources/preprocessed/MITgcm-$NAME/"
+STATIC_PREFIX="/home/hschnoor/eclipse-workspace/PlayPython/resources/preprocessed/MITgcm-$NAME/"
 
 # Hostname where the dynamic analysis was executed
 HOST=lisboa
@@ -151,7 +148,8 @@ one experiment only.
 
 To run a single experiment you can type
 ```
-./run-dynamic-observation.sh tutorial_barotropic_gyre
+cd ${SCRIPTS_DIR}
+./run-dynamic-observation.sh" tutorial_barotropic_gyre
 ```
 where `tutorial_barotropic_gyre` is the experiment to be executed.
 
@@ -169,7 +167,7 @@ at `https://mitgcm.readthedocs.io/en/latest/examples/examples.html`.
 
 ## Static Analysis
 
--- added here --
+-- added here -- TODO (hs)
 
 ## Architecture Reconstruction
 
