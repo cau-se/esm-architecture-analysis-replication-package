@@ -3,6 +3,8 @@
 BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 EXPERIMENTS="${BASE_DIR}/experiments"
 
+. "${BASE_DIR}/../../common-functions.rc"
+
 if [ -f "$BASE_DIR/config" ] ; then
         . $BASE_DIR/config
 else
@@ -10,7 +12,10 @@ else
         exit 1
 fi
 
-export DATA_PATH=${DATA_PATH//\//\\/}
+export DATA_PATH_COLLECTOR=${DYNAMIC_DATA_PATH//\//\\/}
+
+checkDirectory "MITgcm directory" "${PREFIX}"
+checkFile "MITgcm target platform" "${CONFIGURATION}"
 
 cd "${PREFIX}"
 
@@ -24,9 +29,13 @@ else
 fi
 
 for I in `cat "${EXPERIMENTS}"` ; do
+	# create data sink location
+	rm -rf "${DYNAMIC_DATA_PATH}"
+	mkdir -p "${DYNAMIC_DATA_PATH}"
+
 	# start collector
-	echo "Starting collector"
-	cat $BASE_DIR/collector.conf.template | sed "s/%EXPERIMENT%/$I/g" | sed "s/%DATA_PATH%/$DATA_PATH/g" > $BASE_DIR/collector.conf
+	information "Starting collector fo $I"
+	cat $BASE_DIR/collector.conf.template | sed "s/%EXPERIMENT%/$I/g" | sed "s/%DATA_PATH%/${DATA_PATH_COLLECTOR}/g" > $BASE_DIR/collector.conf
 	"${COLLECTOR}" -c "${BASE_DIR}/collector.conf" &
 	export COLLECTOR_PID=$!
 
@@ -35,15 +44,15 @@ for I in `cat "${EXPERIMENTS}"` ; do
 	sleep 30
 
         # build experiment
-        echo "Build experiment"
+        echo "Build experiment $I"
 	if [ -x "${PREFIX}/$I/build.sh" ] ; then
 	        cd "${PREFIX}/$I/build"
-		rm -r *
+		rm -rf *
 		"${PREFIX}/$I/build.sh"
 		cd ..
 	else
 	        cd "${PREFIX}/$I/build"
-		rm -r *
+		rm -rf *
 	        ../../../tools/genmake2 -mods ../code -of "${CONFIGURATION}"
 		make clean
         	make depend
@@ -54,12 +63,12 @@ for I in `cat "${EXPERIMENTS}"` ; do
 	echo "Run experiment"
         if [ -x "${PREFIX}/$I/run.sh" ] ; then
 		cd "${PREFIX}/$I/run"
-		rm -r *
+		rm -rf *
 		"${PREFIX}/$I/run.sh"
 		cd ..
 	else
 		cd "${PREFIX}/$I/run"
-		rm -r *
+		rm -rf *
 	        ln -s ../input/* .
         	ln -s ../build/mitgcmuv .
 		./mitgcmuv > /dev/null
