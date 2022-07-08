@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="ASCII"?>
+<assembly:AssemblyModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:assembly="platform:/resource/Kieker/model/analysismodel.ecore/assembly">
+  <assemblyComponents key="&lt;unknown>">
+    <value signature="&lt;unknown>">
+      <operations key="&lt;unknown>">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.0/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="model.f90">
+    <value signature="model.f90">
+      <operations key="main">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="main_">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="initmodel.3">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="timestepmodel.2">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="model_advance.0">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="finishmodel.1">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.1/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="logging.f90">
+    <value signature="logging.f90">
+      <operations key="initlogging">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.2/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="log_info">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.2/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="formattedwrite">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.2/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="now">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.2/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="log_debug">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.2/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="finishlogging">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.2/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.2/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="io_module.f90">
+    <value signature="io_module.f90">
+      <operations key="initio">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="parse_nc_file_params">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="get_nf90_cmode">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="nf90cmode_string_to_int">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="get_nf90_endianness">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="get_nf90_shuffle">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="get_nf90_deflate_level">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="get_nf90_fletcher32">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="get_nf90_chunksizes">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="get_nf90_contiguous">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <operations key="initfh">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.10/@value"/>
+        </value>
+      </operations>
+      <operations key="issetfh">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.11/@value"/>
+        </value>
+      </operations>
+      <operations key="touch">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.12/@value"/>
+        </value>
+      </operations>
+      <operations key="closeds">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.13/@value"/>
+        </value>
+      </operations>
+      <operations key="createdseuler">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.14/@value"/>
+        </value>
+      </operations>
+      <operations key="getfname">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.15/@value"/>
+        </value>
+      </operations>
+      <operations key="create_nc_file">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.16/@value"/>
+        </value>
+      </operations>
+      <operations key="check">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.17/@value"/>
+        </value>
+      </operations>
+      <operations key="create_nc_coord_var">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.18/@value"/>
+        </value>
+      </operations>
+      <operations key="create_nc_data_var">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.19/@value"/>
+        </value>
+      </operations>
+      <operations key="updatenrec">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.20/@value"/>
+        </value>
+      </operations>
+      <operations key="putvareuler">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.21/@value"/>
+        </value>
+      </operations>
+      <operations key="opends">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.22/@value"/>
+        </value>
+      </operations>
+      <operations key="gettdimid">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.23/@value"/>
+        </value>
+      </operations>
+      <operations key="gettvarid">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.24/@value"/>
+        </value>
+      </operations>
+      <operations key="finishio">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.3/@value/@providedOperations.25/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.3/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="str.f90">
+    <value signature="str.f90">
+      <operations key="to_upper">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.4/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.4/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="calendar_module.f90">
+    <value signature="calendar_module.f90">
+      <operations key="opencal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.5/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="setcal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.5/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="issetcal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.5/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="closecal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.5/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.5/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="f_udunits_2.f90">
+    <value signature="f_udunits_2.f90">
+      <operations key="init_f_udunits_2">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.6/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_set_error_message_handler">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.6/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_read_xml">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.6/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="ut_check_status">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.6/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_get_status">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.6/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_parse">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.6/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_free_system">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.6/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.6/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="domain_module.f90">
+    <value signature="domain_module.f90">
+      <operations key="initdomain">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.7/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.7/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="init_vars.f90">
+    <value signature="init_vars.f90">
+      <operations key="init2dvarsi">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.8/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="init2dvard">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.8/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="init3dvard">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.8/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.8/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="grid_module.f90">
+    <value signature="grid_module.f90">
+      <operations key="setgrideuler">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="setlon">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="setlat">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="setsin">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="setcos">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="settan">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="setland">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="setocean">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="settopo">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="setf">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <operations key="comparegridseuler">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.9/@value/@providedOperations.10/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.9/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="vars_module.f90">
+    <value signature="vars_module.f90">
+      <operations key="initvars">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.10/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="add2dtoregister">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.10/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="getvarptrfromregister">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.10/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="addvarptrtoregister">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.10/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="add3dtoregister">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.10/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="get2dfromregister">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.10/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.10/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="generic_list.f90">
+    <value signature="generic_list.f90">
+      <operations key="list_init">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.11/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="list_get">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.11/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="list_next">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.11/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="list_insert">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.11/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="list_free">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.11/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.11/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="calc_lib.f90">
+    <value signature="calc_lib.f90">
+      <operations key="initcalclib">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.12/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="set2pointinterpolater">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.12/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="getoutgrid">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.12/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="set4pointinterpolater">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.12/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="advancecalclib">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.12/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="finishcalclib">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.12/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.12/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="time_integration_module.f90">
+    <value signature="time_integration_module.f90">
+      <operations key="time_integration_init">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.13/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="integrate_ab_vec">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.13/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.13/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_module.f90">
+    <value signature="swm_module.f90">
+      <operations key="swm_initswm">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.14/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_initialconditions">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.14/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_advance">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.14/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_timestep">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.14/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_finishswm">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.14/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.14/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_vars.f90">
+    <value signature="swm_vars.f90">
+      <operations key="swm_vars_init">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.15/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_vars_finish">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.15/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.15/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_timestep_module.f90">
+    <value signature="swm_timestep_module.f90">
+      <operations key="swm_timestep_init">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="computed">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="computerelvort">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="computepotvort">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="computeedens">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="computemassfluxes">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_timestep_advance">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_timestep_step">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="alreadystepped">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_timestep_nonlinear">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_timestep_finish">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.16/@value/@providedOperations.10/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.16/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_lateralmixing_module.f90">
+    <value signature="swm_lateralmixing_module.f90">
+      <operations key="swm_lateralmixing_init">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.17/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_lateralmixing_init_p_coefficients">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.17/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_lateralmixing_step">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.17/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_lateralmixing_compute_p">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.17/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_lateralmixing_compute_uv">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.17/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_lateralmixing_finish">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.17/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_lateralmixing_finish_p_coefficients">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.17/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.17/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_damping_module.f90">
+    <value signature="swm_damping_module.f90">
+      <operations key="swm_damping_init">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.18/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="getdampingcoefficient">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.18/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="setdefault_swm_damping_nl">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.18/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="getspongelayer">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.18/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_damping_finish">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.18/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.18/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="swm_forcing_module.f90">
+    <value signature="swm_forcing_module.f90">
+      <operations key="swm_forcing_init">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.19/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_forcing_getforcing">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.19/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_forcing_update">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.19/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="swm_forcing_finish">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.19/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.19/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="diag_module.f90">
+    <value signature="diag_module.f90">
+      <operations key="initdiag">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.20/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="diag">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.20/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="finishdiag">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.20/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.20/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="diagtask.f90">
+    <value signature="diagtask.f90">
+      <operations key="initdiagtasklist">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="readdiagnl">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="initdiagtask">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="getvardatafromregister">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="createtaskds">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="processtasklist">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="processtask">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="writetasktofile">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="finishdiagtasklist">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="finishdiagtask">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.21/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.21/@value"/>
+    </value>
+  </assemblyComponents>
+  <assemblyComponents key="diagvar.f90">
+    <value signature="diagvar.f90">
+      <operations key="resetdiagvarlist">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.22/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="finishdiagvarlist">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.22/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.22/@value"/>
+    </value>
+  </assemblyComponents>
+</assembly:AssemblyModel>
