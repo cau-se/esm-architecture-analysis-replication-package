@@ -141,7 +141,7 @@ to run. The file must be named `experiments`. A list of all experiments
 which are used in the tutorial of MITgcm are listed in `tutorials` and
 all other experiments are listed in `normal`. 
 
-## Run Experiments
+## Dynamic Analysis
 
 **Note:** For test purposes, it is helpful run the data collection with
 one experiment only.
@@ -196,7 +196,7 @@ various analyses:
 - `combined-result` contains the same files as the `dynamic-result but
   now also the data from the static analysis has been used.
 - `combined-model` similar to `dynamic-model`, but these models reflect
-  the architecture after the dynamic and static analysis.  
+  the architecture after the dynamic and static analysis.
 
 ## Additional Information
 
