@@ -1,35 +1,35 @@
-# PREFIX for the mitgcm model variants
-PREFIX="/home/reiner/Projects/OceanDSL/case-studies/MITgcm/verification"
+export REPLICATION_DIR="/home/reiner/temp/exp"
 
 # Library path including Kieker libraries
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/reiner/Projects/Kieker/kieker-lang-pack-c/libkieker/.libs"
-
-# Compile configuration for kieker
-export CONFIGURATION="${BASE_DIR}/linux_amd64_gfortran_kieker"
-
-# Location for the observed monitoring data for each model variant
-export DATA_PATH="$BASE_DIR/dynamic-data"
+export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/km/lib/"
 
 # Location for dynamic and static data
-export DYNAMIC_DATA_PATH="${DATA_PATH}"
-export STATIC_DATA_PATH="/home/reiner/Projects/OceanDSL/experiments/static-uvic"
+export DYNAMIC_DATA_PATH="${REPLICATION_DIR}/experiments/uvic/dynamic-data"
+export STATIC_DATA_PATH="${REPLICATION_DIR}/experiments/uvic/static-data"
 
-# prepocessor
-PREPROCESS="$BASE_DIR/../pp-static-log/bin/pp-static-log"
+DAR="${REPLICATION_DIR}/oceandsl-tools/bin/dar"
+SAR="${REPLICATION_DIR}/oceandsl-tools/bin/sar"
+MAA="${REPLICATION_DIR}/oceandsl-tools/bin/maa"
+MOP="${REPLICATION_DIR}/oceandsl-tools/bin/mop"
+MVIS="${REPLICATION_DIR}/oceandsl-tools/bin/mvis"
 
-# arcitecture analysis tool
-ANALYSIS="$BASE_DIR/../create-architecture-model/bin/create-architecture-model"
+# collector tool
+COLLECTOR="${REPLICATION_DIR}/collector/bin/collector"
 
 # addr2line
 ADDR2LINE=`which addr2line`
 
+# Path to uvic repository
+REPOSITORY_DIR="${REPLICATION_DIR}/experiments/uvic/uvic-reconstruction"
+# Compile configurtion for kieker
+export CONFIGURATION="${REPOSITORY_DIR}/run/mk.in"
 # Path to the executable
-EXECUTABLE="$BASE_DIR/../../case-studies/MITgcm/verification/$NAME/build/mitgcmuv"
+EXECUTABLE="${REPOSITORY_DIR}/UVic_ESCM"
+
 
 # Dynamic and static prefix
 DYNAMIC_PREFIX="$PREFIX/$NAME/build/"
 STATIC_PREFIX="/home/hschnoor/eclipse-workspace/PlayPython/resources/preprocessed/MITgcm-$NAME/"
 
 # Hostname where the dynamic analysis was executed
-HOST=node1
-
+HOST=glasgow

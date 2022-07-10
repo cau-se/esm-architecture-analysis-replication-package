@@ -149,7 +149,7 @@ one experiment only.
 To run a single experiment you can type
 ```
 cd ${SCRIPTS_DIR}
-./run-dynamic-observation.sh" tutorial_barotropic_gyre
+./run-dynamic-observation.sh tutorial_barotropic_gyre
 ```
 where `tutorial_barotropic_gyre` is the experiment to be executed.
 
@@ -171,9 +171,9 @@ at `https://mitgcm.readthedocs.io/en/latest/examples/examples.html`.
 
 ## Architecture Reconstruction
 
-Lets assume you have collected the dynamic and static data for a
-MITgcm experiment, e.g., `tutorial_barotropic_gyre` and you are in
-the `experiments/ecsa-mitgcm` directory. Now you can run the analysis
+Lets assume you have collected the dynamic and static data for a MITgcm
+experiment, e.g., `tutorial_barotropic_gyre` and you are in the 
+`${REPLICATION_DIR}/experiments/mitgcm` directory. Now you can run the analysis
 for the experiment with
 
 `./run-architecture-analysis.sh tutorial_barotropic_gyre`
