@@ -1,0 +1,3 @@
+[submodule "esm-coupling-analysis"]
+	path = python-coupling-analysis
+	url = https://python-analysis:glpat-Zk_T952XjXsxCLiRst1t@cau-git.rz.uni-kiel.de/ifi-ag-se/oceandsl/esm-coupling-analysis.git
