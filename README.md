@@ -41,6 +41,8 @@ subsequent operations on the architecture.
 
 - Perform the configuration and preprocess stage of the compilation of an ESM
 - Run esm call and dataflow extractor (based on fparser)
+  - this is currently located in a git submodule in the directory python-coupling-analysis, can be cloned stand-alone with
+    git clone https://python-analysis:glpat-Zk_T952XjXsxCLiRst1t@cau-git.rz.uni-kiel.de/ifi-ag-se/oceandsl/esm-coupling-analysis.git
 - Process data with the static architecture recovery tool (sar)
 
 ### Combine Models
@@ -56,7 +58,9 @@ subsequent operations on the architecture.
 
 ### Compute Restructuring
 
-TODO (hs)
+- similarly a git submodule, clonable with
+git clone https://java-restructuring:glpat-9EeDaDEM3RL25_81Xx-W@cau-git.rz.uni-kiel.de/ifi-ag-se/oceandsl/genetic-restructuring.git java-restructuring
+- TODO: This submodule also contains the dynamic and static analysis results of UVic and MITgmc, which are also in the "models" directory of the replication package. It would be better to let the replication package offer a "complete workflow", where each step can either use the results of the previously performed step, or data supplied by us.
 
 ## Common Setup
 
