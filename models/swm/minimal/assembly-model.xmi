@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ASCII"?>
+<assembly:AssemblyModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:assembly="platform:/resource/Kieker/model/analysismodel.ecore/assembly">
+  <components key="f_udunits_2.f90">
+    <value signature="f_udunits_2.f90">
+      <operations key="init_f_udunits_2">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_set_error_message_handler">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_read_xml">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="ut_check_status">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_get_status">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_parse">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_free_system">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="f_cv_convert_doubles">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="f_cv_convert_floats">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_set_status">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.9/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_get_symbol">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.10/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_free">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.11/@value"/>
+        </value>
+      </operations>
+      <operations key="f_cv_free">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.12/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_decode_time">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.13/@value"/>
+        </value>
+      </operations>
+      <operations key="f_ut_get_name">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.0/@value/@providedOperations.14/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.0/@value"/>
+    </value>
+  </components>
+  <components key="calendar_module.f90">
+    <value signature="calendar_module.f90">
+      <operations key="opencal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.0/@value"/>
+        </value>
+      </operations>
+      <operations key="setcal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.1/@value"/>
+        </value>
+      </operations>
+      <operations key="issetcal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.2/@value"/>
+        </value>
+      </operations>
+      <operations key="closecal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.3/@value"/>
+        </value>
+      </operations>
+      <operations key="converttimearraydouble">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.4/@value"/>
+        </value>
+      </operations>
+      <operations key="converttimearrayfloat">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.5/@value"/>
+        </value>
+      </operations>
+      <operations key="freecal">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.6/@value"/>
+        </value>
+      </operations>
+      <operations key="converttimescalardouble">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.7/@value"/>
+        </value>
+      </operations>
+      <operations key="converttimescalarfloat">
+        <value>
+          <operationType href="type-model.xmi#//@componentTypes.1/@value/@providedOperations.8/@value"/>
+        </value>
+      </operations>
+      <componentType href="type-model.xmi#//@componentTypes.1/@value"/>
+    </value>
+  </components>
+</assembly:AssemblyModel>

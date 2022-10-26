@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ASCII"?>
+<deployment:DeploymentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:deployment="platform:/resource/Kieker/model/analysismodel.ecore/deployment">
+  <contexts key="kali">
+    <value name="kali">
+      <components key="f_udunits_2.f90">
+        <value signature="f_udunits_2.f90">
+          <assemblyComponent href="assembly-model.xmi#//@components.0/@value"/>
+          <operations key="init_f_udunits_2">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.0/@value/@operations.0/@value"/>
+            </value>
+          </operations>
+          <operations key="f_ut_set_error_message_handler">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.0/@value/@operations.1/@value"/>
+            </value>
+          </operations>
+          <operations key="f_ut_read_xml">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.0/@value/@operations.2/@value"/>
+            </value>
+          </operations>
+          <operations key="ut_check_status">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.0/@value/@operations.3/@value"/>
+            </value>
+          </operations>
+          <operations key="f_ut_get_status">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.0/@value/@operations.4/@value"/>
+            </value>
+          </operations>
+          <operations key="f_ut_parse">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.0/@value/@operations.5/@value"/>
+            </value>
+          </operations>
+          <operations key="f_ut_free_system">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.0/@value/@operations.6/@value"/>
+            </value>
+          </operations>
+        </value>
+      </components>
+      <components key="calendar_module.f90">
+        <value signature="calendar_module.f90">
+          <assemblyComponent href="assembly-model.xmi#//@components.1/@value"/>
+          <operations key="opencal">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.1/@value/@operations.0/@value"/>
+            </value>
+          </operations>
+          <operations key="setcal">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.1/@value/@operations.1/@value"/>
+            </value>
+          </operations>
+          <operations key="issetcal">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.1/@value/@operations.2/@value"/>
+            </value>
+          </operations>
+          <operations key="closecal">
+            <value>
+              <assemblyOperation href="assembly-model.xmi#//@components.1/@value/@operations.3/@value"/>
+            </value>
+          </operations>
+        </value>
+      </components>    </value>
+  </contexts>
+</deployment:DeploymentModel>

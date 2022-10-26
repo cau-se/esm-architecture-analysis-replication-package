@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <assembly:AssemblyModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:assembly="platform:/resource/Kieker/model/analysismodel.ecore/assembly">
-  <assemblyComponents key="grid_module.f90">
+  <components key="grid_module.f90">
     <value signature="grid_module.f90">
       <operations key="setgrideuler">
         <value>
@@ -73,15 +73,15 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.0/@value/@providedInterfaceTypes.1"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.10/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.10/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.0/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.0/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_module.f90">
+  </components>
+  <components key="swm_module.f90">
     <value signature="swm_module.f90">
       <operations key="swm_initswm">
         <value>
@@ -114,36 +114,36 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.8/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.8/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.6/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.6/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.28/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.28/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.14/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.14/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.8"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.15/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.15/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.21/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.21/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.4/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.4/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.1/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="vars_module.f90">
+  </components>
+  <components key="vars_module.f90">
     <value signature="vars_module.f90">
       <operations key="initvars">
         <value>
@@ -206,36 +206,36 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@providedInterfaceTypes.3"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.8"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.3/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.3/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.2/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="str.f90">
+  </components>
+  <components key="str.f90">
     <value signature="str.f90">
       <operations key="to_upper">
         <value>
@@ -254,8 +254,8 @@
         </value>
       </providedInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_damping_module.f90">
+  </components>
+  <components key="swm_damping_module.f90">
     <value signature="swm_damping_module.f90">
       <operations key="swm_damping_init">
         <value>
@@ -288,33 +288,33 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.25/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.25/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.2/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.2/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.3/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.3/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.4/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_lateralmixing_module.f90">
+  </components>
+  <components key="swm_lateralmixing_module.f90">
     <value signature="swm_lateralmixing_module.f90">
       <operations key="swm_lateralmixing_init">
         <value>
@@ -367,33 +367,33 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@providedInterfaceTypes.1"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.2/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.2/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.2/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.2/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.5/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="io_module.f90">
+  </components>
+  <components key="io_module.f90">
     <value signature="io_module.f90">
       <operations key="initio">
         <value>
@@ -611,30 +611,30 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.6/@value/@providedInterfaceTypes.6"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.6/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.12/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.12/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.6/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.6/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.6/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.6/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.10/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.10/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.6/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.3/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.3/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.6/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="f_udunits_2.f90">
+  </components>
+  <components key="f_udunits_2.f90">
     <value signature="f_udunits_2.f90">
       <operations key="init_f_udunits_2">
         <value>
@@ -717,12 +717,12 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.7/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.7/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="init_vars.f90">
+  </components>
+  <components key="init_vars.f90">
     <value signature="init_vars.f90">
       <operations key="init2dvarsi">
         <value>
@@ -756,8 +756,8 @@
         </value>
       </providedInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="calc_lib.f90">
+  </components>
+  <components key="calc_lib.f90">
     <value signature="calc_lib.f90">
       <operations key="initcalclib">
         <value>
@@ -855,24 +855,24 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.9/@value/@providedInterfaceTypes.1"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.9/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.0/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.0/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.9/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.9/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.9/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.9/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="calendar_module.f90">
+  </components>
+  <components key="calendar_module.f90">
     <value signature="calendar_module.f90">
       <operations key="opencal">
         <value>
@@ -925,15 +925,15 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.10/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.7/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.7/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.10/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.10/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="generic_list.f90">
+  </components>
+  <components key="generic_list.f90">
     <value signature="generic_list.f90">
       <operations key="list_init">
         <value>
@@ -977,8 +977,8 @@
         </value>
       </providedInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="diag_module.f90">
+  </components>
+  <components key="diag_module.f90">
     <value signature="diag_module.f90">
       <operations key="initdiag">
         <value>
@@ -1001,12 +1001,12 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.12/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.18/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.18/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.12/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="time_integration_module.f90">
+  </components>
+  <components key="time_integration_module.f90">
     <value signature="time_integration_module.f90">
       <operations key="time_integration_init">
         <value>
@@ -1030,8 +1030,8 @@
         </value>
       </providedInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_timestep_module.f90">
+  </components>
+  <components key="swm_timestep_module.f90">
     <value signature="swm_timestep_module.f90">
       <operations key="swm_timestep_init">
         <value>
@@ -1099,27 +1099,27 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.14/@value/@providedInterfaceTypes.1"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.11/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.11/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.14/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.5/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.5/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.14/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.5/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.5/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.14/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.14/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.13/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.13/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.14/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.28/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.28/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.14/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_forcing_module.f90">
+  </components>
+  <components key="swm_forcing_module.f90">
     <value signature="swm_forcing_module.f90">
       <operations key="swm_forcing_init">
         <value>
@@ -1187,36 +1187,36 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.25/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.25/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.2/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.2/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.8"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.15/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="&lt;unknown>">
+  </components>
+  <components key="&lt;unknown>">
     <value signature="&lt;unknown>">
       <operations key="&lt;unknown>">
         <value>
@@ -1225,8 +1225,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.16/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="domain_module.f90">
+  </components>
+  <components key="domain_module.f90">
     <value signature="domain_module.f90">
       <operations key="initdomain">
         <value>
@@ -1239,30 +1239,30 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.17/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.17/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.9/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.9/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.17/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.0/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.0/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.17/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.17/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.17/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.17/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.6/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.6/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.17/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="diagtask.f90">
+  </components>
+  <components key="diagtask.f90">
     <value signature="diagtask.f90">
       <operations key="initdiagtasklist">
         <value>
@@ -1335,54 +1335,54 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.8"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.9"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.13/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.13/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.10"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.2/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.2/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.14"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.11"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.12"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.13"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.3/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.3/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.19/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.19/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.18/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="diagvar.f90">
+  </components>
+  <components key="diagvar.f90">
     <value signature="diagvar.f90">
       <operations key="resetdiagvarlist">
         <value>
@@ -1440,33 +1440,33 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.9/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.9/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.19/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="logging.f90">
+  </components>
+  <components key="logging.f90">
     <value signature="logging.f90">
       <operations key="initlogging">
         <value>
@@ -1549,12 +1549,12 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.20/@value/@providedInterfaceTypes.5"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.7/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.7/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.20/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_vars.f90">
+  </components>
+  <components key="swm_vars.f90">
     <value signature="swm_vars.f90">
       <operations key="swm_vars_init">
         <value>
@@ -1572,27 +1572,27 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.21/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.21/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.21/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.21/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.8/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.8/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.21/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.21/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.2/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.2/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.21/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="model.f90">
+  </components>
+  <components key="model.f90">
     <value signature="model.f90">
       <operations key="main">
         <value>
@@ -1650,36 +1650,36 @@
         </value>
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.22/@value"/>
-      <requiredInterfaces requires="//@assemblyComponents.1/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.1/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.17/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.17/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.9/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.9/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.12/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.12/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.13/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.13/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.2/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.2/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.8"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.22/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="">
+  </components>
+  <components key="">
     <value signature="">
       <operations key="initvar">
         <value>
@@ -1863,8 +1863,8 @@
         </value>
       </providedInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="dynfromfile_module.f90">
+  </components>
+  <components key="dynfromfile_module.f90">
     <value signature="dynfromfile_module.f90">
       <operations key="dff_initdynfromfile">
         <value>
@@ -1887,18 +1887,18 @@
         </value>
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.24/@value"/>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.24/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.25/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.25/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.24/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.24/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="memchunk_module.f90">
+  </components>
+  <components key="memchunk_module.f90">
     <value signature="memchunk_module.f90">
       <operations key="initmemchunk">
         <value>
@@ -1936,33 +1936,33 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.25/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="tracer_vars.f90">
+  </components>
+  <components key="tracer_vars.f90">
     <value signature="tracer_vars.f90">
       <operations key="trc_vars_init">
         <value>
@@ -1995,36 +1995,36 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@providedInterfaceTypes.0"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.6"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.7"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.6/@value/@providedInterfaces.6/@value">
+      <requiredInterfaces requires="//@components.6/@value/@providedInterfaces.6/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.8"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.11/@value/@providedInterfaces.2/@value">
+      <requiredInterfaces requires="//@components.11/@value/@providedInterfaces.2/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.26/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="elsolv_sor.f90">
+  </components>
+  <components key="elsolv_sor.f90">
     <value signature="elsolv_sor.f90">
       <operations key="init_elsolv_sor">
         <value>
@@ -2052,21 +2052,21 @@
         </value>
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.27/@value"/>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.27/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.27/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.27/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.27/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_timestep_module_old.f90">
+  </components>
+  <components key="swm_timestep_module_old.f90">
     <value signature="swm_timestep_module_old.f90">
       <operations key="swm_timestep_init">
         <value>
@@ -2119,21 +2119,21 @@
           <providedInterfaceType href="type-model.xmi#//@componentTypes.28/@value/@providedInterfaceTypes.1"/>
         </value>
       </providedInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.28/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.6/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.6/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.28/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.5/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.5/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.28/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.25/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.25/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.28/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_nonlinear_timestep_module.f90">
+  </components>
+  <components key="swm_nonlinear_timestep_module.f90">
     <value signature="swm_nonlinear_timestep_module.f90">
       <operations key="swm_timestep_init">
         <value>
@@ -2161,27 +2161,27 @@
         </value>
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.29/@value"/>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.11/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.11/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.29/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.5/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.5/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.29/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.5/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.5/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.29/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.29/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.28/@value/@providedInterfaces.1/@value">
+      <requiredInterfaces requires="//@components.28/@value/@providedInterfaces.1/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.29/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.14/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.14/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.29/@value/@requiredInterfaceTypes.5"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="tracer_module.f90">
+  </components>
+  <components key="tracer_module.f90">
     <value signature="tracer_module.f90">
       <operations key="trc_inittracer">
         <value>
@@ -2229,21 +2229,21 @@
         </value>
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.30/@value"/>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.30/@value/@requiredInterfaceTypes.3"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.23/@value/@providedInterfaces.4/@value">
+      <requiredInterfaces requires="//@components.23/@value/@providedInterfaces.4/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.30/@value/@requiredInterfaceTypes.4"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.26/@value/@providedInterfaces.0/@value">
+      <requiredInterfaces requires="//@components.26/@value/@providedInterfaces.0/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.30/@value/@requiredInterfaceTypes.2"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.3/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.3/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.30/@value/@requiredInterfaceTypes.0"/>
       </requiredInterfaces>
-      <requiredInterfaces requires="//@assemblyComponents.20/@value/@providedInterfaces.5/@value">
+      <requiredInterfaces requires="//@components.20/@value/@providedInterfaces.5/@value">
         <requiredInterfaceType href="type-model.xmi#//@componentTypes.30/@value/@requiredInterfaceTypes.1"/>
       </requiredInterfaces>
     </value>
-  </assemblyComponents>
+  </components>
 </assembly:AssemblyModel>

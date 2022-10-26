@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ASCII"?>
+<type:TypeModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:type="platform:/resource/Kieker/model/analysismodel.ecore/type">
+  <componentTypes key="f_udunits_2.f90">
+    <value signature="f_udunits_2.f90" name="f_udunits_2.f90" package="demo">
+      <providedOperations key="init_f_udunits_2">
+        <value signature="init_f_udunits_2" name="init_f_udunits_2" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_set_error_message_handler">
+        <value signature="f_ut_set_error_message_handler" name="f_ut_set_error_message_handler" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_read_xml">
+        <value signature="f_ut_read_xml" name="f_ut_read_xml" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="ut_check_status">
+        <value signature="ut_check_status" name="ut_check_status" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_get_status">
+        <value signature="f_ut_get_status" name="f_ut_get_status" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_parse">
+        <value signature="f_ut_parse" name="f_ut_parse" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_free_system">
+        <value signature="f_ut_free_system" name="f_ut_free_system" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_cv_convert_doubles">
+        <value signature="f_cv_convert_doubles" name="f_cv_convert_doubles" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_cv_convert_floats">
+        <value signature="f_cv_convert_floats" name="f_cv_convert_floats" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_set_status">
+        <value signature="f_ut_set_status" name="f_ut_set_status" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_get_symbol">
+        <value signature="f_ut_get_symbol" name="f_ut_get_symbol" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_free">
+        <value signature="f_ut_free" name="f_ut_free" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_cv_free">
+        <value signature="f_cv_free" name="f_cv_free" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_decode_time">
+        <value signature="f_ut_decode_time" name="f_ut_decode_time" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="f_ut_get_name">
+        <value signature="f_ut_get_name" name="f_ut_get_name" returnType="unknown"/>
+      </providedOperations>
+    </value>
+  </componentTypes>
+  <componentTypes key="calendar_module.f90">
+    <value signature="calendar_module.f90" name="calendar_module.f90" package="demo">
+      <providedOperations key="opencal">
+        <value signature="opencal" name="opencal" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="setcal">
+        <value signature="setcal" name="setcal" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="issetcal">
+        <value signature="issetcal" name="issetcal" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="closecal">
+        <value signature="closecal" name="closecal" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="converttimearraydouble">
+        <value signature="converttimearraydouble" name="converttimearraydouble" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="converttimearrayfloat">
+        <value signature="converttimearrayfloat" name="converttimearrayfloat" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="freecal">
+        <value signature="freecal" name="freecal" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="converttimescalardouble">
+        <value signature="converttimescalardouble" name="converttimescalardouble" returnType="unknown"/>
+      </providedOperations>
+      <providedOperations key="converttimescalarfloat">
+        <value signature="converttimescalarfloat" name="converttimescalarfloat" returnType="unknown"/>
+      </providedOperations>
+    </value>
+  </componentTypes>
+</type:TypeModel>

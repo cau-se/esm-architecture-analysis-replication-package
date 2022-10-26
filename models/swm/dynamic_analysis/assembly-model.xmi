@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <assembly:AssemblyModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:assembly="platform:/resource/Kieker/model/analysismodel.ecore/assembly">
-  <assemblyComponents key="&lt;unknown>">
+  <components key="&lt;unknown>">
     <value signature="&lt;unknown>">
       <operations key="&lt;unknown>">
         <value>
@@ -9,8 +9,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.0/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="model.f90">
+  </components>
+  <components key="model.f90">
     <value signature="model.f90">
       <operations key="main">
         <value>
@@ -44,8 +44,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.1/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="logging.f90">
+  </components>
+  <components key="logging.f90">
     <value signature="logging.f90">
       <operations key="initlogging">
         <value>
@@ -79,8 +79,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.2/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="io_module.f90">
+  </components>
+  <components key="io_module.f90">
     <value signature="io_module.f90">
       <operations key="initio">
         <value>
@@ -214,8 +214,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.3/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="str.f90">
+  </components>
+  <components key="str.f90">
     <value signature="str.f90">
       <operations key="to_upper">
         <value>
@@ -224,8 +224,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.4/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="calendar_module.f90">
+  </components>
+  <components key="calendar_module.f90">
     <value signature="calendar_module.f90">
       <operations key="opencal">
         <value>
@@ -249,8 +249,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.5/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="f_udunits_2.f90">
+  </components>
+  <components key="f_udunits_2.f90">
     <value signature="f_udunits_2.f90">
       <operations key="init_f_udunits_2">
         <value>
@@ -289,8 +289,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.6/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="domain_module.f90">
+  </components>
+  <components key="domain_module.f90">
     <value signature="domain_module.f90">
       <operations key="initdomain">
         <value>
@@ -299,8 +299,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.7/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="init_vars.f90">
+  </components>
+  <components key="init_vars.f90">
     <value signature="init_vars.f90">
       <operations key="init2dvarsi">
         <value>
@@ -319,8 +319,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.8/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="grid_module.f90">
+  </components>
+  <components key="grid_module.f90">
     <value signature="grid_module.f90">
       <operations key="setgrideuler">
         <value>
@@ -379,8 +379,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.9/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="vars_module.f90">
+  </components>
+  <components key="vars_module.f90">
     <value signature="vars_module.f90">
       <operations key="initvars">
         <value>
@@ -414,8 +414,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.10/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="generic_list.f90">
+  </components>
+  <components key="generic_list.f90">
     <value signature="generic_list.f90">
       <operations key="list_init">
         <value>
@@ -444,8 +444,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.11/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="calc_lib.f90">
+  </components>
+  <components key="calc_lib.f90">
     <value signature="calc_lib.f90">
       <operations key="initcalclib">
         <value>
@@ -479,8 +479,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.12/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="time_integration_module.f90">
+  </components>
+  <components key="time_integration_module.f90">
     <value signature="time_integration_module.f90">
       <operations key="time_integration_init">
         <value>
@@ -494,8 +494,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.13/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_module.f90">
+  </components>
+  <components key="swm_module.f90">
     <value signature="swm_module.f90">
       <operations key="swm_initswm">
         <value>
@@ -524,8 +524,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.14/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_vars.f90">
+  </components>
+  <components key="swm_vars.f90">
     <value signature="swm_vars.f90">
       <operations key="swm_vars_init">
         <value>
@@ -539,8 +539,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.15/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_timestep_module.f90">
+  </components>
+  <components key="swm_timestep_module.f90">
     <value signature="swm_timestep_module.f90">
       <operations key="swm_timestep_init">
         <value>
@@ -599,8 +599,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.16/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_lateralmixing_module.f90">
+  </components>
+  <components key="swm_lateralmixing_module.f90">
     <value signature="swm_lateralmixing_module.f90">
       <operations key="swm_lateralmixing_init">
         <value>
@@ -639,8 +639,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.17/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_damping_module.f90">
+  </components>
+  <components key="swm_damping_module.f90">
     <value signature="swm_damping_module.f90">
       <operations key="swm_damping_init">
         <value>
@@ -669,8 +669,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.18/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="swm_forcing_module.f90">
+  </components>
+  <components key="swm_forcing_module.f90">
     <value signature="swm_forcing_module.f90">
       <operations key="swm_forcing_init">
         <value>
@@ -694,8 +694,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.19/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="diag_module.f90">
+  </components>
+  <components key="diag_module.f90">
     <value signature="diag_module.f90">
       <operations key="initdiag">
         <value>
@@ -714,8 +714,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.20/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="diagtask.f90">
+  </components>
+  <components key="diagtask.f90">
     <value signature="diagtask.f90">
       <operations key="initdiagtasklist">
         <value>
@@ -769,8 +769,8 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.21/@value"/>
     </value>
-  </assemblyComponents>
-  <assemblyComponents key="diagvar.f90">
+  </components>
+  <components key="diagvar.f90">
     <value signature="diagvar.f90">
       <operations key="resetdiagvarlist">
         <value>
@@ -784,5 +784,5 @@
       </operations>
       <componentType href="type-model.xmi#//@componentTypes.22/@value"/>
     </value>
-  </assemblyComponents>
+  </components>
 </assembly:AssemblyModel>
