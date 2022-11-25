@@ -89,7 +89,9 @@ In case you want to follow this recommendation, you have to create the
 directories as follows.
 
 ```
-mkdir replication install experiments
+mkdir replication
+cd replication
+mkdir install experiments
 ```
 
 Then move the `esm-architecture-analyisis-replication-package` directory into
@@ -179,3 +181,11 @@ Additional information on the collector and how to use it to collect
 monitoring data, you may find on the Kieker documentation page.
 
 https://kieker-monitoring.readthedocs.io/en/latest/kieker-tools/Collector---Kieker-Data-Bridge.html#kieker-tools-collector
+
+### Install additional tooling
+
+Install binutils which include `addr2line` with
+
+`sudo apt install binutils -y`
+
+
