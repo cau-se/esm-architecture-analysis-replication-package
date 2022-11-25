@@ -57,7 +57,7 @@ checkExecutable "dynamic architecture analysis" "${DAR}"
 checkExecutable "dynamic architecture analysis" "${SAR}"
 checkExecutable "mop merge models" "${MOP}"
 checkExecutable "computing interfaces" "${MAA}"
-checkExecutable "visualization and statistics" "${MIVS}"
+checkExecutable "visualization and statistics" "${MVIS}"
 
 ## check directories and data
 checkDirectory "Kieker Log" "${KIEKER_LOG}"
@@ -89,21 +89,24 @@ information "------------------------------------------------"
 information "${NAME}"
 information "------------------------------------------------"
 
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.groovy"
 
 information "Process dynamic data to model"
-"${DAR}" -i "${KIEKER_LOG}" -c -o "${DYNAMIC_FILE_MODEL}" -e "${EXECUTABLE}" -a "${ADDR2LINE}" -E "${EXPERIMENT_NAME}" \\
+"${DAR}" -i "${KIEKER_LOG}" -c -o "${DYNAMIC_FILE_MODEL}" -e "${EXECUTABLE}" \
+	-a "${ADDR2LINE}" -E "${EXPERIMENT_NAME}" \
 	-l dynamic -m file-mode -s elf
-"${DAR}" -i "${KIEKER_LOG}" -c -o "${DYNAMIC_MAP_MODEL}" -e "${EXECUTABLE}" -a "${ADDR2LINE}" -E "${EXPERIMENT_NAME}" \\
+"${DAR}" -i "${KIEKER_LOG}" -c -o "${DYNAMIC_MAP_MODEL}" -e "${EXECUTABLE}" \
+	-a "${ADDR2LINE}" -E "${EXPERIMENT_NAME}" \
 	-l dynamic -m map-mode -s elf -M "${STATIC_MODULE_MAP}"
 
 information "Process static data to model"
-"${SAR}" -i "${STATIC_LOG}" -j "${STATIC_DATAFLOW_LOG}" -c -E "${EXPERIMENT_NAME}" \\
-	-f "${STATIC_FUNCTION_MAP}" "${ADDITIONAL_FUNCTION_MAP}" "${GLOBAL_FUNCTION_MAP}" \\
+"${SAR}" -i "${STATIC_LOG}" -j "${STATIC_DATAFLOW_LOG}" -c -E "${EXPERIMENT_NAME}" \
+	-f "${STATIC_FUNCTION_MAP}" "${ADDITIONAL_FUNCTION_MAP}" "${GLOBAL_FUNCTION_MAP}" \
 	-H "${HOST}" \\
 	-o "${STATIC_FILE_MODEL}" -l static -ns ";" -ds ";" -cs ";"
-"${SAR}" -i "${STATIC_LOG}" -j "${STATIC_DATAFLOW_LOG}" -c -E "${EXPERIMENT_NAME}" \\
-	-f "${STATIC_FUNCTION_MAP}" "${ADDITIONAL_FUNCTION_MAP}" "${GLOBAL_FUNCTION_MAP}" \\
-	-H "${HOST}" -M "${STATIC_MODULE_MAP}" -m "${MISSING_FUNCTIONS_LIST}" \\
+"${SAR}" -i "${STATIC_LOG}" -j "${STATIC_DATAFLOW_LOG}" -c -E "${EXPERIMENT_NAME}" \
+	-f "${STATIC_FUNCTION_MAP}" "${ADDITIONAL_FUNCTION_MAP}" "${GLOBAL_FUNCTION_MAP}" \
+	-H "${HOST}" -M "${STATIC_MODULE_MAP}" -m "${MISSING_FUNCTIONS_LIST}" \
 	-o "${STATIC_FILE_MODEL}" -l static -ns ";" -ds ";" -cs ";"
 
 information "Combine models"
@@ -115,15 +118,23 @@ information "Compute Interfaces"
 "${MAA}" -i "${COMBINED_MAP_MODEL}" -o "${INTERFACE_MAP_MODEL}" -I -c -s
 
 information "Compute statistics"
-"${MVIS}" -i "${DYNAMIC_FILE_MODEL}" -o "${DYNAMIC_RESULT}" -s all -g dot-op dot-component -m add-nodes
-"${MVIS}" -i "${STATIC_FILE_MODEL}" -o "${STATIC_RESULT}" -s all -g dot-op dot-component -m add-nodes
-"${MVIS}" -i "${COMBINED_FILE_MODEL}" -o "${COMBINED_RESULT}" -s all -g dot-op dot-component -m add-nodes
-"${MVIS}" -i "${INTERFACE_FILE_MODEL}" -o "${INTERFACE_RESULT}" -s all -g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${DYNAMIC_FILE_MODEL}" -o "${DYNAMIC_RESULT}" -s all \
+	-g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${STATIC_FILE_MODEL}" -o "${STATIC_RESULT}" -s all \
+	-g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${COMBINED_FILE_MODEL}" -o "${COMBINED_RESULT}" -s all \
+	-g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${INTERFACE_FILE_MODEL}" -o "${INTERFACE_RESULT}" -s all \
+	-g dot-op dot-component -m add-nodes
 
-"${MVIS}" -i "${DYNAMIC_MAP_MODEL}" -o "${DYNAMIC_RESULT}" -s all -g dot-op dot-component -m add-nodes
-"${MVIS}" -i "${STATIC_MAP_MODEL}" -o "${STATIC_RESULT}" -s all -g dot-op dot-component -m add-nodes
-"${MVIS}" -i "${COMBINED_MAP_MODEL}" -o "${COMBINED_RESULT}" -s all -g dot-op dot-component -m add-nodes
-"${MVIS}" -i "${INTERFACE_MAP_MODEL}" -o "${INTERFACE_RESULT}" -s all -g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${DYNAMIC_MAP_MODEL}" -o "${DYNAMIC_RESULT}" -s all \
+	-g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${STATIC_MAP_MODEL}" -o "${STATIC_RESULT}" -s all \
+	-g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${COMBINED_MAP_MODEL}" -o "${COMBINED_RESULT}" -s all \
+	-g dot-op dot-component -m add-nodes
+"${MVIS}" -i "${INTERFACE_MAP_MODEL}" -o "${INTERFACE_RESULT}" -s all \
+	-g dot-op dot-component -m add-nodes
 
 information ""
 information "Done"
