@@ -1,12 +1,12 @@
 ### ---------------------swm-instrumentation----------------------------
 ##### 1. Install Kieker-language-c pack
 - load git rep with `git clone https://github.com/kieker-monitoring/kieker-lang-pack-c.git`
-- run following commands
+- run following commands in folder `source`
 	- `libtoolize`
 	- `aclocal`
 	- `automake --add-missing`
-	- `autoconfig`
-- go in the `libkieker`folder and run following commands
+	- `autoconf`
+- run following commands
 	- `export KIEKER_HOSTNAME=127.0.0.1`
 	- `export KIEKER_PORT=5678`
 	- `./configure && make && make install`
@@ -14,9 +14,9 @@
 ##### 2. Load Kieker Collector
 - load the latest Kieker Binaries, i.e. here https://kieker-monitoring.net/download/
 - goto `tools` folder ad unzip the `collector`
-- make a file with the name `collector.conf`and paste that in it:
+- make a file with the name `collector.conf` in the `./bin` folder and paste the following cofigurations in:
 ```
-	# Kieker settings
+# Kieker settings
 
 ## The name of the Kieker instance.
 kieker.monitoring.name=KIEKER
@@ -97,18 +97,19 @@ Fix:
 ### Analyse the result
 
 First of all your Kieker-Logs are not filled with usual information due to Fortran parsing there are rom-access memoryaddresses saved in them.
-To parse and convert them to operations called within the run of the model you have to use the rewrite_log_entries tool:
+To parse and convert them to operations called within the run of the model you have to use the rewrite-log-entries tool:
 
-1. Clone the git with `git clone gitlab@git.se.informatik.uni-kiel.de:oceandsl/oceandsl-tools.git`
+1. Clone the git with `git clone https://git.se.informatik.uni-kiel.de/oceandsl/oceandsl-tools.git`
 2. run `sudo apt install binutils -y`
-3. open the project in eclipse and run the ^^tool with following parameters:
+3. open the project in eclipse and run the rewrite-log-entries tool with following parameters:
 	- `-i [kieker logs folder] -o [output of kieker logs] -a /usr/bin/addr2line -m [path to model executable]`
 	- you can add this run-configuration to eclipse manually by changing the run parameters:
 		- click on `run` then on `run configirations...`
 		- search for the correct java executable and click on it
 		- press Arguments and paste the arguments from above in the text field under `Program Arguments`
 4. after running your log files are ready to analyse
-5. i.e. run: ```
+5. i.e. run: 
+```
 dar-1.3.0-SNAPSHOT/bin/dar -i [kieker-folder]/ -o [output folder] -s ELF -E demo -l label
 
 mvis-1.3.0-SNAPSHOT/bin/mvis -i [input folder] -o [output folder] -g dot-op -m add-nodes -s all 
