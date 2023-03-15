@@ -1,35 +1,33 @@
-export REPLICATION_DIR="/home/reiner/temp/exp"
+export REPLICATION_DIR="/home/reiner/experiment/experiments"
+export GLOBAL_DATA_DIR="/Projects/OceanDSL/architecture-recovery-and-optimization-data/uvic"
 
 # Library path including Kieker libraries
 export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/km/lib/"
 
 # Location for dynamic and static data
-export DYNAMIC_DATA_PATH="${REPLICATION_DIR}/experiments/uvic/dynamic-data"
-export STATIC_DATA_PATH="${REPLICATION_DIR}/experiments/uvic/static-data"
+export DYNAMIC_DATA_PATH="${GLOBAL_DATA_DIR}"
+export STATIC_DATA_PATH="${GLOBAL_DATA_DIR}"
 
-DAR="${REPLICATION_DIR}/oceandsl-tools/bin/dar"
-SAR="${REPLICATION_DIR}/oceandsl-tools/bin/sar"
-MAA="${REPLICATION_DIR}/oceandsl-tools/bin/maa"
-MOP="${REPLICATION_DIR}/oceandsl-tools/bin/mop"
-MVIS="${REPLICATION_DIR}/oceandsl-tools/bin/mvis"
+export TOOL_DIR="/home/reiner/temp/experiment/install"
+
+DAR="${TOOL_DIR}/oceandsl-tools/bin/dar"
+SAR="${TOOL_DIR}/oceandsl-tools/bin/sar"
+MAA="${TOOL_DIR}/oceandsl-tools/bin/maa"
+MOP="${TOOL_DIR}/oceandsl-tools/bin/mop"
+MVIS="${TOOL_DIR}/oceandsl-tools/bin/mvis"
 
 # collector tool
-COLLECTOR="${REPLICATION_DIR}/collector/bin/collector"
+COLLECTOR="${TOOL_DIR}/collector/bin/collector"
 
 # addr2line
 ADDR2LINE=`which addr2line`
 
 # Path to uvic repository
-REPOSITORY_DIR="${REPLICATION_DIR}/experiments/uvic/uvic-reconstruction"
+REPOSITORY_DIR="${REPLICATION_DIR}/UVic_ESCM/2.9"
 # Compile configurtion for kieker
 export CONFIGURATION="${REPOSITORY_DIR}/run/mk.in"
 # Path to the executable
-EXECUTABLE="${REPOSITORY_DIR}/UVic_ESCM"
-
-
-# Dynamic and static prefix
-DYNAMIC_PREFIX="$PREFIX/$NAME/build/"
-STATIC_PREFIX="/home/hschnoor/eclipse-workspace/PlayPython/resources/preprocessed/MITgcm-$NAME/"
+EXECUTABLE="${REPOSITORY_DIR}/run/UVic_ESCM"
 
 # Hostname where the dynamic analysis was executed
 HOST=glasgow
