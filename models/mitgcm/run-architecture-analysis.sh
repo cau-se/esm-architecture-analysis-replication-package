@@ -28,8 +28,4 @@ export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.groovy"
 "${BASE_DIR}/combine-models.sh" "${EXPERIMENT_NAME}"
 "${BASE_DIR}/compute-statistics.sh" "${EXPERIMENT_NAME}"
 
-information ""
-information "Done"
-information ""
-
 # end
