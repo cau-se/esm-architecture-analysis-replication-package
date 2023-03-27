@@ -19,24 +19,24 @@ else
 fi
 
 # variables
-export UVIC_DATA_PATH="${DATA_PATH}/uvic"
+export MITGCM_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
 
-STATIC_CALL_LOG="${UVIC_DATA_PATH}/calltable.csv"
-STATIC_DATAFLOW_LOG="${UVIC_DATA_PATH}/dataflow.csv"
+STATIC_CALL_LOG="${MITGCM_DATA_PATH}/calltable.csv"
+STATIC_DATAFLOW_LOG="${MITGCM_DATA_PATH}/dataflow.csv"
 
-STATIC_MODULE_MAP="${UVIC_DATA_PATH}/module-file-map.csv"
-GLOBAL_FUNCTION_MAP="${UVIC_DATA_PATH}/operation-definitions.csv"
+STATIC_MODULE_MAP="${MITGCM_DATA_PATH}/module-file-map.csv"
+GLOBAL_FUNCTION_MAP="${MITGCM_DATA_PATH}/operation-definitions.csv"
 
-STATIC_FILE_MODEL="${UVIC_DATA_PATH}/static/file"
-STATIC_MAP_MODEL="${UVIC_DATA_PATH}/static/map"
-STATIC_2_LEVEL_MODEL="${UVIC_DATA_PATH}/static/2-level"
+STATIC_FILE_MODEL="${MITGCM_DATA_PATH}/static/file"
+STATIC_MAP_MODEL="${MITGCM_DATA_PATH}/static/map"
+STATIC_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/static/2-level"
 
 # check tools and executables
 checkExecutable "Static architecture analysis" "${SAR}"
 checkExecutable "Model architecture analysis" "${MAA}"
 
 # check inputs
-checkDirectory "Static data directory" "${UVIC_DATA_PATH}"
+checkDirectory "Static data directory" "${MITGCM_DATA_PATH}"
 checkFile "Module map" "${STATIC_MODULE_MAP}" 
 checkFile "Function map" "${GLOBAL_FUNCTION_MAP}"
 

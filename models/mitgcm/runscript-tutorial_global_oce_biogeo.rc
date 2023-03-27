@@ -1,0 +1,3 @@
+ln -s ../input/* .
+../input/prepare_run
+ln -s ../build/mitgcmuv .

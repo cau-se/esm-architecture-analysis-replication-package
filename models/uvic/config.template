@@ -1,12 +1,10 @@
 export REPLICATION_DIR="/home/reiner/experiment/experiments"
-export GLOBAL_DATA_DIR="/Projects/OceanDSL/architecture-recovery-and-optimization-data/uvic"
 
 # Library path including Kieker libraries
 export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/km/lib/"
 
 # Location for dynamic and static data
-export DYNAMIC_DATA_PATH="${GLOBAL_DATA_DIR}"
-export STATIC_DATA_PATH="${GLOBAL_DATA_DIR}"
+export DATA_PATH=""
 
 export TOOL_DIR="/home/reiner/temp/experiment/install"
 

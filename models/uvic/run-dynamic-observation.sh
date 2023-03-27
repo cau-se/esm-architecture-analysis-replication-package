@@ -11,7 +11,9 @@ fi
 
 . "${BASE_DIR}/../../common-functions.rc"
 
-export COLLECTOR_DATA_PATH=${DYNAMIC_DATA_PATH//\//\\/}
+export UVIC_DATA_PATH="${DATA_PATH}/uvic"
+
+export COLLECTOR_DATA_PATH=${UVIC_DATA_PATH//\//\\/}
 
 cd "${REPOSITORY_DIR}"
 
@@ -26,10 +28,9 @@ checkFile "uvic-configuration" "${CONFIGURATION}"
 checkExecutable "mk-script" "${MK_SCRIPT}"
 
 # start collector
-echo "Starting collector $I"
+echo "Starting collector"
 cat "${BASE_DIR}/collector.conf.template" | sed "s/%EXPERIMENT%/$I/g" | sed "s/%DATA_PATH%/${COLLECTOR_DATA_PATH}\/$I/g" > "${BASE_DIR}/collector.conf"
-rm -rf "${DYNAMIC_DATA_PATH}/$I"
-mkdir -p "${DYNAMIC_DATA_PATH}/$I"
+
 "${COLLECTOR}" -c "${BASE_DIR}/collector.conf" &
 export COLLECTOR_PID=$!
 
@@ -39,12 +40,12 @@ sleep 10
 
 # configure uvic
 information "Configure UVic"
-cd "${UVIC_DIR}"
+cd "${REPOSITORY_DIR}"
 cp "${CONFIGURATION}" "${CONFIGURATION}.factory"
 
 cat << EOF >> "${CONFIGURATION}"
 # code directory
-Version_Directory = ${REPOSITORY_DIR}
+Version_Directory = ${SOURCE_CODE_PATH}
 # compile setting
 Libraries = -lnetcdf -lnetcdff -lkieker -L/usr/lib/x86_64-linux-gnu -L${KIEKER_LIBRARY_PATH}
 

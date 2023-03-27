@@ -46,16 +46,35 @@ function checkFile() {
 	fi
 }
 
-# $1 = NAME, $2 = DIRECTORY
+# $1 = NAME, $2 = DIRECTORY, $3 = "", create, recreate
 function checkDirectory() {
 	if [ "$2" == "" ] ; then
 		error "$1 variable for file not set."
 		exit 1
 	fi
 	if [ ! -d "$2" ] ; then
-		error "$1 not found at: $2"
-		exit 1
+		if [ "$3" == "create" ] || [ "$3" == "recreate" ] ; then
+			mkdir -p "$2"
+			information "Creating $1 at $2"
+		else
+			error "$1 not found at $2"
+			exit 1
+		fi
+	else
+		if [ "$3" == "recreate" ] ; then
+			rm -rf "$2"
+			mkdir -p "$2"
+			information "Recreating $1 at $2"
+		fi
 	fi
+}
+
+
+# $1 = NAME, $2 = DIRECTORIES, $3 = "", create, recreate
+function checkDirectoryList() {
+	for I in `echo $2 | tr ":" "\n"` ; do
+		checkDirectory "$1" "$I" "$3"
+	done 
 }
 
 # $1 = DIRECTORY

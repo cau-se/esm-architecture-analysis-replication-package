@@ -11,18 +11,20 @@ else
         exit 1
 fi
 
-checkDirectory "Static data" "${STATIC_DATA_PATH}"
+export UVIC_DATA_PATH="${DATA_PATH}/uvic"
+
+checkDirectory "Static data" "${UVIC_DATA_PATH}"
 checkDirectory "Source directory" "${SOURCE_CODE_PATH}"
 checkDirectory "Processed source directory" "${PROCESSED_CODE_PATH}"
 checkExecutable "fxtran" "${FXTRAN}"
 checkExecutable "fxca" "${FXCA}"
 
 # outputs
-STATIC_CALL_LOG="${STATIC_DATA_PATH}/calltable.csv"
-STATIC_DATAFLOW_LOG="${STATIC_DATA_PATH}/dataflow.csv"
+STATIC_CALL_LOG="${UVIC_DATA_PATH}/calltable.csv"
+STATIC_DATAFLOW_LOG="${UVIC_DATA_PATH}/dataflow.csv"
 
-STATIC_COMPONENT_MAP="${STATIC_DATA_PATH}/module-file-map.csv"
-GLOBAL_FUNCTION_MAP="${STATIC_DATA_PATH}/operation-definitions.csv"
+STATIC_COMPONENT_MAP="${UVIC_DATA_PATH}/module-file-map.csv"
+GLOBAL_FUNCTION_MAP="${UVIC_DATA_PATH}/operation-definitions.csv"
 
 information "Create directory/file map"
 
@@ -43,6 +45,6 @@ for I in `find . -name "*.f"` ; do
 done
 cd "${CURRENT_PATH}"
 
-${FXCA} -i "${PROCESSED_CODE_PATH}" -o "${STATIC_DATA_PATH}"
+${FXCA} -i "${PROCESSED_CODE_PATH}" -o "${UVIC_DATA_PATH}"
 
 # end
