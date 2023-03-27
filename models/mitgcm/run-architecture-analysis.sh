@@ -20,6 +20,10 @@ fi
 
 export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.groovy"
 
+information "++++++++++++++++++++++++++++++++++++++"
+information "Configuration ${EXPERIMENT_NAME}"
+information "++++++++++++++++++++++++++++++++++++++"
+
 "${BASE_DIR}/run-static-code-processing.sh" "${EXPERIMENT_NAME}"
 "${BASE_DIR}/run-static-analysis.sh" "${EXPERIMENT_NAME}"
 "${BASE_DIR}/run-dynamic-observation.sh" "${EXPERIMENT_NAME}"
@@ -27,5 +31,10 @@ export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.groovy"
 
 "${BASE_DIR}/combine-models.sh" "${EXPERIMENT_NAME}"
 "${BASE_DIR}/compute-statistics.sh" "${EXPERIMENT_NAME}"
+
+information "++++++++++++++++++++++++++++++++++++++"
+information "Done ${EXPERIMENT_NAME}"
+information "++++++++++++++++++++++++++++++++++++++"
+
 
 # end
