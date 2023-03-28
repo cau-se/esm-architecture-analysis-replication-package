@@ -11,39 +11,47 @@ else
         exit 1
 fi
 
-if [ -f "$BASE_DIR/config" ] ; then
-        . $BASE_DIR/config
+if [ -f "${BASE_DIR}/config" ] ; then
+        . "${BASE_DIR}/config"
 else
         echo "Config file not found."
         exit 1
 fi
 
 # variables
-export UVIC_DATA_PATH="${DATA_PATH}/uvic"
+export MODEL_DATA_PATH="${DATA_PATH}/uvic"
 
-STATIC_CALL_LOG="${UVIC_DATA_PATH}/calltable.csv"
-STATIC_DATAFLOW_LOG="${UVIC_DATA_PATH}/dataflow.csv"
+STATIC_CALL_LOG="${MODEL_DATA_PATH}/calltable.csv"
+STATIC_DATAFLOW_LOG="${MODEL_DATA_PATH}/dataflow.csv"
 
-STATIC_MODULE_MAP="${UVIC_DATA_PATH}/module-file-map.csv"
-GLOBAL_FUNCTION_MAP="${UVIC_DATA_PATH}/operation-definitions.csv"
+STATIC_MODULE_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
+GLOBAL_FUNCTION_MAP="${MODEL_DATA_PATH}/operation-definitions.csv"
 
-STATIC_FILE_MODEL="${UVIC_DATA_PATH}/static/file"
-STATIC_MAP_MODEL="${UVIC_DATA_PATH}/static/map"
-STATIC_2_LEVEL_MODEL="${UVIC_DATA_PATH}/static/2-level"
+STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static/file"
+STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static/map"
+STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static/2-level"
+
+INTERFACE_FILE_MODEL="${MODEL_DATA_PATH}/static/iface-file"
+INTERFACE_MAP_MODEL="${MODEL_DATA_PATH}/static/iface-map"
+INTERFACE_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static/iface-2-level"
 
 # check tools and executables
 checkExecutable "Static architecture analysis" "${SAR}"
 checkExecutable "Model architecture analysis" "${MAA}"
 
 # check inputs
-checkDirectory "Static data directory" "${UVIC_DATA_PATH}"
-checkFile "Module map" "${STATIC_MODULE_MAP}" 
+checkDirectory "Static data directory" "${MODEL_DATA_PATH}"
+checkFile "Module map" "${STATIC_MODULE_MAP}"
 checkFile "Function map" "${GLOBAL_FUNCTION_MAP}"
 
 # check outputs
 checkDirectory "Static file model" "${STATIC_FILE_MODEL}" recreate
 checkDirectory "Static map model" "${STATIC_MAP_MODEL}" recreate
 checkDirectory "Static 2-level model" "${STATIC_2_LEVEL_MODEL}" recreate
+
+checkDirectory "Interface file model" "${INTERFACE_FILE_MODEL}" recreate
+checkDirectory "Interface map model" "${INTERFACE_MAP_MODEL}" recreate
+checkDirectory "Interface 2-level model" "${INTERFACE_2_LEVEL_MODEL}" recreate
 
 # prepare
 INPUTS=""
@@ -76,5 +84,11 @@ information "Static architecture analysis - map based components"
 information "2 level map and file-based info"
 
 "${MAA}" -g "${STATIC_MODULE_MAP}" -i "${STATIC_FILE_MODEL}" -o "${STATIC_2_LEVEL_MODEL}" -gs ";"
+
+information "Compute interface models"
+"${MAA}" -i "${STATIC_FILE_MODEL}" -o "${INTERFACE_FILE_MODEL}" -I -c -s
+"${MAA}" -i "${STATIC_MAP_MODEL}" -o "${INTERFACE_MAP_MODEL}" -I -c -s
+"${MAA}" -i "${STATIC_2_LEVEL_MODEL}" -o "${INTERFACE_2_LEVEL_MODEL}" -I -c -s
+
 
 # end

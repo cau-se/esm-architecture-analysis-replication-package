@@ -11,7 +11,7 @@ else
 	exit 1
 fi
 
-if [ -f "$BASE_DIR/config" ] ; then
+if [ -f "${BASE_DIR}/config" ] ; then
         . "${BASE_DIR}/config"
 else
         echo "Config file not found."
@@ -19,18 +19,18 @@ else
 fi
 
 # variables
-export MITGCM_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
-export KIEKER_LOG=${MITGCM_DATA_PATH}/`ls "${MITGCM_DATA_PATH}" | grep kieker`
+export MODEL_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
+export KIEKER_LOG=${MODEL_DATA_PATH}/`ls "${MODEL_DATA_PATH}" | grep kieker`
 
-DYNAMIC_FILE_MODEL="${MITGCM_DATA_PATH}/dynamic/file"
-DYNAMIC_MAP_MODEL="${MITGCM_DATA_PATH}/dynamic/map"
-DYNAMIC_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/dynamic/2-level"
+DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/file"
+DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/map"
+DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/2-level"
 
-INTERFACE_FILE_MODEL="${MITGCM_DATA_PATH}/dynamic/iface-file"
-INTERFACE_MAP_MODEL="${MITGCM_DATA_PATH}/dynamic/iface-map"
-INTERFACE_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/dynamic/iface-2-level"
+INTERFACE_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/iface-file"
+INTERFACE_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/iface-map"
+INTERFACE_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/iface-2-level"
 
-STATIC_MODULE_MAP="${MITGCM_DATA_PATH}/module-file-map.csv"
+STATIC_MODULE_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
 
 ## check tools
 checkExecutable "dynamic architecture analysis" "${DAR}"
@@ -39,7 +39,7 @@ checkExecutable "Executable" "${EXECUTABLE}"
 checkExecutable "addr2line" "${ADDR2LINE}"
 
 # check inputs
-checkDirectory "Dynamic data directory" "${MITGCM_DATA_PATH}"
+checkDirectory "Dynamic data directory" "${MODEL_DATA_PATH}"
 checkDirectory "Kieker Log" "${KIEKER_LOG}"
 checkFile "Static module map" "${STATIC_MODULE_MAP}"
 
@@ -56,11 +56,11 @@ checkDirectory "Interface 2-level model" "${INTERFACE_2_LEVEL_MODEL}" recreate
 
 information "Dynamic architecture analysis - file based components"
 
-"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${NAME}" -i "${KIEKER_LOG}" -m file-mode -o "${DYNAMIC_FILE_MODEL}" -s elf -l dynamic
+"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}" -i "${KIEKER_LOG}" -m file-mode -o "${DYNAMIC_FILE_MODEL}" -s elf -l dynamic
 
 information "Dynamic architecture analysis - map based components"
 
-"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${NAME}" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_MAP_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}"
+"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_MAP_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}"
 
 information "2 level map and file-based info"
 

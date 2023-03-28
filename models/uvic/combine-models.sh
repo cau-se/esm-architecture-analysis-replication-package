@@ -19,7 +19,7 @@ else
 fi
 
 # variables
-export MODEL_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
+export MODEL_DATA_PATH="${DATA_PATH}/uvic"
 
 STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static/file"
 STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static/map"

@@ -19,31 +19,31 @@ else
 fi
 
 # variables
-export MITGCM_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
+export MODEL_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
 
-STATIC_FILE_MODEL="${MITGCM_DATA_PATH}/static/file"
-STATIC_MAP_MODEL="${MITGCM_DATA_PATH}/static/map"
-STATIC_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/static/2-level"
+STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static/file"
+STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static/map"
+STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static/2-level"
 
-IFACE_STATIC_FILE_MODEL="${MITGCM_DATA_PATH}/static/iface-file"
-IFACE_STATIC_MAP_MODEL="${MITGCM_DATA_PATH}/static/iface-map"
-IFACE_STATIC_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/static/iface-2-level"
+IFACE_STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static/iface-file"
+IFACE_STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static/iface-map"
+IFACE_STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static/iface-2-level"
 
-DYNAMIC_FILE_MODEL="${MITGCM_DATA_PATH}/dynamic/file"
-DYNAMIC_MAP_MODEL="${MITGCM_DATA_PATH}/dynamic/map"
-DYNAMIC_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/dynamic/2-level"
+DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/file"
+DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/map"
+DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/2-level"
 
-IFACE_DYNAMIC_FILE_MODEL="${MITGCM_DATA_PATH}/dynamic/iface-file"
-IFACE_DYNAMIC_MAP_MODEL="${MITGCM_DATA_PATH}/dynamic/iface-map"
-IFACE_DYNAMIC_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/dynamic/iface-2-level"
+IFACE_DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/iface-file"
+IFACE_DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/iface-map"
+IFACE_DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/iface-2-level"
 
-COMBINED_FILE_MODEL="${MITGCM_DATA_PATH}/combined/file"
-COMBINED_MAP_MODEL="${MITGCM_DATA_PATH}/combined/map"
-COMBINED_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/combined/2-level"
+COMBINED_FILE_MODEL="${MODEL_DATA_PATH}/combined/file"
+COMBINED_MAP_MODEL="${MODEL_DATA_PATH}/combined/map"
+COMBINED_2_LEVEL_MODEL="${MODEL_DATA_PATH}/combined/2-level"
 
-IFACE_COMBINED_FILE_MODEL="${MITGCM_DATA_PATH}/combined/iface-file"
-IFACE_COMBINED_MAP_MODEL="${MITGCM_DATA_PATH}/combined/iface-map"
-IFACE_COMBINED_2_LEVEL_MODEL="${MITGCM_DATA_PATH}/combined/iface-2-level"
+IFACE_COMBINED_FILE_MODEL="${MODEL_DATA_PATH}/combined/iface-file"
+IFACE_COMBINED_MAP_MODEL="${MODEL_DATA_PATH}/combined/iface-map"
+IFACE_COMBINED_2_LEVEL_MODEL="${MODEL_DATA_PATH}/combined/iface-2-level"
 
 
 
@@ -104,7 +104,7 @@ EOF
 information "Compute file level statistics"
 IFS=$'\n'
 for I in `cat $TEMPFILE` ; do
-	"${MVIS}" -i "$I" -o "$I" -s all -g dot-op dot-component -c -m add-nodes
+	"${MVIS}" -i "$I" -o "$I" -s all -g dot-op dot-component -c allen num-of-calls op-coupling module-coupling -m add-nodes
 done
 
 # end

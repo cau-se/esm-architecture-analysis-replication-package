@@ -5,27 +5,32 @@ export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 . "${BASE_DIR}/../../common-functions.rc"
 
 if [ "$1" != "" ] ; then
-        export NAME="$1"
+	EXPERIMENT_NAME="$1"
 else
         echo "Missing experiment name"
         exit 1
 fi
 
-if [ -f "$BASE_DIR/config" ] ; then
-        . $BASE_DIR/config
+if [ -f "${BASE_DIR}/config" ] ; then
+        . "${BASE_DIR}/config"
 else
         echo "Config file not found."
         exit 1
 fi
 
-export UVIC_DATA_PATH="${DATA_PATH}/uvic"
-export KIEKER_LOG=${UVIC_DATA_PATH}/`ls "${UVIC_DATA_PATH}" | grep kieker`
+# variables
+export MODEL_DATA_PATH="${DATA_PATH}/uvic"
+export KIEKER_LOG=${MODEL_DATA_PATH}/`ls "${MODEL_DATA_PATH}" | grep kieker`
 
-DYNAMIC_FILE_MODEL="${UVIC_DATA_PATH}/dynamic/file"
-DYNAMIC_MAP_MODEL="${UVIC_DATA_PATH}/dynamic/map"
-DYNAMIC_2_LEVEL_MODEL="${UVIC_DATA_PATH}/dynamic/2-level"
+DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/file"
+DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/map"
+DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/2-level"
 
-STATIC_MODULE_MAP="${UVIC_DATA_PATH}/module-file-map.csv"
+INTERFACE_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/iface-file"
+INTERFACE_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/iface-map"
+INTERFACE_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/iface-2-level"
+
+STATIC_MODULE_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
 
 EXECUTABLE="${REPOSITORY_DIR}/run/UVic_ESCM"
 
@@ -36,28 +41,36 @@ checkExecutable "Executable" "${EXECUTABLE}"
 checkExecutable "addr2line" "${ADDR2LINE}"
 
 # check inputs
-checkDirectory "Dynamic data directory" "${UVIC_DATA_PATH}"
-
-## check directories and data
+checkDirectory "Dynamic data directory" "${MODEL_DATA_PATH}"
 checkDirectory "Kieker Log" "${KIEKER_LOG}"
 checkFile "Static module map" "${STATIC_MODULE_MAP}"
 
-#checkDirectory "Dynamic file model" "${DYNAMIC_FILE_MODEL}" recreate
-#checkDirectory "Dynamic map model" "${DYNAMIC_MAP_MODEL}" recreate
-#checkDirectory "Dynamic 2-level model" "${DYNAMIC_2_LEVEL_MODEL}" recreate
+## check outputs
+checkDirectory "Dynamic file model" "${DYNAMIC_FILE_MODEL}" recreate
+checkDirectory "Dynamic map model" "${DYNAMIC_MAP_MODEL}" recreate
+checkDirectory "Dynamic 2-level model" "${DYNAMIC_2_LEVEL_MODEL}" recreate
+
+checkDirectory "Interface file model" "${INTERFACE_FILE_MODEL}" recreate
+checkDirectory "Interface map model" "${INTERFACE_MAP_MODEL}" recreate
+checkDirectory "Interface 2-level model" "${INTERFACE_2_LEVEL_MODEL}" recreate
 
 # run
 
 information "Dynamic architecture analysis - file based components"
 
-echo "${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${NAME}" -i "${KIEKER_LOG}" -m file-mode -o "${DYNAMIC_FILE_MODEL}" -s elf -l dynamic
+"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}" -i "${KIEKER_LOG}" -m file-mode -o "${DYNAMIC_FILE_MODEL}" -s elf -l dynamic
 
 information "Dynamic architecture analysis - map based components"
 
-echo "${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${NAME}" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_FILE_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}"
+"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_MAP_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}"
 
 information "2 level map and file-based info"
 
 "${MAA}" -g "${STATIC_MODULE_MAP}" -i "${DYNAMIC_FILE_MODEL}" -o "${DYNAMIC_2_LEVEL_MODEL}" -gs ";"
+
+information "Compute interface models"
+"${MAA}" -i "${DYNAMIC_FILE_MODEL}" -o "${INTERFACE_FILE_MODEL}" -I -c -s
+"${MAA}" -i "${DYNAMIC_MAP_MODEL}" -o "${INTERFACE_MAP_MODEL}" -I -c -s
+"${MAA}" -i "${DYNAMIC_2_LEVEL_MODEL}" -o "${INTERFACE_2_LEVEL_MODEL}" -I -c -s
 
 # end
