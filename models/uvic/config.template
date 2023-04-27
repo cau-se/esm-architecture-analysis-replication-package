@@ -6,6 +6,9 @@ export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/../install/km/lib/"
 # Location for dynamic and static data
 export DATA_PATH="/home/reiner/Projects/OceanDSL/architecture-recovery-and-optimization-data"
 
+# List of external functions
+export EXTERNAL_FUNCTIONS_MAP="${REPLICATION_DIR}/builtin-functions.csv"
+
 export TOOL_DIR="/home/reiner/temp/experiment/install"
 
 DAR="${TOOL_DIR}/oceandsl-tools/bin/dar"

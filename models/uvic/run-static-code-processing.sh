@@ -21,11 +21,7 @@ checkExecutable "fxtran" "${FXTRAN}"
 checkExecutable "fxca" "${FXCA}"
 
 # outputs
-STATIC_CALL_LOG="${UVIC_DATA_PATH}/calltable.csv"
-STATIC_DATAFLOW_LOG="${UVIC_DATA_PATH}/dataflow.csv"
-
 STATIC_COMPONENT_MAP="${UVIC_DATA_PATH}/module-file-map.csv"
-GLOBAL_FUNCTION_MAP="${UVIC_DATA_PATH}/operation-definitions.csv"
 
 information "Create directory/file map"
 
@@ -33,7 +29,7 @@ echo "module;file" > "${STATIC_COMPONENT_MAP}"
 
 for EXT in f f90 f95 ; do
 	for I in `find "${SOURCE_CODE_PATH}" -iname "*.$EXT" -printf "%P\n"` ; do
-		echo $I	| sed 's/\/\([0-9A-Za-z\-_.]*\)/;\1/' >> "${STATIC_COMPONENT_MAP}"
+		echo $I	| sed 's/\/\([0-9A-Za-z\-_.]*\)/;\1/' | sed 's/F\([0-9]*\)$/f\1/' >> "${STATIC_COMPONENT_MAP}"
 	done
 done
 

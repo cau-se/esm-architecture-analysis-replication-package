@@ -11,8 +11,6 @@ else
         exit 1
 fi
 
-checkMode $2
-
 if [ -f "$BASE_DIR/config" ] ; then
         . $BASE_DIR/config
 else
@@ -26,13 +24,18 @@ information "++++++++++++++++++++++++++++++++++++++"
 information "Configuration ${EXPERIMENT_NAME}"
 information "++++++++++++++++++++++++++++++++++++++"
 
-"${BASE_DIR}/run-static-code-processing.sh" "${EXPERIMENT_NAME}" "$MODE"
-"${BASE_DIR}/run-static-analysis.sh" "${EXPERIMENT_NAME}" "$MODE"
+"${BASE_DIR}/run-static-code-processing.sh" "${EXPERIMENT_NAME}"
+"${BASE_DIR}/run-static-analysis.sh" "${EXPERIMENT_NAME}" call
+"${BASE_DIR}/run-static-analysis.sh" "${EXPERIMENT_NAME}" dataflow
+"${BASE_DIR}/run-static-analysis.sh" "${EXPERIMENT_NAME}" both
+
 "${BASE_DIR}/run-dynamic-observation.sh" "${EXPERIMENT_NAME}"
 "${BASE_DIR}/run-dynamic-analysis.sh" "${EXPERIMENT_NAME}"
 
-"${BASE_DIR}/combine-models.sh" "${EXPERIMENT_NAME}"
-"${BASE_DIR}/compute-statistics.sh" "${EXPERIMENT_NAME}"
+for I in calls dataflow both ; do
+	"${BASE_DIR}/combine-models.sh" "${EXPERIMENT_NAME}" "$I"
+	"${BASE_DIR}/compute-statistics.sh" "${EXPERIMENT_NAME}" "$I"
+done
 
 information "++++++++++++++++++++++++++++++++++++++"
 information "Done ${EXPERIMENT_NAME}"

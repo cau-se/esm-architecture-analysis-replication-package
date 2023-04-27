@@ -18,32 +18,34 @@ else
         exit 1
 fi
 
+checkmode "$2"
+
 # variables
 export MODEL_DATA_PATH="${DATA_PATH}/uvic"
 
-STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static/file"
-STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static/map"
-STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static/2-level"
+STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static-plain-file-$MODE"
+STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static-plain-map-$MODE"
+STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static-plain-2-level-$MODE"
 
-IFACE_STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static/iface-file"
-IFACE_STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static/iface-map"
-IFACE_STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static/iface-2-level"
+IFACE_STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static-iface-file-$MODE"
+IFACE_STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static-iface-map-$MODE"
+IFACE_STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static-iface-2-level-$MODE"
 
-DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/file"
-DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/map"
-DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/2-level"
+DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic-plain-file"
+DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic-plain-map"
+DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic-plain-2-level"
 
-IFACE_DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/iface-file"
-IFACE_DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/iface-map"
-IFACE_DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/iface-2-level"
+IFACE_DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic-iface-file"
+IFACE_DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic-iface-map"
+IFACE_DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic-iface-2-level"
 
-COMBINED_FILE_MODEL="${MODEL_DATA_PATH}/combined/file"
-COMBINED_MAP_MODEL="${MODEL_DATA_PATH}/combined/map"
-COMBINED_2_LEVEL_MODEL="${MODEL_DATA_PATH}/combined/2-level"
+COMBINED_FILE_MODEL="${MODEL_DATA_PATH}/combined-plain-file-$MODE"
+COMBINED_MAP_MODEL="${MODEL_DATA_PATH}/combined-plain-map-$MODE"
+COMBINED_2_LEVEL_MODEL="${MODEL_DATA_PATH}/combined-plain-2-level-$MODE"
 
-IFACE_COMBINED_FILE_MODEL="${MODEL_DATA_PATH}/combined/iface-file"
-IFACE_COMBINED_MAP_MODEL="${MODEL_DATA_PATH}/combined/iface-map"
-IFACE_COMBINED_2_LEVEL_MODEL="${MODEL_DATA_PATH}/combined/iface-2-level"
+IFACE_COMBINED_FILE_MODEL="${MODEL_DATA_PATH}/combined-iface-file-$MODE"
+IFACE_COMBINED_MAP_MODEL="${MODEL_DATA_PATH}/combined-iface-map-$MODE"
+IFACE_COMBINED_2_LEVEL_MODEL="${MODEL_DATA_PATH}/combined-iface-2-level-$MODE"
 
 # check tools
 checkExecutable "Model operations" "${MOP}"

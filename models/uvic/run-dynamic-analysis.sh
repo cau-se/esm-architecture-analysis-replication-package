@@ -22,13 +22,13 @@ fi
 export MODEL_DATA_PATH="${DATA_PATH}/uvic"
 export KIEKER_LOG=${MODEL_DATA_PATH}/`ls "${MODEL_DATA_PATH}" | grep kieker`
 
-DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/file"
-DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/map"
-DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/2-level"
+DYNAMIC_FILE_MODEL="${MODEL_DATA_PATH}/dynamic-plain-file"
+DYNAMIC_MAP_MODEL="${MODEL_DATA_PATH}/dynamic-plain-map"
+DYNAMIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic-plain-2-level"
 
-INTERFACE_FILE_MODEL="${MODEL_DATA_PATH}/dynamic/iface-file"
-INTERFACE_MAP_MODEL="${MODEL_DATA_PATH}/dynamic/iface-map"
-INTERFACE_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic/iface-2-level"
+INTERFACE_FILE_MODEL="${MODEL_DATA_PATH}/dynamic-iface-file"
+INTERFACE_MAP_MODEL="${MODEL_DATA_PATH}/dynamic-iface-map"
+INTERFACE_2_LEVEL_MODEL="${MODEL_DATA_PATH}/dynamic-iface-2-level"
 
 STATIC_MODULE_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
 

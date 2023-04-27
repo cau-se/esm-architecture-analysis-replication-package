@@ -53,7 +53,7 @@ checkDirectory "Interface map model" "${INTERFACE_MAP_MODEL}" recreate
 checkDirectory "Interface 2-level model" "${INTERFACE_2_LEVEL_MODEL}" recreate
 
 case "$MODE" in
-  "calls")
+  "call")
      checkFile "Static calls" "${MODEL_DATA_PATH}/calltable.csv"
      ;;
   "dataflow")
