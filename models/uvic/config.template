@@ -1,10 +1,10 @@
-export REPLICATION_DIR="/home/reiner/experiment/experiments"
+export REPLICATION_DIR="/home/reiner/temp/experiment/experiments"
 
 # Library path including Kieker libraries
-export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/km/lib/"
+export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/../install/km/lib/"
 
 # Location for dynamic and static data
-export DATA_PATH=""
+export DATA_PATH="/home/reiner/Projects/OceanDSL/architecture-recovery-and-optimization-data"
 
 export TOOL_DIR="/home/reiner/temp/experiment/install"
 
@@ -13,6 +13,8 @@ SAR="${TOOL_DIR}/oceandsl-tools/bin/sar"
 MAA="${TOOL_DIR}/oceandsl-tools/bin/maa"
 MOP="${TOOL_DIR}/oceandsl-tools/bin/mop"
 MVIS="${TOOL_DIR}/oceandsl-tools/bin/mvis"
+FXCA="${TOOL_DIR}/oceandsl-tools/bin/fxca"
+FXTRAN="${TOOL_DIR}/fxtran"
 
 # collector tool
 COLLECTOR="${TOOL_DIR}/collector/bin/collector"
@@ -24,6 +26,10 @@ ADDR2LINE=`which addr2line`
 REPOSITORY_DIR="${REPLICATION_DIR}/UVic_ESCM/2.9"
 # Compile configurtion for kieker
 export CONFIGURATION="${REPOSITORY_DIR}/run/mk.in"
+# Source code root directory
+SOURCE_CODE_PATH="${REPOSITORY_DIR}/source"
+# Processed source code directory
+PROCESSED_CODE_PATH="${REPOSITORY_DIR}/run/code"
 # Path to the executable
 EXECUTABLE="${REPOSITORY_DIR}/run/UVic_ESCM"
 
