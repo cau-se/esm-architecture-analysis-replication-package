@@ -86,4 +86,19 @@ function prepareDirectory() {
 	fi
 }
 
+# check mode
+function checkMode() {
+	if [ "$1" != "" ] ; then
+	        export MODE="$1"
+	        if [ "$MODE" != "calls" ] && [ "$MODE" != "dataflow" ] && [ "$MODE" != "both" ] ; then
+	        	echo "Unknown mode $MODE. Allowed modes are calls, dataflow, both"
+	        	exit 1
+	        fi
+	else
+	        echo "No mode specified. Allowed modes are calls, dataflow, both"
+	        exit 1
+	fi
+}
+
+
 # end

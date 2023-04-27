@@ -16,6 +16,7 @@ export UVIC_DATA_PATH="${DATA_PATH}/uvic"
 checkDirectory "Static data" "${UVIC_DATA_PATH}"
 checkDirectory "Source directory" "${SOURCE_CODE_PATH}"
 checkDirectory "Processed source directory" "${PROCESSED_CODE_PATH}"
+checkFile "External functions map" "${EXTERNAL_FUNCTIONS_MAP}"
 checkExecutable "fxtran" "${FXTRAN}"
 checkExecutable "fxca" "${FXCA}"
 
@@ -45,6 +46,6 @@ for I in `find . -name "*.f"` ; do
 done
 cd "${CURRENT_PATH}"
 
-${FXCA} -i "${PROCESSED_CODE_PATH}" -o "${UVIC_DATA_PATH}"
+${FXCA} -i "${PROCESSED_CODE_PATH}" -o "${UVIC_DATA_PATH}" -l "${EXTERNAL_FUNCTIONS_MAP}"
 
 # end

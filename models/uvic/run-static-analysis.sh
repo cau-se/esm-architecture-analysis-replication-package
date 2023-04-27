@@ -11,6 +11,8 @@ else
         exit 1
 fi
 
+checkMode $2
+
 if [ -f "${BASE_DIR}/config" ] ; then
         . "${BASE_DIR}/config"
 else
@@ -21,19 +23,16 @@ fi
 # variables
 export MODEL_DATA_PATH="${DATA_PATH}/uvic"
 
-STATIC_CALL_LOG="${MODEL_DATA_PATH}/calltable.csv"
-STATIC_DATAFLOW_LOG="${MODEL_DATA_PATH}/dataflow.csv"
-
 STATIC_MODULE_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
 GLOBAL_FUNCTION_MAP="${MODEL_DATA_PATH}/operation-definitions.csv"
 
-STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static/file"
-STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static/map"
-STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static/2-level"
+STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static-plain-file-$MODE"
+STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static-plain-map-$MODE"
+STATIC_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static-plain-2-level-$MODE"
 
-INTERFACE_FILE_MODEL="${MODEL_DATA_PATH}/static/iface-file"
-INTERFACE_MAP_MODEL="${MODEL_DATA_PATH}/static/iface-map"
-INTERFACE_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static/iface-2-level"
+INTERFACE_FILE_MODEL="${MODEL_DATA_PATH}/static-iface-file-$MODE"
+INTERFACE_MAP_MODEL="${MODEL_DATA_PATH}/static-iface-map-$MODE"
+INTERFACE_2_LEVEL_MODEL="${MODEL_DATA_PATH}/static-iface-2-level-$MODE"
 
 # check tools and executables
 checkExecutable "Static architecture analysis" "${SAR}"
@@ -53,33 +52,37 @@ checkDirectory "Interface file model" "${INTERFACE_FILE_MODEL}" recreate
 checkDirectory "Interface map model" "${INTERFACE_MAP_MODEL}" recreate
 checkDirectory "Interface 2-level model" "${INTERFACE_2_LEVEL_MODEL}" recreate
 
-# prepare
-INPUTS=""
-if [ -f "${STATIC_CALL_LOG}" ] && [ -f "${STATIC_DATAFLOW_LOG}" ] ; then
-	INPUTS="-i ${STATIC_CALL_LOG} -j ${STATIC_DATAFLOW_LOG}"
-elif [ -f "${STATIC_CALL_LOG}" ] ; then
-	INPUTS="-i ${STATIC_CALL_LOG}"
-elif [ -f "${STATIC_DATAFLOW_LOG}" ] ; then
-	INPUTS="-j ${STATIC_DATAFLOW_LOG}"
-else
-	error "No input logs for calls and dataflow available"
-	exit 1
-fi
-
+case "$MODE" in
+  "calls")
+     checkFile "Static calls" "${MODEL_DATA_PATH}/calltable.csv"
+     ;;
+  "dataflow")
+     checkFile "Common blocks" "${MODEL_DATA_PATH}/common-blocks.csv"
+     checkFile "Dataflow common blocks" "${MODEL_DATA_PATH}/dataflow-cb.csv"
+     checkFile "Dataflow caller callee" "${MODEL_DATA_PATH}/dataflow-cc.csv"
+     ;;
+   "both")
+     checkFile "Static calls" "${MODEL_DATA_PATH}/calltable.csv"
+     checkFile "Common blocks" "${MODEL_DATA_PATH}/common-blocks.csv"
+     checkFile "Dataflow common blocks" "${MODEL_DATA_PATH}/dataflow-cb.csv"
+     checkFile "Dataflow caller callee" "${MODEL_DATA_PATH}/dataflow-cc.csv"
+     ;;
+esac
+   
 # run
 information "Static architecture analysis - file based components"
 
-"${SAR}" ${INPUTS} -c -E "${EXPERIMENT_NAME}-file" \
+"${SAR}" -i ${MODEL_DATA_PATH} -g "$MODE" -E "${EXPERIMENT_NAME}-file" \
 	-m file-mode \
 	-H "${HOST}" \
-	-o "${STATIC_FILE_MODEL}" -l static -ns ";" -ds ";" -cs ";"
+	-o "${STATIC_FILE_MODEL}" -l static -sc ";"
 
 information "Static architecture analysis - map based components"
 
-"${SAR}" ${INPUTS} -c -E "${EXPERIMENT_NAME}-map" \
+"${SAR}" -i ${MODEL_DATA_PATH} -g "$MODE" -E "${EXPERIMENT_NAME}-map" \
 	-M "${STATIC_MODULE_MAP}"  -m map-mode \
 	-H "${HOST}" \
-	-o "${STATIC_MAP_MODEL}" -l static -ns ";" -ds ";" -cs ";"
+	-o "${STATIC_MAP_MODEL}" -l static -sc ";"
 
 information "2 level map and file-based info"
 
