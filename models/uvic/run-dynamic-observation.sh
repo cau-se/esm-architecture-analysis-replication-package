@@ -1,6 +1,8 @@
 #!/bin/bash
 
-BASE_DIR=$(cd "$(dirname "$0")"; pwd)
+export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
+
+. "${BASE_DIR}/../../common-functions.rc"
 
 if [ -f "$BASE_DIR/config" ] ; then
         . "${BASE_DIR}/config"
@@ -8,8 +10,6 @@ else
         echo "Config file not found."
         exit 1
 fi
-
-. "${BASE_DIR}/../../common-functions.rc"
 
 export UVIC_DATA_PATH="${DATA_PATH}/uvic"
 
@@ -81,4 +81,3 @@ mv "${CONFIGURATION}.factory" "${CONFIGURATION}"
 cd "${CURRENT_DIR}"
 
 # end
-

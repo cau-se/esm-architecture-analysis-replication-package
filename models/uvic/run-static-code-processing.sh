@@ -5,7 +5,7 @@ export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 . "${BASE_DIR}/../../common-functions.rc"
 
 if [ -f "$BASE_DIR/config" ] ; then
-        . $BASE_DIR/config
+        . "${BASE_DIR}/config"
 else
         echo "Config file not found."
         exit 1

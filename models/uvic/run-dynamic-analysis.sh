@@ -5,7 +5,7 @@ export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 . "${BASE_DIR}/../../common-functions.rc"
 
 if [ "$1" != "" ] ; then
-	EXPERIMENT_NAME="$1"
+        export EXPERIMENT_NAME="$1"
 else
         echo "Missing experiment name"
         exit 1
@@ -34,9 +34,9 @@ STATIC_MODULE_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
 
 EXECUTABLE="${REPOSITORY_DIR}/run/UVic_ESCM"
 
-## check tools
+# check tools and executables
 checkExecutable "dynamic architecture analysis" "${DAR}"
-checkExecutable "maa" "${MAA}"
+checkExecutable "Model architecture analysis" "${MAA}"
 checkExecutable "Executable" "${EXECUTABLE}"
 checkExecutable "addr2line" "${ADDR2LINE}"
 
@@ -55,22 +55,21 @@ checkDirectory "Interface map model" "${INTERFACE_MAP_MODEL}" recreate
 checkDirectory "Interface 2-level model" "${INTERFACE_2_LEVEL_MODEL}" recreate
 
 # run
-
 information "Dynamic architecture analysis - file based components"
 
-"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}" -i "${KIEKER_LOG}" -m file-mode -o "${DYNAMIC_FILE_MODEL}" -s elf -l dynamic
+"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}-dynamic-call" -i "${KIEKER_LOG}" -m file-mode -o "${DYNAMIC_FILE_MODEL}" -s elf -l dynamic
 
 information "Dynamic architecture analysis - map based components"
 
-"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_MAP_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}"
+"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}-dynamic-call" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_MAP_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}"
 
 information "2 level map and file-based info"
 
-"${MAA}" -g "${STATIC_MODULE_MAP}" -i "${DYNAMIC_FILE_MODEL}" -o "${DYNAMIC_2_LEVEL_MODEL}" -gs ";"
+"${MAA}" -g "${STATIC_MODULE_MAP}" -i "${DYNAMIC_FILE_MODEL}" -o "${DYNAMIC_2_LEVEL_MODEL}" -gs ";" -E "${EXPERIMENT_NAME}-dynamic-plain-call-2-level"
 
 information "Compute interface models"
-"${MAA}" -i "${DYNAMIC_FILE_MODEL}" -o "${INTERFACE_FILE_MODEL}" -I -c -s
-"${MAA}" -i "${DYNAMIC_MAP_MODEL}" -o "${INTERFACE_MAP_MODEL}" -I -c -s
-"${MAA}" -i "${DYNAMIC_2_LEVEL_MODEL}" -o "${INTERFACE_2_LEVEL_MODEL}" -I -c -s
+"${MAA}" -i "${DYNAMIC_FILE_MODEL}" -o "${INTERFACE_FILE_MODEL}" -I -c -s -E "${EXPERIMENT_NAME}-dynamic-iface-call-file"
+"${MAA}" -i "${DYNAMIC_MAP_MODEL}" -o "${INTERFACE_MAP_MODEL}" -I -c -s -E "${EXPERIMENT_NAME}-dynamic-iface-call-map"
+"${MAA}" -i "${DYNAMIC_2_LEVEL_MODEL}" -o "${INTERFACE_2_LEVEL_MODEL}" -I -c -s -E "${EXPERIMENT_NAME}-dynamic-iface-call-2-level"
 
 # end
