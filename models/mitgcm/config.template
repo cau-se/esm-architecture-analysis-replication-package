@@ -1,5 +1,6 @@
+export REPLICATION_DIR="/home/reiner/temp/experiment/experiments"
 # PREFIX for the mitgcm model variants
-PREFIX="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification"
+PREFIX="${REPLICATION_DIR}/mitgcm/MITgcm/verification"
 
 # Library path including Kieker libraries
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${REPLICATION_DIR}/kieker/lib/"
@@ -24,10 +25,10 @@ COLLECTOR="${REPLICATION_DIR}/collector/bin/collector"
 ADDR2LINE=`which addr2line`
 
 # Path to the executable
-EXECUTABLE="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification/$NAME/build/mitgcmuv"
+EXECUTABLE="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification/$VARIANT_NAME/build/mitgcmuv"
 
 # Dynamic and static prefix
-DYNAMIC_PREFIX="$PREFIX/$NAME/build/"
+DYNAMIC_PREFIX="$PREFIX/$VARIANT_NAME/build/"
 STATIC_PREFIX="/home/hschnoor/eclipse-workspace/PlayPython/resources/preprocessed/MITgcm-$NAME/"
 
 # Hostname where the dynamic analysis was executed
