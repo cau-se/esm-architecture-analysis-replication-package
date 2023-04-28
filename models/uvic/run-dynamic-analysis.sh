@@ -45,7 +45,7 @@ checkDirectory "Dynamic data directory" "${MODEL_DATA_PATH}"
 checkDirectory "Kieker Log" "${KIEKER_LOG}"
 checkFile "Static module map" "${STATIC_MODULE_MAP}"
 
-## check outputs
+# check outputs
 checkDirectory "Dynamic file model" "${DYNAMIC_FILE_MODEL}" recreate
 checkDirectory "Dynamic map model" "${DYNAMIC_MAP_MODEL}" recreate
 checkDirectory "Dynamic 2-level model" "${DYNAMIC_2_LEVEL_MODEL}" recreate

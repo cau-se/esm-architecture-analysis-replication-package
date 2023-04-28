@@ -18,21 +18,18 @@ else
         exit 1
 fi
 
-export MITGCM_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
+export MODEL_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
 
 # inputs
-checkDirectory "Static data" "${MITGCM_DATA_PATH}" create
+checkDirectory "Static data" "${MODEL_DATA_PATH}" create
 checkDirectoryList "Source directory" "${SOURCE_CODE_PATH}"
 checkDirectory "Processed source directory" "${PROCESSED_CODE_PATH}"
+checkFile "External functions map" "${EXTERNAL_FUNCTIONS_MAP}"
 checkExecutable "fxtran" "${FXTRAN}"
 checkExecutable "fxca" "${FXCA}"
 
 # outputs
-STATIC_CALL_LOG="${MITGCM_DATA_PATH}/calltable.csv"
-STATIC_DATAFLOW_LOG="${MITGCM_DATA_PATH}/dataflow.csv"
-
-STATIC_COMPONENT_MAP="${MITGCM_DATA_PATH}/module-file-map.csv"
-GLOBAL_FUNCTION_MAP="${MITGCM_DATA_PATH}/operation-definitions.csv"
+STATIC_COMPONENT_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
 
 information "Create directory/file map"
 
@@ -52,7 +49,7 @@ for EXT in f f90 f95 ; do
 	done
 done
 
-information "Configure code"
+information "Parse processed code"
 
 CURRENT_PATH=`pwd`
 cd "${PROCESSED_CODE_PATH}"
@@ -68,6 +65,6 @@ for I in `find . -name "*.f"` ; do
 done
 cd "${CURRENT_PATH}"
 
-${FXCA} -i "${PROCESSED_CODE_PATH}" -o "${MITGCM_DATA_PATH}" -d runtime
+${FXCA} -i "${PROCESSED_CODE_PATH}" -o "${MODEL_DATA_PATH}" -l "${EXTERNAL_FUNCTIONS_MAP}"
 
 # end

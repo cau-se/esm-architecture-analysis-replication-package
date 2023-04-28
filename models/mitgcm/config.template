@@ -9,23 +9,29 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${REPLICATION_DIR}/kieker/lib/"
 export CONFIGURATION="${REPLICATION_DIR}/experiments/mitgcm/linux_amd64_gfortran_kieker"
 
 # Location for dynamic and static data
-export DYNAMIC_DATA_PATH="${REPLICATION_DIR}/dynamic-data"
-export STATIC_DATA_PATH="${REPLICATION_DIR}/static-data"
+export DATA_PATH="/home/reiner/Projects/OceanDSL/architecture-recovery-and-optimization-data"
 
-DAR="${REPLICATION_DIR}/oceandsl-tools/bin/dar"
-SAR="${REPLICATION_DIR}/oceandsl-tools/bin/sar"
-MAA="${REPLICATION_DIR}/oceandsl-tools/bin/maa"
-MOP="${REPLICATION_DIR}/oceandsl-tools/bin/mop"
-MVIS="${REPLICATION_DIR}/oceandsl-tools/bin/mvis"
+# List of external functions
+export EXTERNAL_FUNCTIONS_MAP="${REPLICATION_DIR}/builtin-functions.csv"
+
+export TOOL_DIR="/home/reiner/temp/experiment/install"
+
+DAR="${TOOL_DIR}/oceandsl-tools/bin/dar"
+SAR="${TOOL_DIR}/oceandsl-tools/bin/sar"
+MAA="${TOOL_DIR}/oceandsl-tools/bin/maa"
+MOP="${TOOL_DIR}/oceandsl-tools/bin/mop"
+MVIS="${TOOL_DIR}/oceandsl-tools/bin/mvis"
+FXCA="${TOOL_DIR}/oceandsl-tools/bin/fxca"
+FXTRAN="${TOOL_DIR}/fxtran"
 
 # collector tool
-COLLECTOR="${REPLICATION_DIR}/collector/bin/collector"
+COLLECTOR="${TOOL_DIR}/collector/bin/collector"
 
 # addr2line
 ADDR2LINE=`which addr2line`
 
 # Path to the executable
-EXECUTABLE="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification/$VARIANT_NAME/build/mitgcmuv"
+EXECUTABLE="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification/$NAME/build/mitgcmuv"
 
 # Dynamic and static prefix
 DYNAMIC_PREFIX="$PREFIX/$VARIANT_NAME/build/"

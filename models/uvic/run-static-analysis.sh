@@ -73,14 +73,14 @@ esac
 # run
 information "Static architecture analysis - file based components"
 
-"${SAR}" -i ${MODEL_DATA_PATH} -g "$MODE" -E "${EXPERIMENT_NAME}-static-plain-$MODE" \
+"${SAR}" -i "${MODEL_DATA_PATH}" -g "$MODE" -E "${EXPERIMENT_NAME}-static-plain-$MODE" \
 	-m file-mode \
 	-H "${HOST}" \
 	-o "${STATIC_FILE_MODEL}" -l "static-$MODE" -sc ";"
 
 information "Static architecture analysis - map based components"
 
-"${SAR}" -i ${MODEL_DATA_PATH} -g "$MODE" -E "${EXPERIMENT_NAME}-static-plain-$MODE" \
+"${SAR}" -i "${MODEL_DATA_PATH}" -g "$MODE" -E "${EXPERIMENT_NAME}-static-plain-$MODE" \
 	-M "${STATIC_MODULE_MAP}" -m map-mode \
 	-H "${HOST}" \
 	-o "${STATIC_MAP_MODEL}" -l "static-$MODE" -sc ";"

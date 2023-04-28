@@ -11,9 +11,10 @@ else
         exit 1
 fi
 
-export UVIC_DATA_PATH="${DATA_PATH}/uvic"
+export MODEL_DATA_PATH="${DATA_PATH}/uvic"
 
-checkDirectory "Static data" "${UVIC_DATA_PATH}"
+# inputs
+checkDirectory "Static data" "${MODEL_DATA_PATH}"
 checkDirectory "Source directory" "${SOURCE_CODE_PATH}"
 checkDirectory "Processed source directory" "${PROCESSED_CODE_PATH}"
 checkFile "External functions map" "${EXTERNAL_FUNCTIONS_MAP}"
@@ -21,7 +22,7 @@ checkExecutable "fxtran" "${FXTRAN}"
 checkExecutable "fxca" "${FXCA}"
 
 # outputs
-STATIC_COMPONENT_MAP="${UVIC_DATA_PATH}/module-file-map.csv"
+STATIC_COMPONENT_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
 
 information "Create directory/file map"
 
@@ -42,6 +43,6 @@ for I in `find . -name "*.f"` ; do
 done
 cd "${CURRENT_PATH}"
 
-${FXCA} -i "${PROCESSED_CODE_PATH}" -o "${UVIC_DATA_PATH}" -l "${EXTERNAL_FUNCTIONS_MAP}"
+${FXCA} -i "${PROCESSED_CODE_PATH}" -o "${MODEL_DATA_PATH}" -l "${EXTERNAL_FUNCTIONS_MAP}"
 
 # end

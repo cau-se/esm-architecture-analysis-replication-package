@@ -11,9 +11,9 @@ else
         exit 1
 fi
 
-export UVIC_DATA_PATH="${DATA_PATH}/uvic"
+export MODEL_DATA_PATH="${DATA_PATH}/uvic"
 
-export COLLECTOR_DATA_PATH=${UVIC_DATA_PATH//\//\\/}
+export COLLECTOR_DATA_PATH=${MODEL_DATA_PATH//\//\\/}
 
 cd "${REPOSITORY_DIR}"
 
@@ -23,6 +23,7 @@ export CONFIGURATION="${REPOSITORY_DIR}/run/mk.in"
 export EXECUTABLE="${REPOSITORY_DIR}/run/UVic_ESCM"
 export MK_SCRIPT="${REPOSITORY_DIR}/../mk"
 
+# inputs
 checkDirectory "uvic-version" "${REPOSITORY_DIR}"
 checkFile "uvic-configuration" "${CONFIGURATION}"
 checkExecutable "mk-script" "${MK_SCRIPT}"

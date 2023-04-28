@@ -18,11 +18,12 @@ else
         exit 1
 fi
 
-export MITGCM_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
-export COLLECTOR_DATA_PATH=${MITGCM_DATA_PATH//\//\\/}
+export MODEL_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
+
+export COLLECTOR_DATA_PATH=${MODEL_DATA_PATH//\//\\/}
 
 # inputs
-checkDirectory "Dynamic data" "${MITGCM_DATA_PATH}" create
+checkDirectory "Dynamic data" "${MODEL_DATA_PATH}" create
 
 # start collector
 echo "Starting collector"
