@@ -42,6 +42,7 @@ checkExecutable "addr2line" "${ADDR2LINE}"
 checkDirectory "Dynamic data directory" "${MODEL_DATA_PATH}"
 checkDirectory "Kieker Log" "${KIEKER_LOG}"
 checkFile "Static module map" "${STATIC_MODULE_MAP}"
+checkFile "Static aux module map" "${STATIC_AUX_MODULE_MAP}"
 
 # check outputs
 checkDirectory "Dynamic file model" "${DYNAMIC_FILE_MODEL}" recreate
@@ -59,7 +60,7 @@ information "Dynamic architecture analysis - file based components"
 
 information "Dynamic architecture analysis - map based components"
 
-"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}-dynamic-call" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_MAP_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}"
+"${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}-dynamic-call" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_MAP_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}" "${STATIC_AUX_MODULE_MAP}"
 
 information "2 level map and file-based info"
 

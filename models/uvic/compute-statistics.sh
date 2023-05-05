@@ -103,10 +103,13 @@ ${IFACE_COMBINED_MAP_MODEL}
 ${IFACE_COMBINED_2_LEVEL_MODEL}
 EOF
 
+export JAVA_OPTS="-Dlogback.configurationFile=​${BASE_DIR}/logback.groovy"
+export MVIS_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
+
 information "Compute file level statistics"
 IFS=$'\n'
 for I in `cat $TEMPFILE` ; do
-	"${MVIS}" -i "$I" -o "$I" -s all -g dot-op dot-component -c allen num-of-calls op-coupling module-coupling -m add-nodes
+	echo "${MVIS}" -i "$I" -o "$I" -s all -g dot-op dot-component -c allen num-of-calls op-coupling module-coupling -m add-nodes
 done
 
 # end

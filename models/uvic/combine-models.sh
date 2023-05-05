@@ -18,7 +18,7 @@ else
         exit 1
 fi
 
-checkmode "$2"
+checkMode "$2"
 
 # variables
 export MODEL_DATA_PATH="${DATA_PATH}/uvic"

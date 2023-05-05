@@ -38,7 +38,7 @@ echo "module;file" > "${STATIC_COMPONENT_MAP}"
 for EXT in f f90 f95 ; do
 	for SINGLE_PATH in `echo "${SOURCE_CODE_PATH}" | tr ":" "\n"` ; do
 	 	for I in `find "${SINGLE_PATH}" -iname "*.$EXT" -printf "%P\n"` ; do
-			ENTRY=`echo $I | sed 's/\/\([0-9A-Za-z\-_.]*\)/;\1/'`
+			ENTRY=`echo $I | sed 's/\/\([0-9A-Za-z\-_.]*\)/;\1/' | sed 's/F\([0-9]*\)$/f\1/'`
 			if [[ "$ENTRY" =~ .*";".* ]]; then
 				echo "$ENTRY" >> "${STATIC_COMPONENT_MAP}"
 			else
