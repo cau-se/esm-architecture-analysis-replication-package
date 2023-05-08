@@ -1,20 +1,20 @@
+# Main replication directory
 export REPLICATION_DIR="/home/reiner/temp/experiment/experiments"
-# PREFIX for the mitgcm model variants
-PREFIX="${REPLICATION_DIR}/mitgcm/MITgcm/verification"
 
 # Library path including Kieker libraries
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${REPLICATION_DIR}/kieker/lib/"
-
-# Compile configurtion for kieker
-export CONFIGURATION="${REPLICATION_DIR}/experiments/mitgcm/linux_amd64_gfortran_kieker"
+export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/../install/km/lib/"
 
 # Location for dynamic and static data
 export DATA_PATH="/home/reiner/Projects/OceanDSL/architecture-recovery-and-optimization-data"
 
 # List of external functions
 export EXTERNAL_FUNCTIONS_MAP="${REPLICATION_DIR}/builtin-functions.csv"
+export STATIC_AUX_MODULE_MAP="${REPLICATION_DIR}/mitgcm-aux-map-file.csv"
 
 export TOOL_DIR="/home/reiner/temp/experiment/install"
+
+# Data directory for results from the optimization
+OPTIMIZATION_DATA="/home/reiner/jss-results"
 
 DAR="${TOOL_DIR}/oceandsl-tools/bin/dar"
 SAR="${TOOL_DIR}/oceandsl-tools/bin/sar"
@@ -23,6 +23,7 @@ MOP="${TOOL_DIR}/oceandsl-tools/bin/mop"
 MVIS="${TOOL_DIR}/oceandsl-tools/bin/mvis"
 FXCA="${TOOL_DIR}/oceandsl-tools/bin/fxca"
 FXTRAN="${TOOL_DIR}/fxtran"
+RESTRUCTURING="${TOOL_DIR}/oceandsl-tools/bin/restructuring"
 
 # collector tool
 COLLECTOR="${TOOL_DIR}/collector/bin/collector"
@@ -30,12 +31,19 @@ COLLECTOR="${TOOL_DIR}/collector/bin/collector"
 # addr2line
 ADDR2LINE=`which addr2line`
 
+# Repoistory prefix for the mitgcm model variants
+REPOSITORY_DIR="${REPLICATION_DIR}/MITgcm"
+# Compile configurtion for kieker
+export CONFIGURATION="${REPOSITORY_DIR}/linux_amd64_gfortran_kieker"
+# Source code root directory
+SOURCE_CODE_PATH="${REPOSITORY_DIR}/model:${REPOSITORY_DIR}/pkg:${REPOSITORY_DIR}/optim:${REPOSITORY_DIR}/eesupp"
+# Processed source code directory
+PROCESSED_CODE_PATH="${REPOSITORY_DIR}/verification/${EXPERIMENT_NAME}/build"
 # Path to the executable
-EXECUTABLE="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification/$NAME/build/mitgcmuv"
+EXECUTABLE="${REPLICATION_DIR}/MITgcm/verification/${EXPERIMENT_NAME}/build/mitgcmuv"
 
-# Dynamic and static prefix
-DYNAMIC_PREFIX="$PREFIX/$VARIANT_NAME/build/"
-STATIC_PREFIX="/home/hschnoor/eclipse-workspace/PlayPython/resources/preprocessed/MITgcm-$NAME/"
+# Path to the executable
+EXECUTABLE="${REPOSITORY_DIR}/verification/${EXPERIMENT_NAME}/build/mitgcmuv"
 
 # Hostname where the dynamic analysis was executed
-HOST=lisboa
+HOST=glasgow
