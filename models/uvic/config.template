@@ -1,3 +1,4 @@
+# Main replication directory
 export REPLICATION_DIR="/home/reiner/temp/experiment/experiments"
 
 # Library path including Kieker libraries
@@ -8,8 +9,12 @@ export DATA_PATH="/home/reiner/Projects/OceanDSL/architecture-recovery-and-optim
 
 # List of external functions
 export EXTERNAL_FUNCTIONS_MAP="${REPLICATION_DIR}/builtin-functions.csv"
+export STATIC_AUX_MODULE_MAP="${REPLICATION_DIR}/uvic-aux-map-file.csv"
 
 export TOOL_DIR="/home/reiner/temp/experiment/install"
+
+# Data directory for results from the optimization
+OPTIMIZATION_DATA="/home/reiner/jss-results"
 
 DAR="${TOOL_DIR}/oceandsl-tools/bin/dar"
 SAR="${TOOL_DIR}/oceandsl-tools/bin/sar"
@@ -18,6 +23,7 @@ MOP="${TOOL_DIR}/oceandsl-tools/bin/mop"
 MVIS="${TOOL_DIR}/oceandsl-tools/bin/mvis"
 FXCA="${TOOL_DIR}/oceandsl-tools/bin/fxca"
 FXTRAN="${TOOL_DIR}/fxtran"
+RESTRUCTURING="${TOOL_DIR}/oceandsl-tools/bin/restructuring"
 
 # collector tool
 COLLECTOR="${TOOL_DIR}/collector/bin/collector"

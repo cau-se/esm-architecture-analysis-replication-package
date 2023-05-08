@@ -40,9 +40,6 @@ SOURCE_CODE_PATH="${REPOSITORY_DIR}/model:${REPOSITORY_DIR}/pkg:${REPOSITORY_DIR
 # Processed source code directory
 PROCESSED_CODE_PATH="${REPOSITORY_DIR}/verification/${EXPERIMENT_NAME}/build"
 # Path to the executable
-EXECUTABLE="${REPLICATION_DIR}/MITgcm/verification/${EXPERIMENT_NAME}/build/mitgcmuv"
-
-# Path to the executable
 EXECUTABLE="${REPOSITORY_DIR}/verification/${EXPERIMENT_NAME}/build/mitgcmuv"
 
 # Hostname where the dynamic analysis was executed

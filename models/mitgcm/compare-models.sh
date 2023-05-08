@@ -29,6 +29,8 @@ jss-jobs-35-mitgcm_tutorial_barotropic_gyre_static_map.job ; do
 
 	export JOB_DIRECTORY="${OPTIMIZATION_DATA}/$I"
 
+	checkDirectory "job directory" "${JOB_DIRECTORY}"
+
 	export ORIGINAL_ARCHIVE="${JOB_DIRECTORY}/optimized-models.tar.xz"
 	export OPTIMIZED_ARCHIVE="${JOB_DIRECTORY}/original-model.tar.xz"
 	export COMBINED_ARCHIVE="${JOB_DIRECTORY}/kieker-repositories.tar.xz"
