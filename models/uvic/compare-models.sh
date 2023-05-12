@@ -11,6 +11,8 @@ else
         exit 1
 fi
 
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
+
 checkExecutable "Restructuring" "${RESTRUCTURING}"
 checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
@@ -76,6 +78,10 @@ jss-jobs-71-c-uvic_static_map-mom.job ; do
 			fi
 		done
 		"${RESTRUCTURING}" -i "${ORIGINAL}" $LIST -o "${JOB_DIRECTORY}" -e demo -s kuhn
+		for J in $LIST ; do
+			OPTIMIZED=`basename $J`
+	                "${DELTA}" -i "${JOB_DIRECTORY}/original-model-${OPTIMIZED}.xmi" -o "${JOB_DIRECTORY}/original-model-${OPTIMIZED}"
+		done
 	fi
 done
 

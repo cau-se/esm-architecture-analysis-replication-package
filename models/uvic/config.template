@@ -25,6 +25,7 @@ RELABEL="${TOOL_DIR}/oceandsl-tools/bin/relabel"
 FXCA="${TOOL_DIR}/oceandsl-tools/bin/fxca"
 FXTRAN="${TOOL_DIR}/fxtran"
 RESTRUCTURING="${TOOL_DIR}/oceandsl-tools/bin/restructuring"
+DELTA="${TOOL_DIR}/oceandsl-tools/bin/delta"
 
 # collector tool
 COLLECTOR="${TOOL_DIR}/collector/bin/collector"
