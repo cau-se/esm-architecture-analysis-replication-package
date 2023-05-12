@@ -59,6 +59,7 @@ jss-jobs-71-c-uvic_static_map-mom.job ; do
 	SOURCE_LABEL="/home/hs/share/software/restructuring-experiments/architecture-recovery-and-optimization-data/uvic/$MODE/$FORM"
 
 	cat template.project | sed "s/NAME/$NAME-original/g" > "${JOB_DIRECTORY}/original-model/.project"
+
 	rm -rf "${JOB_DIRECTORY}/original-model-fl"
 	mkdir "${JOB_DIRECTORY}/original-model-fl"
 	${RELABEL} -i "${JOB_DIRECTORY}/original-model" -o "${JOB_DIRECTORY}/original-model-fl" -r "$SOURCE_LABEL:original" -e "$NAME-original-fl"
