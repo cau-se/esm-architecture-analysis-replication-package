@@ -69,7 +69,7 @@ case "$MODE" in
      checkFile "Dataflow caller callee" "${MODEL_DATA_PATH}/dataflow-cc.csv"
      ;;
 esac
-   
+
 # run
 information "Static architecture analysis - file based components"
 

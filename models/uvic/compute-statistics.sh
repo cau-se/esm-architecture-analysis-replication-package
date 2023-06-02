@@ -109,7 +109,7 @@ export MVIS_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
 information "Compute file level statistics"
 IFS=$'\n'
 for I in `cat $TEMPFILE` ; do
-	echo "${MVIS}" -i "$I" -o "$I" -s all -g dot-op dot-component -c allen num-of-calls op-coupling module-coupling -m add-nodes
+	"${MVIS}" -i "$I" -o "$I" -s all -g dot-op dot-component -c allen num-of-calls op-coupling module-coupling -m add-nodes
 done
 
 # end
