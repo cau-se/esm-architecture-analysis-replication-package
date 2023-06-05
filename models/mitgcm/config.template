@@ -33,7 +33,7 @@ COLLECTOR="${TOOL_DIR}/collector/bin/collector"
 # addr2line
 ADDR2LINE=`which addr2line`
 
-# Repoistory prefix for the mitgcm model variants
+# Repository prefix for the mitgcm model variants
 REPOSITORY_DIR="${REPLICATION_DIR}/MITgcm"
 # Compile configurtion for kieker
 export CONFIGURATION="${REPOSITORY_DIR}/linux_amd64_gfortran_kieker"

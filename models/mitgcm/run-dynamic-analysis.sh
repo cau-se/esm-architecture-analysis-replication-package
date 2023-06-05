@@ -55,15 +55,12 @@ checkDirectory "Interface 2-level model" "${INTERFACE_2_LEVEL_MODEL}" recreate
 
 # run
 information "Dynamic architecture analysis - file based components"
-
 "${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}-dynamic-call" -i "${KIEKER_LOG}" -m file-mode -o "${DYNAMIC_FILE_MODEL}" -s elf -l dynamic
 
 information "Dynamic architecture analysis - map based components"
-
 "${DAR}" -a "${ADDR2LINE}" -c -e "${EXECUTABLE}" -E "${EXPERIMENT_NAME}-dynamic-call" -i "${KIEKER_LOG}" -m map-mode -o "${DYNAMIC_MAP_MODEL}" -s elf -l dynamic -M "${STATIC_MODULE_MAP}" "${STATIC_AUX_MODULE_MAP}"
 
 information "2 level map and file-based info"
-
 "${MAA}" -g "${STATIC_MODULE_MAP}" -i "${DYNAMIC_FILE_MODEL}" -o "${DYNAMIC_2_LEVEL_MODEL}" -gs ";" -E "${EXPERIMENT_NAME}-dynamic-plain-call-2-level"
 
 information "Compute interface models"

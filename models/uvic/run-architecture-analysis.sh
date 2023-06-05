@@ -32,7 +32,7 @@ information "++++++++++++++++++++++++++++++++++++++"
 "${BASE_DIR}/run-dynamic-observation.sh" "${EXPERIMENT_NAME}"
 "${BASE_DIR}/run-dynamic-analysis.sh" "${EXPERIMENT_NAME}"
 
-for I in calls dataflow both ; do
+for I in call dataflow both ; do
 	"${BASE_DIR}/combine-models.sh" "${EXPERIMENT_NAME}" "$I"
 	"${BASE_DIR}/compute-statistics.sh" "${EXPERIMENT_NAME}" "$I"
 done
