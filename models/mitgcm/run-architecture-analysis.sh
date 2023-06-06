@@ -18,7 +18,7 @@ else
         exit 1
 fi
 
-export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.groovy"
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
 
 information "++++++++++++++++++++++++++++++++++++++"
 information "Configuration ${EXPERIMENT_NAME}"
