@@ -11,20 +11,20 @@ else
         exit 1
 fi
 
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
+
 checkExecutable "Merge model" "${MOP}"
 checkExecutable "Relabel" "${RELABEL}"
 checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
-
-for I in `find "${OPTIMIZATION_DATA}/jss"* -name '*uvic*job'` ; do
-
-	BASENAME=`basename $I`
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*uvic*job'` ; do
+	BASENAME=`basename $JOB_DIRECTORY`
 	information "----------------------------------------"
 	information $BASENAME
 	information "----------------------------------------"
 
-	export JOB_DIRECTORY="$I"
+	export JOB_DIRECTORY
 
 	checkDirectory "job directory" "${JOB_DIRECTORY}"
 
