@@ -19,7 +19,7 @@ checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
 for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*uvic*job'` ; do
-	BASENAME=`basename $JOB_DIRECTORY`
+	BASENAME=`basename "${JOB_DIRECTORY}"`
 	information "----------------------------------------"
 	information $BASENAME
 	information "----------------------------------------"
@@ -42,7 +42,6 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*uvic*job'` ; do
 	cd "${JOB_DIRECTORY}"
 
 	if [ -f "med-output.csv" ] ; then
-
 		cat "${BASE_DIR}/template.project" | sed "s/NAME/$NAME-original/g" > "${JOB_DIRECTORY}/original-model/.project"
 
 		for J in `cat "med-output.csv" | sed 's/;/\t/g' | awk '{ print $3","$1","$2 }' | sed 's/^\([0-9],\)/00\1/'  | sed 's/^\([0-9]\{2\},\)/0\1/' | sort` ; do
