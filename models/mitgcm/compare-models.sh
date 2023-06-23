@@ -16,18 +16,13 @@ checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
 
-for I in jss-jobs-22-mitgcm_tutorial_barotropic_gyre_combined_iface-map.job \
-jss-jobs-23-mitgcm_tutorial_barotropic_gyre_combined_map.job \
-jss-jobs-28-mitgcm_tutorial_barotropic_gyre_dynamic_iface-map.job \
-jss-jobs-29-mitgcm_tutorial_barotropic_gyre_dynamic_map.job \
-jss-jobs-34-mitgcm_tutorial_barotropic_gyre_static_iface-map.job \
-jss-jobs-35-mitgcm_tutorial_barotropic_gyre_static_map.job ; do
-
+for JOB in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
+ 	BASENAME=`basename "${JOB}"`
 	information "----------------------------------------"
-	information $I
+	information $BASENAME
 	information "----------------------------------------"
 
-	export JOB_DIRECTORY="${OPTIMIZATION_DATA}/$I"
+	export JOB_DIRECTORY="${JOB}"
 
 	checkDirectory "job directory" "${JOB_DIRECTORY}"
 
