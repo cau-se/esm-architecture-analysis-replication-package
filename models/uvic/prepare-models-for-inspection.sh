@@ -41,9 +41,6 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*uvic*job'` ; do
 
 	cd "${JOB_DIRECTORY}"
 
-echo $JOB_DIRECTORY
-
-exit
 	if [ -f "med-output.csv" ] ; then
 
 		cat "${BASE_DIR}/template.project" | sed "s/NAME/$NAME-original/g" > "${JOB_DIRECTORY}/original-model/.project"
@@ -60,7 +57,7 @@ exit
 			rm -rf "${JOB_DIRECTORY}/merge-${OPTIMIZED}"
 			mkdir "${JOB_DIRECTORY}/merge-${OPTIMIZED}"
 
-			echo "${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge
+			"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge
 		done
 	else
 		error "Missing MED output for job $BASENAME"
