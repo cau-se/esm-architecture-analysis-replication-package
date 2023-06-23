@@ -17,17 +17,18 @@ checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
 
-for I in `ls "${OPTIMIZATION_DATA}"` ; do
+for I in `find "${OPTIMIZATION_DATA}/jss"* -name '*uvic*job'` ; do
 
+	BASENAME=`basename $I`
 	information "----------------------------------------"
-	information $I
+	information $BASENAME
 	information "----------------------------------------"
 
-	export JOB_DIRECTORY="${OPTIMIZATION_DATA}/$I"
+	export JOB_DIRECTORY="$I"
 
 	checkDirectory "job directory" "${JOB_DIRECTORY}"
 
-	export MODEL_ID=`echo "$I" | sed 's/^jss-jobs-[0-9]*-//g' | sed 's/\.job$//g'`
+	export MODEL_ID=`echo "$BASENAME" | sed 's/^jss-jobs-[0-9]*-//g' | sed 's/\.job$//g'`
 
 	NAME="2.9"
 	MODEL=`echo "${MODEL_ID}" | cut -d"_" -f1`
@@ -59,7 +60,7 @@ for I in `ls "${OPTIMIZATION_DATA}"` ; do
 			${MOP} -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge
 		done
 	else
-		error "Missing MED output for job $I"
+		error "Missing MED output for job $BASENAME"
 	fi
 done
 
