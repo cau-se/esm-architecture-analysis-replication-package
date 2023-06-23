@@ -11,33 +11,33 @@ else
         exit 1
 fi
 
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
+
 checkExecutable "Merge model" "${MOP}"
 checkExecutable "Relabel" "${RELABEL}"
 checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
-
-for I in jss-jobs-22-mitgcm_tutorial_barotropic_gyre_combined_iface-map.job \
-jss-jobs-23-mitgcm_tutorial_barotropic_gyre_combined_map.job \
-jss-jobs-28-mitgcm_tutorial_barotropic_gyre_dynamic_iface-map.job \
-jss-jobs-29-mitgcm_tutorial_barotropic_gyre_dynamic_map.job \
-jss-jobs-34-mitgcm_tutorial_barotropic_gyre_static_iface-map.job \
-jss-jobs-35-mitgcm_tutorial_barotropic_gyre_static_map.job ; do
-
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
+ 	BASENAME=`basename "${JOB_DIRECTORY}"`
 	information "----------------------------------------"
-	information $I
+	information $BASENAME
 	information "----------------------------------------"
 
-	export JOB_DIRECTORY="${OPTIMIZATION_DATA}/$I"
+	export JOB_DIRECTORY
 
 	checkDirectory "job directory" "${JOB_DIRECTORY}"
 	
-	P=`echo "$I" | sed 's/^jss-jobs-[0-9]*-//g' | sed 's/\.job$//g'`
+	export MODEL_ID=`echo "$BASENAME" | sed 's/^jss-jobs-[0-9]*-//g' | sed 's/\.job$//g'`
 	
-	NAME=`echo "$P" | cut -d"_" -f2-4`
-	MODEL=`echo "$P" | cut -d"_" -f1`
-	MODE=`echo "$P" | cut -d"_" -f5`
-	FORM=`echo "$P" | cut -d"_" -f6`
+	NAME=`echo "${MODEL_ID}" | cut -d"_" -f2-4`
+	MODEL=`echo "${MODEL_ID}" | cut -d"_" -f1`
+	MODE=`echo "${MODEL_ID}" | cut -d"_" -f5`
+	FORM=`echo "${MODEL_ID}" | cut -d"_" -f6`
+
+	information "  name $NAME"
+	information "  model $MODEL"
+	information "  mode $MODE"
 
 	SOURCE_LABEL="/home/hs/share/software/restructuring-experiments/architecture-recovery-and-optimization-data/$MODEL/$NAME/$MODE/$FORM"
 
