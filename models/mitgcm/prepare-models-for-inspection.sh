@@ -56,7 +56,7 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
 			rm -rf "merge-${OPTIMIZED}"
 			mkdir "merge-${OPTIMIZED}"
 
-			"${MOP}" -e "${MODEL_ID}-$OPTIMIZED-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge >> mop.log 2>&1
+			"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge >> mop.log 2>&1
 		done
 	else
 		error "Missing MED output for job $BASENAME"
