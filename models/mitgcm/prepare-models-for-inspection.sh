@@ -42,7 +42,7 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
 	cd "${JOB_DIRECTORY}"
 
 	if [ -f "med-output.csv" ] ; then
-		cat "${BASE_DIR}/template.project" | sed "s/NAME/$NAME-original/g" > "${JOB_DIRECTORY}/original-model/.project"
+		cat "${BASE_DIR}/template.project" | sed "s/NAME/$NAME-original/g" > "original-model/.project"
 
 		for J in `cat "med-output.csv" | sed 's/;/\t/g' | awk '{ print $3","$1","$2 }' | sed 's/^\([0-9],\)/00\1/'  | sed 's/^\([0-9]\{2\},\)/0\1/' | sort` ; do
 			ORIGINAL=`echo "$J" | cut -d, -f2 | sed 's/"//g'`
@@ -51,12 +51,12 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
 
 			echo "$ORIGINAL -> $OPTIMIZED in $STEPS"
 
-			cat "${BASE_DIR}/template.project" | sed "s/NAME/${MODEL_ID}-$OPTIMIZED/g" > "${JOB_DIRECTORY}/$OPTIMIZED/.project"
+			cat "${BASE_DIR}/template.project" | sed "s/NAME/${MODEL_ID}-$OPTIMIZED/g" > "$OPTIMIZED/.project"
 
-			rm -rf "${JOB_DIRECTORY}/merge-${OPTIMIZED}"
-			mkdir "${JOB_DIRECTORY}/merge-${OPTIMIZED}"
+			rm -rf "merge-${OPTIMIZED}"
+			mkdir "merge-${OPTIMIZED}"
 
-			${MOP} -e ${MODEL_ID}-$OPTIMIZED-merged -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge
+			"${MOP}" -e "${MODEL_ID}-$OPTIMIZED-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge >> mop.log 2>&1
 		done
 	else
 		error "Missing MED output for job $BASENAME"
