@@ -17,6 +17,11 @@ checkExecutable "Merge model" "${MOP}"
 checkExecutable "Relabel" "${RELABEL}"
 checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
+export MOP_LOG="${BASE_DIR}/mop.log"
+
+rm -f "${MOP_LOG}"
+touch "${MOP_LOG}"
+
 # main
 for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
 	BASENAME=`basename "${JOB_DIRECTORY}"`
@@ -44,7 +49,7 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
 	if [ -f "med-output.csv" ] ; then
 		cat "${BASE_DIR}/template.project" | sed "s/NAME/$NAME-original/g" > "original-model/.project"
 
-		for J in `cat "med-output.csv" | sed 's/;/\t/g' | awk '{ print $3","$1","$2 }' | sed 's/^\([0-9],\)/00\1/'  | sed 's/^\([0-9]\{2\},\)/0\1/' | sort` ; do
+		for J in `tail -n +2 "med-output.csv" | sed 's/;/\t/g' | awk '{ print $3","$1","$2 }' | sed 's/^\([0-9],\)/00\1/'  | sed 's/^\([0-9]\{2\},\)/0\1/' | sort` ; do
 			ORIGINAL=`echo "$J" | cut -d, -f2 | sed 's/"//g'`
 			OPTIMIZED=`echo "$J" | cut -d, -f3 | sed 's/"//g'`
 			STEPS=`echo "$J" | cut -d, -f1`
@@ -56,7 +61,7 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
 			rm -rf "merge-${OPTIMIZED}"
 			mkdir "merge-${OPTIMIZED}"
 
-			"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge >> mop.log 2>&1
+			"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge >> "${MOP_LOG}" 2>&1
 		done
 	else
 		error "Missing MED output for job $BASENAME"
