@@ -11,6 +11,12 @@ else
         exit 1
 fi
 
+if [ -f "${BASE_DIR}/../config" ] ; then
+        . "${BASE_DIR}/../config"
+else
+        echo "Main config file not found."
+        exit 1
+fi
 if [ -f "$BASE_DIR/config" ] ; then
         . $BASE_DIR/config
 else

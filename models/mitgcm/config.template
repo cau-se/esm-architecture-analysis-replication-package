@@ -1,38 +1,3 @@
-# Main replication directory
-export REPLICATION_DIR="/home/reiner/temp/experiment/experiments"
-
-# Library path including Kieker libraries
-export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/../install/km/lib/"
-
-# Location for dynamic and static data
-export DATA_PATH="/home/reiner/Projects/OceanDSL/architecture-recovery-and-optimization-data"
-
-# List of external functions
-export EXTERNAL_FUNCTIONS_MAP="${REPLICATION_DIR}/builtin-functions.csv"
-export STATIC_AUX_MODULE_MAP="${REPLICATION_DIR}/mitgcm-aux-map-file.csv"
-
-export TOOL_DIR="/home/reiner/temp/experiment/install"
-
-# Data directory for results from the optimization
-OPTIMIZATION_DATA="/home/reiner/jss-results"
-
-DAR="${TOOL_DIR}/oceandsl-tools/bin/dar"
-SAR="${TOOL_DIR}/oceandsl-tools/bin/sar"
-MAA="${TOOL_DIR}/oceandsl-tools/bin/maa"
-MOP="${TOOL_DIR}/oceandsl-tools/bin/mop"
-MVIS="${TOOL_DIR}/oceandsl-tools/bin/mvis"
-RELABEL="${TOOL_DIR}/oceandsl-tools/bin/relabel"
-FXCA="${TOOL_DIR}/oceandsl-tools/bin/fxca"
-FXTRAN="${TOOL_DIR}/fxtran"
-RESTRUCTURING="${TOOL_DIR}/oceandsl-tools/bin/restructuring"
-DELTA="${TOOL_DIR}/oceandsl-tools/bin/delta"
-
-# collector tool
-COLLECTOR="${TOOL_DIR}/collector/bin/collector"
-
-# addr2line
-ADDR2LINE=`which addr2line`
-
 # Repository prefix for the mitgcm model variants
 REPOSITORY_DIR="${REPLICATION_DIR}/MITgcm"
 # Compile configurtion for kieker
@@ -44,5 +9,3 @@ PROCESSED_CODE_PATH="${REPOSITORY_DIR}/verification/${EXPERIMENT_NAME}/build"
 # Path to the executable
 EXECUTABLE="${REPOSITORY_DIR}/verification/${EXPERIMENT_NAME}/build/mitgcmuv"
 
-# Hostname where the dynamic analysis was executed
-HOST=glasgow

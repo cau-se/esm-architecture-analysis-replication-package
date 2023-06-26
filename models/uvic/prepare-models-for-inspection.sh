@@ -4,6 +4,12 @@ export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
 . "${BASE_DIR}/../../common-functions.rc"
 
+if [ -f "${BASE_DIR}/../config" ] ; then
+        . "${BASE_DIR}/../config"
+else
+        echo "Main config file not found."
+        exit 1
+fi
 if [ -f "$BASE_DIR/config" ] ; then
         . $BASE_DIR/config
 else
@@ -56,12 +62,16 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*uvic*job'` ; do
 
 			echo "$ORIGINAL -> $OPTIMIZED in $STEPS"
 
-			cat "${BASE_DIR}/template.project" | sed "s/NAME/${MODEL_ID}-$OPTIMIZED/g" > "$OPTIMIZED/.project"
+			if [ -d "$OPTIMIZED" ] ; then
+				cat "${BASE_DIR}/template.project" | sed "s/NAME/${MODEL_ID}-$OPTIMIZED/g" > "$OPTIMIZED/.project"
 
-			rm -rf "merge-${OPTIMIZED}"
-			mkdir "merge-${OPTIMIZED}"
+				rm -rf "merge-${OPTIMIZED}"
+				mkdir "merge-${OPTIMIZED}"
 
-			"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge >> "${MOP_LOG}" 2>&1
+				"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge >> "${MOP_LOG}" 2>&1
+			else
+				warning "Missing $OPTIMIZED model"
+			fi
 		done
 	else
 		error "Missing MED output for job $BASENAME"
