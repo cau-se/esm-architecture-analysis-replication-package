@@ -23,7 +23,7 @@ checkExecutable "Restructuring" "${RESTRUCTURING}"
 checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
-for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*uvic*job'` ; do
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*uvic*job'` ; do
 	BASENAME=`basename $JOB_DIRECTORY`
 	information "----------------------------------------"
 	information $BASENAME

@@ -29,7 +29,7 @@ rm -f "${MOP_LOG}"
 touch "${MOP_LOG}"
 
 # main
-for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}/jss"* -name '*mitgcm*job'` ; do
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*mitgcm*job'` ; do
 	BASENAME=`basename "${JOB_DIRECTORY}"`
 	information "----------------------------------------"
 	information $BASENAME
