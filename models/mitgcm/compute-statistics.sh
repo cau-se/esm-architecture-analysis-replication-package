@@ -26,6 +26,8 @@ fi
 
 checkMode $2
 
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
+
 # variables
 export MODEL_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
 
