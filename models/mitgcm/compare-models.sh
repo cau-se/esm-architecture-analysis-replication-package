@@ -46,7 +46,7 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*mitgcm*job'` ; do
 		"${RESTRUCTURING}" -i "${ORIGINAL}" $LIST -o "${JOB_DIRECTORY}" -e compare -s kuhn
 		for K in $LIST ; do
 			OPTIMIZED=`basename $K`
-		        "${DELTA}" -i "${JOB_DIRECTORY}/original-model-${OPTIMIZED}.xmi" -o "${JOB_DIRECTORY}/original-model-${OPTIMIZED}"
+		        "${DELTA}" -i "${JOB_DIRECTORY}/original-model-${OPTIMIZED}.xmi" -o "${JOB_DIRECTORY}/original-model-${OPTIMIZED}" &
 		done
 	fi
 done
