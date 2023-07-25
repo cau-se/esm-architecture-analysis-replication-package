@@ -2,7 +2,7 @@
 
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
-. "${BASE_DIR}/../common-functions.rc"
+. "${BASE_DIR}/common-functions.rc"
 
 if [ -f "$BASE_DIR/config" ] ; then
         . $BASE_DIR/config
@@ -37,6 +37,20 @@ for LINE in `cat "${JOB_FILE}"` ; do
 			MERGE_MODEL="${JOB_DIRECTORY}/original-model-optimized-$OPT"
 			mkdir -p "${MERGE_MODEL}"
 			${MOP} -e merged-$OPT-$NAME  -i "${JOB_DIRECTORY}/original-model" "${JOB_DIRECTORY}/optimized-$OPT" -o "${MERGE_MODEL}" merge
+			
+			LEFT=""
+			RIGHT="optimized-$OPT"
+			for E in `cat "${MERGE_MODEL}/source-model.xmi" | grep "<value>" | sort | uniq | sed 's/^ *<value>\(.*\)<\/value>$/\1/g' | grep -v "optimized-$OPT"` ; do
+				if [ "${LEFT}" == "" ] ; then
+					LEFT=$E
+				else
+					LEFT="$LEFT,$E"
+				fi
+			done
+			
+			${MVIS} -c allen num-of-calls op-coupling module-coupling -g dot-op dot-component -i "${MERGE_MODEL}" -o "${MERGE_MODEL}" -m add-nodes -s "all-color:$LEFT:$RIGHT"
+			${BASE_DIR}/dotPic-single-fileConverter.sh "${MERGE_MODEL}/original-model-optimized-$OPT-component.dot" pdf
+			${BASE_DIR}/dotPic-single-fileConverter.sh "${MERGE_MODEL}/original-model-optimized-$OPT-operation.dot" pdf
 		else
 			information $LINE
 			JOB_DIRECTORY="${OPTIMIZATION_DATA}/$LINE.job"
