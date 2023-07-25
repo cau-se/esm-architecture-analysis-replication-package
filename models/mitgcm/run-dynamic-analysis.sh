@@ -2,7 +2,7 @@
 
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
-. "${BASE_DIR}/../../common-functions.rc"
+. "${BASE_DIR}/../common-functions.rc"
 
 if [ "$1" != "" ] ; then
         export EXPERIMENT_NAME="$1"
@@ -40,7 +40,7 @@ STATIC_MODULE_MAP="${MODEL_DATA_PATH}/module-file-map.csv"
 
 # check tools and executables
 checkExecutable "dynamic architecture analysis" "${DAR}"
-checkExecutable "maa" "${MAA}"
+checkExecutable "Model architecture analysis" "${MAA}"
 checkExecutable "Executable" "${EXECUTABLE}"
 checkExecutable "addr2line" "${ADDR2LINE}"
 

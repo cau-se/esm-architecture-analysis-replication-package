@@ -2,7 +2,7 @@
 
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
-. "${BASE_DIR}/../../common-functions.rc"
+. "${BASE_DIR}/../common-functions.rc"
 
 if [ "$1" != "" ] ; then
         export EXPERIMENT_NAME="$1"
@@ -24,7 +24,7 @@ else
         exit 1
 fi
 
-export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/../logback.xml"
 
 information "++++++++++++++++++++++++++++++++++++++"
 information "Configuration ${EXPERIMENT_NAME}"

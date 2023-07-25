@@ -2,7 +2,7 @@
 
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
-. "${BASE_DIR}/../../common-functions.rc"
+. "${BASE_DIR}/../common-functions.rc"
 
 if [ "$1" != "" ] ; then
         export EXPERIMENT_NAME="$1"
@@ -27,6 +27,7 @@ else
 fi
 
 # variables
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/../logback.xml"
 export MODEL_DATA_PATH="${DATA_PATH}/uvic"
 
 STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static-plain-$MODE-file"
