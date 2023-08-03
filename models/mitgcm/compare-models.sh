@@ -19,13 +19,19 @@ else
         exit 1
 fi
 
+if [ "$2" != "" ] ; then
+	export MODEL="$2"
+else
+	echo "Missing model identifier"
+fi
+
 export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/../logback.xml"
 
 checkExecutable "Restructuring" "${RESTRUCTURING}"
 checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
-for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*mitgcm*job'` ; do
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*${MODEL}*job'` ; do
 	BASENAME=`basename "${JOB_DIRECTORY}"`
 	information "----------------------------------------"
 	information $BASENAME

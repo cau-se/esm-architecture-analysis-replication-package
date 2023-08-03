@@ -24,13 +24,21 @@ else
         exit 1
 fi
 
+if [ "$2" != "" ] ; then
+	export MODEL="$2"
+else
+	echo "Missing model identifier"
+fi
+
 # set mode call, dataflow or both
 checkMode "$3"
 
-export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/../logback.xml"
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
 
 # variables
 export MODEL_DATA_PATH="${DATA_PATH}/$MODEL/${EXPERIMENT_NAME}"
+
+checkDirectory "Model data path" "${MODEL_DATA_PATH}"
 
 STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static-plain-$MODE-file"
 STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static-plain-$MODE-map"
