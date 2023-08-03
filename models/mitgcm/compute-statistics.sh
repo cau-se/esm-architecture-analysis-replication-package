@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Compute statistics for various models.
+
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
 . "${BASE_DIR}/../common-functions.rc"

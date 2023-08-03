@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# compare original models with optimized models.
+
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
 . "${BASE_DIR}/../common-functions.rc"
