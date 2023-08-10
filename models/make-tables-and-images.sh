@@ -51,8 +51,8 @@ for LINE in `cat "${JOB_FILE}"` ; do
 			${MKTABLE} -i "${MERGE_MODEL}.csv" -o "${MERGE_MODEL}"
 			LAST_PWD=`pwd`
 			cd "${MERGE_MODEL}"
-			pdflatex full.tex
-			pdflatex compact.tex
+			#pdflatex full.tex
+			#pdflatex compact.tex
 			cd $LAST_PWD
 			#${MVIS} -c allen num-of-calls op-coupling module-coupling -g dot-op dot-component -i "${MERGE_MODEL}" -o "${MERGE_MODEL}" -m add-nodes -s "all-color:$LEFT:$RIGHT"
 			#${BASE_DIR}/dotPic-single-fileConverter.sh "${MERGE_MODEL}/original-model-optimized-$OPT-component.dot" pdf &

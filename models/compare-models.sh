@@ -4,34 +4,30 @@
 
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
-. "${BASE_DIR}/../common-functions.rc"
+. "${BASE_DIR}/common-functions.rc"
 
-if [ -f "${BASE_DIR}/../config" ] ; then
-        . "${BASE_DIR}/../config"
+if [ -f "${BASE_DIR}/config" ] ; then
+        . "${BASE_DIR}/config"
 else
         echo "Main config file not found."
         exit 1
 fi
-if [ -f "$BASE_DIR/config" ] ; then
-        . $BASE_DIR/config
-else
-        echo "Config file not found."
-        exit 1
-fi
 
-if [ "$2" != "" ] ; then
-	export MODEL="$2"
+if [ "$1" != "" ] ; then
+	export MODEL="$1"
 else
+	echo "usage: compare-models.sh model-identifier"
 	echo "Missing model identifier"
+	exit 1
 fi
 
-export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/../logback.xml"
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
 
 checkExecutable "Restructuring" "${RESTRUCTURING}"
 checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
-for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*${MODEL}*job'` ; do
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name "*${MODEL}*job"` ; do
 	BASENAME=`basename "${JOB_DIRECTORY}"`
 	information "----------------------------------------"
 	information $BASENAME

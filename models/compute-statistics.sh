@@ -1,8 +1,10 @@
 #!/bin/bash
 
+# Compute statistics for various models.
+
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
-. "${BASE_DIR}/../common-functions.rc"
+. "${BASE_DIR}/common-functions.rc"
 
 if [ "$1" != "" ] ; then
         export EXPERIMENT_NAME="$1"
@@ -11,25 +13,26 @@ else
         exit 1
 fi
 
-if [ -f "${BASE_DIR}/../config" ] ; then
-        . "${BASE_DIR}/../config"
+if [ -f "${BASE_DIR}/config" ] ; then
+        . "${BASE_DIR}/config"
 else
         echo "Main config file not found."
         exit 1
 fi
-if [ -f "$BASE_DIR/config" ] ; then
-        . $BASE_DIR/config
+if [ "$2" != "" ] ; then
+	export MODEL="$2"
 else
-        echo "Config file not found."
-        exit 1
+	echo "Missing model identifier"
 fi
 
-checkMode $2
+checkMode $3
 
-export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/../logback.xml"
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
 
 # variables
-export MODEL_DATA_PATH="${DATA_PATH}/uvic"
+export MODEL_DATA_PATH="${DATA_PATH}/${MODEL}/${EXPERIMENT_NAME}"
+
+checkDirectory "Model data directory" "${MODEL_DATA_PATH}"
 
 STATIC_FILE_MODEL="${MODEL_DATA_PATH}/static-plain-$MODE-file"
 STATIC_MAP_MODEL="${MODEL_DATA_PATH}/static-plain-$MODE-map"
@@ -110,9 +113,6 @@ ${IFACE_COMBINED_FILE_MODEL}
 ${IFACE_COMBINED_MAP_MODEL}
 ${IFACE_COMBINED_2_LEVEL_MODEL}
 EOF
-
-export JAVA_OPTS="-Dlogback.configurationFile=​${BASE_DIR}/logback.groovy"
-export MVIS_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
 
 information "Compute file level statistics"
 IFS=$'\n'

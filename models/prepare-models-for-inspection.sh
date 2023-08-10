@@ -2,22 +2,22 @@
 
 export BASE_DIR=$(cd "$(dirname "$0")"; pwd)
 
-. "${BASE_DIR}/../common-functions.rc"
+. "${BASE_DIR}/common-functions.rc"
 
-if [ -f "${BASE_DIR}/../config" ] ; then
-        . "${BASE_DIR}/../config"
+if [ -f "${BASE_DIR}/config" ] ; then
+        . "${BASE_DIR}/config"
 else
         echo "Main config file not found."
         exit 1
 fi
-if [ -f "$BASE_DIR/config" ] ; then
-        . $BASE_DIR/config
+
+if [ "$1" != "" ] ; then
+	export MODEL="$1"
 else
-        echo "Config file not found."
-        exit 1
+	echo "Missing model identifier"
 fi
 
-export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/../logback.xml"
+export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"
 
 checkExecutable "Merge model" "${MOP}"
 checkExecutable "Relabel" "${RELABEL}"
@@ -29,7 +29,8 @@ rm -f "${MOP_LOG}"
 touch "${MOP_LOG}"
 
 # main
-for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*uvic*job'` ; do
+COUNT=0
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name "*${MODEL}*job"` ; do
 	BASENAME=`basename "${JOB_DIRECTORY}"`
 	information "----------------------------------------"
 	information $BASENAME
@@ -41,26 +42,17 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*uvic*job'` ; do
 
 	export MODEL_ID=`echo "$BASENAME" | sed 's/^jss-jobs-[0-9]*-//g' | sed 's/\.job$//g'`
 
-	NAME="2.9"
-	MODEL=`echo "${MODEL_ID}" | cut -d"_" -f1`
-	MODE=`echo "${MODEL_ID}" | cut -d"_" -f2`
-	FORM=`echo "${MODEL_ID}" | cut -d"_" -f3 | sed 's/-\w*$//g'`
-
-	information "  name $NAME"
-	information "  model $MODEL"
-	information "  mode $MODE"
-
 	cd "${JOB_DIRECTORY}"
 
 	if [ -f "med-output.csv" ] ; then
-		cat "${BASE_DIR}/template.project" | sed "s/NAME/$NAME-original/g" > "original-model/.project"
+		cat "${BASE_DIR}/template.project" | sed "s/NAME/${MODEL_ID}-original/g" > "original-model/.project"
 
-		for J in `tail -n +2 "med-output.csv" | sed 's/;/\t/g' | awk '{ print $3","$1","$2 }' | sed 's/^\([0-9],\)/00\1/'  | sed 's/^\([0-9]\{2\},\)/0\1/' | sort` ; do
+		for J in `tail -n +2 "med-output.csv" | sed 's/;/\t/g' | awk '{ print $3,$1,$2 }' | sed 's/,//g' | awk '{ print $1","$2","$3 }'` ; do
 			ORIGINAL=`echo "$J" | cut -d, -f2 | sed 's/"//g'`
 			OPTIMIZED=`echo "$J" | cut -d, -f3 | sed 's/"//g'`
 			STEPS=`echo "$J" | cut -d, -f1`
 
-			echo "$ORIGINAL -> $OPTIMIZED in $STEPS"
+			information "$ORIGINAL -> $OPTIMIZED in $STEPS steps"
 
 			if [ -d "$OPTIMIZED" ] ; then
 				cat "${BASE_DIR}/template.project" | sed "s/NAME/${MODEL_ID}-$OPTIMIZED/g" > "$OPTIMIZED/.project"
@@ -68,7 +60,13 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name '*uvic*job'` ; do
 				rm -rf "merge-${OPTIMIZED}"
 				mkdir "merge-${OPTIMIZED}"
 
-				"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all merge >> "${MOP_LOG}" 2>&1
+				if [ "$COUNT" -lt 8 ] ; then
+					"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all nearest-merge >> "${MOP_LOG}" 2>&1 &
+					COUNT=`expr $COUNT + 1`
+				else
+					"${MOP}" -e "${MODEL_ID}-${OPTIMIZED}-merged" -i "original-model" "${OPTIMIZED}" -o "merge-${OPTIMIZED}" -s all nearest-merge >> "${MOP_LOG}" 2>&1
+					COUNT=0
+				fi
 			else
 				warning "Missing $OPTIMIZED model"
 			fi
