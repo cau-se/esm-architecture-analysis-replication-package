@@ -27,7 +27,7 @@ checkExecutable "Restructuring" "${RESTRUCTURING}"
 checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 # main
-for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name "*${MODEL}*job"` ; do
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name "${MODEL}*.job"` ; do
 	BASENAME=`basename "${JOB_DIRECTORY}"`
 	information "----------------------------------------"
 	information $BASENAME

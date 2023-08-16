@@ -22,7 +22,7 @@ checkDirectory "Result directory" "${OPTIMIZATION_DATA}"
 
 if [ "$1" == "" ] ; then
 	error "Missing action: extract, compress"
-	information "Usage: handle-model-archives.sh <extract|compress> [JOB_NAME_FRAGMENT]"
+	information "Usage: handle-model-archives.sh <extract|finalize|compress|restore> [JOB_NAME_FRAGMENT]"
 	exit 1
 else
 	ACTION="$1"
@@ -34,6 +34,8 @@ else
 		information "compress"
 	elif [ "${ACTION}" == "restore" ] ; then
 		information "restore"
+	elif [ "${ACTION}" == "cleanup" ] ; then
+		information "cleanup"
 	else
 		warn "Unknown action ${ACTION}"
 		exit 1
@@ -82,20 +84,34 @@ function restore() {
 
 function compress() {
 	export MERGED_MODEL_ARCHIVE="${JOB_DIRECTORY}/merged-models.tar.xz"
-	mkdir -p "${JOB_DIRECTORY}/merged-models"
-	mv "${JOB_DIRECTORY}/"merge-optimized-* "${JOB_DIRECTORY}/merged-models"
+	export MERGED_MODEL_DIR="${JOB_DIRECTORY}/merged-models"
+	if [ -d "${MERGED_MODEL_DIR}" ] ; then
+		rm -rf "${MERGED_MODEL_DIR}"
+	fi
+	mkdir -p "${MERGED_MODEL_DIR}"
+	mv "${JOB_DIRECTORY}/"merge-optimized-* "${MERGED_MODEL_DIR}"
 	tar -cJf "${MERGED_MODEL_ARCHIVE}" merged-models
-	rm -rf "${JOB_DIRECTORY}/merged-models"
+	rm -rf "${MERGED_MODEL_DIR}"
+
 	# compress csv xmi yaml files
 	export MODIFICATIONS_ARCHIVE="${JOB_DIRECTORY}/modifications.tar.xz"
-	mkdir -p "${JOB_DIRECTORY}/modifications"
+	export MODIFICATIONS_DIR="${JOB_DIRECTORY}/modifications"
+	if [ -d "${MODIFICATIONS_DIR}" ] ; then
+		rm -rf "${MODIFICATIONS_DIR}"
+	fi
+	mkdir -p "${MODIFICATIONS_DIR}"
 	mv "${JOB_DIRECTORY}/"original-model-optimized-*.* modifications
 	tar -cJf "${MODIFICATIONS_ARCHIVE}" modifications
-	rm -rf "${JOB_DIRECTORY}/modifications"
+	rm -rf "${MODIFICATIONS_DIR}"
 }
 
 function finalize() {
 	compress
+	cleanup
+}
+
+function cleanup() {
+        rm -rf "${JOB_DIRECTORY}/original-model"
 	for J in "${JOB_DIRECTORY}/optimized-"* ; do
 		if [ -d "$J" ] ; then
 			rm -rf "$J"
@@ -123,6 +139,8 @@ for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name "*${MODEL}*job"` ; do
 		compress
 	elif [ "${ACTION}" == "restore" ] ; then
 		restore
+	elif [ "${ACTION}" == "cleanup" ] ; then
+		cleanup
 	elif [ "${ACTION}" == "finalize" ] ; then
 		finalize
 	fi

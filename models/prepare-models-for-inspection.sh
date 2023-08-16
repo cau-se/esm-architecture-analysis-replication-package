@@ -30,7 +30,7 @@ touch "${MOP_LOG}"
 
 # main
 COUNT=0
-for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name "*${MODEL}*job"` ; do
+for JOB_DIRECTORY in `find "${OPTIMIZATION_DATA}" -name "${MODEL}*.job"` ; do
 	BASENAME=`basename "${JOB_DIRECTORY}"`
 	information "----------------------------------------"
 	information $BASENAME
