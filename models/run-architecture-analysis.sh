@@ -22,6 +22,7 @@ if [ "$2" != "" ] ; then
 	export MODEL="$2"
 else
 	echo "Missing model identifier"
+	exit
 fi
 
 export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/logback.xml"

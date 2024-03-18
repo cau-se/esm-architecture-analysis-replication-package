@@ -73,12 +73,20 @@ function extract() {
 function restore() {
 	export MERGED_MODEL_ARCHIVE="${JOB_DIRECTORY}/merged-models.tar.xz"
 	tar -xpf "${MERGED_MODEL_ARCHIVE}"
-	mv "${JOB_DIRECTORY}/merged-models/"* "${JOB_DIRECTORY}"
+	for I in "${JOB_DIRECTORY}/merged-models/"* ; do
+		if [ -d "$I" ] ; then
+			TARGET=`basename $I`
+			if [ -d "${JOB_DIRECTORY}/${TARGET}" ] ; then
+				rm -rf "${JOB_DIRECTORY}/${TARGET}"
+			fi
+			mv "$I" "${JOB_DIRECTORY}"
+		fi
+	done
 	rmdir merged-models
 	# xmi and yaml files
 	export MODIFICATIONS_ARCHIVE="${JOB_DIRECTORY}/modifications.tar.xz"
 	tar -xpf "${MODIFICATIONS_ARCHIVE}"
-	mv modifications/* .
+	mv -f modifications/* .
 	rmdir modifications
 }
 
