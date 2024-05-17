@@ -81,7 +81,6 @@ The envisioned setup is:
     - oceandsl-tools (git repo)
   - experiments
   - oceandsl-tools
-  - collector
   
 We will refer to the `replication` directory as `${REPLICATION_DIR}` in the
 documentation.
@@ -174,8 +173,11 @@ You may use the collector bundled in the replication package. Therefore,
 extract the archive in place.
 
 ```
-tar -xvpf collector.tgz
+cd "${REPLICATION_DIR}"
+unzip esm-architecture-analysis-replication-package/collector.zip
 ```
+Depending on the version this will produce a directory named `collector-2.0.0-SNAPSHOT`.
+Please rename this to `collector`.
 
 Additional information on the collector and how to use it to collect
 monitoring data, you may find on the Kieker documentation page.
@@ -188,4 +190,5 @@ Install binutils which include `addr2line` with
 
 `sudo apt install binutils -y`
 
-
+In case you use a non-Debian distribution, install the corresponding package of your
+distribution.
