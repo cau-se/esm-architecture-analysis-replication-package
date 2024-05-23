@@ -27,6 +27,8 @@ fi
 export JAVA_OPTS="-Dlogback.configurationFile=${BASE_DIR}/../logback.xml"
 export MODEL_DATA_PATH="${DATA_PATH}/mitgcm/${EXPERIMENT_NAME}"
 
+information "MODEL $MODEL_DATA_PATH"
+
 # inputs
 checkDirectory "Static data" "${MODEL_DATA_PATH}" create
 checkDirectoryList "Source directory" "${SOURCE_CODE_PATH}"

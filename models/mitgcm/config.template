@@ -1,7 +1,7 @@
 # Repository prefix for the mitgcm model variants
-REPOSITORY_DIR="${REPLICATION_DIR}/MITgcm"
+REPOSITORY_DIR="${REPLICATION_DIR}/experiments/mitgcm/MITgcm"
 # Compile configurtion for kieker
-export CONFIGURATION="${REPOSITORY_DIR}/linux_amd64_gfortran_kieker"
+export CONFIGURATION="${REPLICATION_DIR}/esm-architecture-analysis-replication-package/models/mitgcm/linux_amd64_gfortran_kieker"
 # Source code root directory
 SOURCE_CODE_PATH="${REPOSITORY_DIR}/model:${REPOSITORY_DIR}/pkg:${REPOSITORY_DIR}/optim:${REPOSITORY_DIR}/eesupp"
 # Processed source code directory

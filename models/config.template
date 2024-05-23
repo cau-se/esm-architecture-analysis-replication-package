@@ -1,17 +1,24 @@
 # Main replication directory
-export REPLICATION_DIR="/home/reiner/temp/experiment/experiments"
+export REPLICATION_DIR= +++ SETUP HERE +++
 
 # Library path including Kieker libraries
-export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/../install/km/lib/"
+export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/kieker/lib/"
 
 # Location for dynamic and static data
-export DATA_PATH="/home/reiner/Projects/OceanDSL/architecture-recovery-and-optimization-data"
+export DATA_PATH="${REPLICATION_DIR}/data"
+
+# Alternative setup to analyze different revisions of a model
+#export DATA_PATH="${REPLICATION_DIR}/data/$REVISION"
+#
+#if [ ! -d "${DATA_PATH}" ] ; then
+#   mkdir -p "${DATA_PATH}"
+#fi
 
 # List of external functions
 export EXTERNAL_FUNCTIONS_MAP="${REPLICATION_DIR}/builtin-functions.csv"
 export STATIC_AUX_MODULE_MAP="${REPLICATION_DIR}/uvic-aux-map-file.csv"
 
-export TOOL_DIR="/home/reiner/temp/experiment/install"
+export TOOL_DIR="${REPLICATION_DIR}"
 
 # Data directory for results from the optimization
 OPTIMIZATION_DATA="/home/reiner/Projects/OceanDSL/restructuring-results"

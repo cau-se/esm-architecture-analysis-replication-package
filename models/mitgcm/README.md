@@ -31,6 +31,8 @@ another structure, please adapt directories accordingly.
 Please note that the ${REPLICATION_DIR} is the main directory of the whole
 setup and ${SCRIPTS_DIR} is the directory of this README.md file, e.g.,
 `${REPLICATION_DIR}/esm-architecture-analysis-replication-package/models/mitgcm`
+and the ${GLOBAL_SCRIPTS_DIR} is the directory one level up, e.g., 
+`${REPLICATION_DIR}/esm-architecture-analysis-replication-package/models`.
 
 Create a workspace directory for the analyis, e.g., `experiments/mitgcm`, and
 switch to this directory.
@@ -89,64 +91,80 @@ cd ../..
 
 ## Setting up the Experiments
 
-Lets assume you are in the `${SCRIPTS}` directory.
+Switch to the `${GLOBAL_SCRIPTS_DIR}` directory.
 
-Here you need to create a `config` file. You can use the `config.template` that
-resides alongside this `README.md`-file.
+Here you need to create a `config` file in the `${GLOBAL_SCRIPT_DIR}`.
+You can use the `config.template` in the same directory as template. 
 
 Then the configuration file should look like this:
-
 ```
-# PREFIX for the mitgcm model variants
-PREFIX="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification"
+# Main replication directory
+export REPLICATION_DIR="/home/user/replication"
 
 # Library path including Kieker libraries
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${REPLICATION_DIR}/kieker/lib/"
-
-# Compile configurtion for kieker
-export CONFIGURATION="${REPLICATION_DIR}/experiments/mitgcm/linux_amd64_gfortran_kieker"
+export KIEKER_LIBRARY_PATH="${REPLICATION_DIR}/../kieker/lib/"
 
 # Location for dynamic and static data
-export DYNAMIC_DATA_PATH="${REPLICATION_DIR}/experiments/mitgcm/dynamic-data"
-export STATIC_DATA_PATH="${REPLICATION_DIR}/experiments/mitgcm/static-data"
+export DATA_PATH="${REPLICATION_DIR}/data"
 
-DAR="${REPLICATION_DIR}/oceandsl-tools/bin/dar"
-SAR="${REPLICATION_DIR}/oceandsl-tools/bin/sar"
-MAA="${REPLICATION_DIR}/oceandsl-tools/bin/maa"
-MOP="${REPLICATION_DIR}/oceandsl-tools/bin/mop"
-MVIS="${REPLICATION_DIR}/oceandsl-tools/bin/mvis"
+# List of external functions
+export EXTERNAL_FUNCTIONS_MAP="${REPLICATION_DIR}/builtin-functions.csv"
+export STATIC_AUX_MODULE_MAP="${REPLICATION_DIR}/uvic-aux-map-file.csv"
+
+export TOOL_DIR="${REPLICATION_DIR}"
+
+# Data directory for results from the optimization
+OPTIMIZATION_DATA="/home/user/restructuring-results"
+
+DAR="${TOOL_DIR}/oceandsl-tools/bin/dar"
+SAR="${TOOL_DIR}/oceandsl-tools/bin/sar"
+MAA="${TOOL_DIR}/oceandsl-tools/bin/maa"
+MOP="${TOOL_DIR}/oceandsl-tools/bin/mop"
+MVIS="${TOOL_DIR}/oceandsl-tools/bin/mvis"
+RELABEL="${TOOL_DIR}/oceandsl-tools/bin/relabel"
+FXCA="${TOOL_DIR}/oceandsl-tools/bin/fxca"
+FXTRAN="${TOOL_DIR}/fxtran"
+RESTRUCTURING="${TOOL_DIR}/oceandsl-tools/bin/restructuring"
+DELTA="${TOOL_DIR}/oceandsl-tools/bin/delta"
+MKTABLE="${TOOL_DIR}/oceandsl-tools/bin/mktable"
 
 # collector tool
-COLLECTOR="${REPLICATION_DIR}/collector/bin/collector"
+COLLECTOR="${TOOL_DIR}/collector/bin/collector"
 
 # addr2line
 ADDR2LINE=`which addr2line`
 
-# Path to the executable
-EXECUTABLE="${REPLICATION_DIR}/experiments/mitgcm/MITgcm/verification/$NAME/build/mitgcmuv"
-
-# Dynamic and static prefix
-DYNAMIC_PREFIX="$PREFIX/$NAME/build/"
-STATIC_PREFIX="/home/hschnoor/eclipse-workspace/PlayPython/resources/preprocessed/MITgcm-$NAME/"
-
 # Hostname where the dynamic analysis was executed
-HOST=lisboa
+HOST=glasgow
 ```
 
 Of course the HOST variable must be changed to the name of the machine
-the experiments are run.
+the experiments are run. As this is the global configuration file, you
+must also setup the second config file for mitgcm.
+
+```
+cd "${SCRIPTS_DIR}"
+cp config.template config
+```
+
+Then edit the config file accordingly.
 
 The next file you have to create is a list of all experiments you want
 to run. The file must be named `experiments`. A list of all experiments
 which are used in the tutorial of MITgcm are listed in `tutorials` and
 all other experiments are listed in `normal`. 
 
-## Dynamic Analysis
+## Selecting models
 
-**Note:** For test purposes, it is helpful run the data collection with
-one experiment only.
+Mitgcm comes with multiple prepared experiments located in the `verification`
+subdirectory. You can run any number of these experiments following the
+instructions below. For certain experiments additional setup is required.
+Information for these experiments can be found in the respective
+experiment directory.
 
-To run a single experiment you can type
+## Dynamic Observations
+
+To run a single experiment type
 ```
 cd ${SCRIPTS_DIR}
 ./run-dynamic-observation.sh tutorial_barotropic_gyre
@@ -156,8 +174,9 @@ where `tutorial_barotropic_gyre` is the experiment to be executed.
 **Note:** This will automatically create a new experiments file with 
 `tutorial_barotropic_gyre` as only entry.
 
-While the script tries to setup all experiments as intended, some will
-not run or even compile. These need additional setup instructions which
+You can run all experiments from the verification directory of mitgcm.
+However, some need additional setup and the experiment may not run as
+intended. These experiments have additional instructions which
 can be found in the respective experiment folder.
 
 You also may want to increase the runtime of certain experiments, to
@@ -165,18 +184,47 @@ ensure that all parts of the experiment are used. Such instructions
 can also be found in the respecticve experiment directory and online
 at `https://mitgcm.readthedocs.io/en/latest/examples/examples.html`.
 
-## Static Analysis
+## Static Code Processing
 
--- added here -- TODO (hs)
+Fortran code may use built-in functions. There have to be registered
+in a function map. Copy from
+
+```
+cp "${REPLICATION_DIR}/esm-architecture-analysis-replication-package/models/builtin-functions.csv" "${REPLICATION_DIR}"
+```
+
+Run the code processing with
+
+```
+cd "${SCRIPTS_DIR}"
+./run-static-code-processing.sh tutorial_barotropic_gyre
+```
 
 ## Architecture Reconstruction
 
 Lets assume you have collected the dynamic and static data for a MITgcm
-experiment, e.g., `tutorial_barotropic_gyre` and you are in the 
-`${REPLICATION_DIR}/experiments/mitgcm` directory. Now you can run the analysis
-for the experiment with
+experiment, e.g., `tutorial_barotropic_gyre`. Ensure that you are in the
+`${SCRIPTS_DIR}` directory.
 
-`./run-architecture-analysis.sh tutorial_barotropic_gyre`
+```
+cd "${SCRIPTS_DIR}"
+./run-static-analysis.sh tutorial_barotropic_gyre call
+./run-dynamic-analysis.sh tutorial_barotropic_gyre
+```
+Instead of `call` the static analysis also accepts `dataflow` and `both`
+as parameters. 
+
+## Automation of Analysis
+
+Instead of running the scripts above, you can automate this with
+
+```
+cd "${GLOBAL_SCRIPTS_DIR}"
+./run-architecture-analysis.sh tutorial_barotropic_gyre mitgcm
+```
+
+This call runs all dynamic and static analysis steps for the specified
+variant - here `tutorial_barotropic_gyre` for the model `mitgcm`.
 
 If everything is setup properly, you will get results files for the
 various analyses:
@@ -198,11 +246,25 @@ various analyses:
 - `combined-model` similar to `dynamic-model`, but these models reflect
   the architecture after the dynamic and static analysis.
 
-## Additional Information
+## Run all experiments
 
-You can use `./run-all-analysis.sh experiments` to run all experiment
-architecture analyses automatically.
+You can use `./run-all-analysis.sh ${experiments}.lst` to run all
+experiment architecture analyses automatically.
+We have prepared two lists
+- `all-variants.lst` contains all variants of mitgcm
+- `normal-variants.lst` are variants that do not require additional setup
+
+## Visualization
 
 You can use the `dotPic-fileConverter.sh` from the Kieker archive to
 convert all dot files. This tool requires `dot` installed on your
 machine.
+
+Alternatively, you can use from the Kieker Development Tools the visualization
+component. These are a bundle of tools used with Kieker and are implemented
+as plugins for Eclipse. The Eclipse repository is
+
+`https://maui.se.informatik.uni-kiel.de/repo/kdt/snapshot/`
+
+
+

@@ -20,7 +20,7 @@ Directory structure:
 
 - MITgcm
 - UVic
-- SWM
+- SWM (not yet available)
 
 The corresponding subdirectories of the replication package contain detailed
 instructions for each step to be done to setup the experiments and execute them.
@@ -80,7 +80,8 @@ The envisioned setup is:
     - kieker-lang-pack-c (git repo)
     - oceandsl-tools (git repo)
   - experiments
-  - oceandsl-tools
+  - oceandsl-tools (created when following the instructions)
+  - data
   
 We will refer to the `replication` directory as `${REPLICATION_DIR}` in the
 documentation.
@@ -90,20 +91,21 @@ directories as follows.
 ```
 mkdir replication
 cd replication
-mkdir install experiments
+mkdir install experiments data
 ```
 
-Then move the `esm-architecture-analyisis-replication-package` directory into
-the replication package.
+Then move the `esm-architecture-analyisis-replication-package` (replication package)
+directory into the `${REPLICATION_DIR}`.
 
 ### Installing Java
 
-You need to install a Java runtime (at least Java 11 when you use the pre
-packaged tools or Java 8 when you build the code yourself).
+You need to install a Java runtime (at least Java 11). Follow the instructions
+for your respective operating system. Most Linux distributions provide suitable
+Java runtimes and SDKs.
 
 ### OceanDSL-Tools
 
-Installing OceanDSL-Tools from the *archive*:
+Installing OceanDSL-Tools from the *archive* in the **replication package**:
 
 ```
 tar -xvpf oceandsl-tools.tgz
@@ -124,7 +126,7 @@ cd oceandsl-tools
 ./gradlew build
 ./assemble-tools.sh
 cd ${REPLICATION_DIR}
-tar -xvpf ${REPLICATION_DIR}/install/oceandsl-tools/build/oceandsl-tools.tgz
+tar -xzpf ${REPLICATION_DIR}/install/oceandsl-tools/build/oceandsl-tools.tgz
 ```
 
 ### Kieker Monitoring
@@ -159,8 +161,8 @@ Then compile and install the monitoring probes.
 You may also call `make install`. However, this may require admin
 privileges.
 
-In case you intend to install the Kieker library in a different location than
-/usr/local you must specify a suitable path with the configure call, e.g.,
+In case you intend to install the Kieker library in a different location then
+`/usr/local` you must specify a suitable path with the configure call, e.g.,
 ```
 ./configure --prefix=${REPLICATION_DIR}/kieker
 make
@@ -180,15 +182,42 @@ Depending on the version this will produce a directory named `collector-2.0.0-SN
 Please rename this to `collector`.
 
 Additional information on the collector and how to use it to collect
-monitoring data, you may find on the Kieker documentation page.
+monitoring data, can be found in the Kieker documentation page.
 
-https://kieker-monitoring.readthedocs.io/en/latest/kieker-tools/Collector---Kieker-Data-Bridge.html#kieker-tools-collector
+`https://kieker-monitoring.readthedocs.io/en/latest/kieker-tools/Collector---Kieker-Data-Bridge.html#kieker-tools-collector`
+
+In case the *collector* does not work, e.g., for incompatibilities, you can
+download Kieker tools from 
+`https://github.com/kieker-monitoring/kieker/releases/` in the tools or binary package.
 
 ### Install additional tooling
 
-Install binutils which include `addr2line` with
+Install binutils which include `addr2line`. In debian based Linux distributions, this
+is done with
 
 `sudo apt install binutils -y`
 
 In case you use a non-Debian distribution, install the corresponding package of your
 distribution.
+
+### Install fxtran
+
+You may find `fxtran` in our fork `https://github.com/OceanDSL/fxtran` repository or
+a more recent version in the original project.
+
+To install `fxtran` which is required for the static architecture recovery, go to
+the `${REPLICATION_DIR}/install` directory and clone the repository
+
+```
+cd ${REPLICATION_DIR}/install
+git clone https://github.com/OceanDSL/fxtran
+```
+
+Compile the tool with
+
+```
+cd fxtran
+make
+cp bin/fxtran "${REPLICATION_DIR}"
+```
+
