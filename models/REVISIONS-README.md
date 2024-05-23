@@ -91,3 +91,16 @@ Alternatively, you can generate graphics with the `mvis` tool
 on commandline using different selection schemes. See the documentation for details or just test out
 the different selectors.
 
+## Compare metrics of different architectures
+
+For each architecture, the recovery produces a `model-complexity.csv` file with multiple metrics.
+To compare them, you have to read all the different `model-complexity.csv` files. However, we
+provide a small tool which can do this for you. Please use for this purpose:
+
+```
+${TOOLS_DIR}/aggregate-metrics -i "${REPLICATION_DIR}/data/mitgcm/checkpoint60" "${REPLICATION_DIR}/data/mitgcm/checkpoint61t" -o summary.csv
+```
+
+The resulting `summary.csv` contains all the data in one table which can then be processed
+by R or other suitable statistics tools.
+
