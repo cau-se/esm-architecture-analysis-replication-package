@@ -1,0 +1,2 @@
+collector.zip filter=lfs diff=lfs merge=lfs -text
+oceandsl-tools.tgz filter=lfs diff=lfs merge=lfs -text
