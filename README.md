@@ -171,14 +171,28 @@ make install
 
 ### Kieker Collector
 
-You may use the collector bundled in the replication package. Therefore,
-extract the archive in place.
+Due to size restrictions, we removed the collector from the replication package.
+You can obtain the collector from the Kieker releases:
+```
+https://github.com/kieker-monitoring/kieker/releases
+```
+Download from the webpage: `kieker-1.15.4-binaries.zip`
+Extract the archive with
+```
+unzip kieker-1.15.4-binaries.zip
+```
+
+and copy from the `kieker-1.15.4/tools` directory the file
+`collector-1.15.4.zip` to the
+`${REPLICATION_DIR}/esm-architecture-analysis-replication-package`
+
+Future Kieker releases will provide a separate file called `collector-2.x.y.zip`.
 
 ```
 cd "${REPLICATION_DIR}"
 unzip esm-architecture-analysis-replication-package/collector.zip
 ```
-Depending on the version this will produce a directory named `collector-2.0.0-SNAPSHOT`.
+Depending on the version this will produce a directory named `collector-1.15.4`, `collector-2.0.0` or similar.
 Please rename this to `collector`.
 
 Additional information on the collector and how to use it to collect
